@@ -1,0 +1,13 @@
+{
+  "id": "stage-2",
+  "title": "Taman Sedekah",
+  "description": "Template stage kedua. Ganti asset sesuai kebutuhan materi.",
+  "thumbnail": "/assets/stages/stage-2/thumbnails/stage-preview.png",
+  "status": "draft",
+  "difficulty": 2,
+  "backgrounds": [],
+  "characters": [],
+  "objects": [],
+  "sounds": [],
+  "instructions": []
+}

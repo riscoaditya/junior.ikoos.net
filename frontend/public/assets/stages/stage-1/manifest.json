@@ -1,0 +1,86 @@
+{
+  "id": "stage-1",
+  "stageSize": { "width": 1500, "height": 1000, "aspectRatio": "3:2" },
+  "title": "Masjid Ceria",
+  "description": "Susun perintah agar karakter berjalan ke masjid, lompat, bicara, dan mengeluarkan suara.",
+  "thumbnail": "/assets/stages/stage-1/thumbnails/stage-preview.png",
+  "status": "active",
+  "difficulty": 1,
+  "maxCommands": 5,
+  "ui": {
+    "stageLabel": "Stage 1",
+    "tip": "Tekan Play untuk mulai!",
+    "theme": "islamic-green"
+  },
+  "backgrounds": [
+    {
+      "id": "masjid-ceria",
+      "name": "Masjid Ceria",
+      "file": "/assets/stages/stage-1/backgrounds/masjid.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/masjid.png"
+    },
+    {
+      "id": "taman",
+      "name": "Taman Ceria",
+      "file": "/assets/stages/stage-1/backgrounds/taman.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/taman.png"
+    },
+    {
+      "id": "sekolah",
+      "name": "Sekolah Ceria",
+      "file": "/assets/stages/stage-1/backgrounds/sekolah.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/sekolah.png"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Anak Muslim",
+      "file": "/assets/stages/stage-1/characters/anak-muslim-laki2.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/anak-muslim-laki2.png",
+      "startPosition": { "x": 340, "y": 720 },
+      "displaySize": { "width": 360, "height": 360 },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Anak Ceria",
+      "file": "/assets/stages/stage-1/characters/anak-muslim-perempuan.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/anak-muslim-perempuan.png",
+      "startPosition": { "x": 340, "y": 720 },
+      "displaySize": { "width": 360, "height": 360 },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing Lucu",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": { "x": 340, "y": 760 },
+      "displaySize": { "width": 320, "height": 320 },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    { "id": "pop", "name": "Pop", "file": "/assets/stages/stage-1/sounds/pop.wav" },
+    { "id": "success", "name": "Success", "file": "/assets/stages/stage-1/sounds/success.wav" },
+    { "id": "salam", "name": "Salam", "file": "/assets/stages/stage-1/sounds/salam.wav" }
+  ],
+  "instructions": [
+    { "order": 1, "command": "start", "label": "Start", "icon": "🚩" },
+    { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "➡️", "value": 5 },
+    { "order": 3, "command": "jump", "label": "Lompat 4", "icon": "⬆️", "value": 4 },
+    { "order": 4, "command": "say", "label": "Bicara", "icon": "💬", "text": "Assalamu'alaikum!" },
+    { "order": 5, "command": "sound", "label": "Suara", "icon": "🔊", "soundId": "salam" }
+  ],
+  "commands": [
+    { "type": "start", "icon": "🚩", "label": "Start", "color": "#ffd84d" },
+    { "type": "moveRight", "value": 5, "icon": "➡️", "label": "Kanan 5", "color": "#168eea" },
+    { "type": "moveUp", "value": 4, "icon": "⬆️", "label": "Naik 4", "color": "#168eea" },
+    { "type": "jump", "value": 4, "icon": "🦘", "label": "Lompat 4", "color": "#ff9f18" },
+    { "type": "say", "text": "Assalamu'alaikum!", "icon": "💬", "label": "Bicara", "color": "#b865dd" },
+    { "type": "sound", "soundId": "salam", "icon": "🔊", "label": "Suara", "color": "#27c488" },
+    { "type": "wait", "value": 1, "icon": "⌛", "label": "Tunggu", "color": "#ff8a96" }
+  ]
+}

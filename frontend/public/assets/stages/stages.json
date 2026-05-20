@@ -1,0 +1,37 @@
+{
+  "defaultStageId": "stage-1",
+  "stages": [
+    {
+      "id": "stage-1",
+      "title": "Masjid Ceria",
+      "manifest": "/assets/stages/stage-1/manifest.json",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/stage-preview.png",
+      "status": "active",
+      "difficulty": 1
+    },
+    {
+      "id": "stage-2",
+      "title": "Sedekah Yuk",
+      "manifest": "/assets/stages/stage-2/manifest.json",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/stage-preview.png",
+      "status": "locked",
+      "difficulty": 2
+    },
+    {
+      "id": "stage-3",
+      "title": "Kelas Ceria",
+      "manifest": "/assets/stages/stage-3/manifest.json",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/sekolah.png",
+      "status": "locked",
+      "difficulty": 3
+    },
+    {
+      "id": "stage-4",
+      "title": "Petualangan Baru",
+      "manifest": "/assets/stages/stage-4/manifest.json",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/taman.png",
+      "status": "locked",
+      "difficulty": 4
+    }
+  ]
+}

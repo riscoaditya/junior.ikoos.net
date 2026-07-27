@@ -343,6 +343,7 @@ Bagian penting manifest:
   "backgrounds": [],
   "characters": [],
   "sounds": [],
+  "levels": [],
   "instructions": [],
   "commands": []
 }
@@ -403,6 +404,36 @@ Pilihan `fit`:
 ```
 
 Instruksi menentukan urutan jawaban benar. User harus menyusun command sesuai urutan ini.
+
+### Level Instruksi Dalam Stage
+
+Satu stage dapat memiliki beberapa level instruksi lewat properti `levels`.
+
+```json
+{
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Level 1",
+      "label": "Lv 1",
+      "description": "Mulai dari bendera, jalan, lompat, bicara, lalu suara.",
+      "maxCommands": 5,
+      "instructions": []
+    },
+    {
+      "id": "level-2",
+      "title": "Level 2",
+      "label": "Lv 2",
+      "maxCommands": 5,
+      "instructions": []
+    }
+  ]
+}
+```
+
+Jika `levels` tersedia, UI akan menampilkan tombol `Lv 1`, `Lv 2`, dan seterusnya di kartu instruksi. Validasi command, Play Contoh, dan penyusunan kereta mengikuti level yang sedang aktif.
+
+Jika `levels` tidak tersedia, aplikasi tetap memakai `instructions` lama di level stage agar manifest lama tetap kompatibel.
 
 ### Commands
 
@@ -532,6 +563,372 @@ dist/
 
 Upload isi folder `dist` ke web server statis. Pastikan folder `assets/stages` ikut ter-copy ke output build. Vite otomatis menyalin file dari `public` ke output.
 
+## Deployment Dengan Docker
+
+Project ini sudah dilengkapi file Docker:
+
+```txt
+Dockerfile
+docker-compose.yml
+nginx.conf
+.dockerignore
+```
+
+Cara kerja Docker image:
+
+```mermaid
+flowchart TD
+  A[Docker build dimulai] --> B[Stage builder: node:24-alpine]
+  B --> C[npm ci]
+  C --> D[npm run build]
+  D --> E[Output dist dibuat]
+  E --> F[Stage runtime: nginx:1.27-alpine]
+  F --> G[Copy dist ke /usr/share/nginx/html]
+  G --> H[Nginx serve aplikasi di port 80]
+```
+
+### Build Image Manual
+
+Jalankan dari folder `frontend`:
+
+```bash
+docker build -t ikoos-junior-frontend .
+```
+
+Jalankan container:
+
+```bash
+docker run -d \
+  --name ikoos-junior-frontend \
+  --restart unless-stopped \
+  -p 8080:80 \
+  ikoos-junior-frontend
+```
+
+Buka aplikasi:
+
+```txt
+http://localhost:8080
+```
+
+Jika dijalankan di server:
+
+```txt
+http://IP_SERVER:8080
+```
+
+### Menjalankan Dengan Docker Compose
+
+Jalankan dari folder `frontend`:
+
+```bash
+docker compose up -d --build
+```
+
+Cek container:
+
+```bash
+docker compose ps
+```
+
+Cek log:
+
+```bash
+docker compose logs -f
+```
+
+Stop container:
+
+```bash
+docker compose down
+```
+
+Default port di `docker-compose.yml` adalah:
+
+```txt
+8080:80
+```
+
+Artinya port `8080` di host akan diarahkan ke port `80` di container Nginx.
+
+Jika ingin aplikasi langsung berjalan di port 80 server, ubah menjadi:
+
+```yaml
+ports:
+  - "80:80"
+```
+
+Pastikan port 80 belum dipakai service lain.
+
+## Deployment Di Ubuntu Server
+
+Panduan ini diasumsikan menggunakan Ubuntu Server dan user memiliki akses `sudo`.
+
+### 1. Update Server
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+### 2. Install Docker
+
+Install dependency dasar:
+
+```bash
+sudo apt install -y ca-certificates curl gnupg
+```
+
+Tambahkan repository Docker resmi:
+
+```bash
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+Tambahkan source list Docker:
+
+```bash
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+Install Docker Engine dan Compose plugin:
+
+```bash
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+Cek instalasi:
+
+```bash
+docker --version
+docker compose version
+```
+
+Opsional, agar user saat ini bisa menjalankan Docker tanpa `sudo`:
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Logout lalu login kembali agar group aktif.
+
+### 3. Upload Project Ke Server
+
+Contoh struktur target:
+
+```txt
+/var/www/ikoos-junior/frontend
+```
+
+Buat folder:
+
+```bash
+sudo mkdir -p /var/www/ikoos-junior
+sudo chown -R $USER:$USER /var/www/ikoos-junior
+```
+
+Clone repository atau upload project ke folder tersebut. Contoh jika memakai Git:
+
+```bash
+cd /var/www/ikoos-junior
+git clone <URL_REPOSITORY> .
+cd frontend
+```
+
+Jika repository sudah berisi folder `frontend`, pastikan Anda masuk ke folder `frontend` sebelum menjalankan Docker.
+
+### 4. Jalankan Aplikasi Dengan Docker Compose
+
+```bash
+docker compose up -d --build
+```
+
+Cek status:
+
+```bash
+docker compose ps
+```
+
+Cek log:
+
+```bash
+docker compose logs -f
+```
+
+Buka dari browser:
+
+```txt
+http://IP_SERVER:8080
+```
+
+### 5. Buka Firewall Ubuntu
+
+Jika server memakai UFW dan aplikasi berjalan di port `8080`:
+
+```bash
+sudo ufw allow 8080/tcp
+sudo ufw status
+```
+
+Jika memakai port 80:
+
+```bash
+sudo ufw allow 80/tcp
+```
+
+Jika memakai HTTPS:
+
+```bash
+sudo ufw allow 443/tcp
+```
+
+### 6. Update Aplikasi Di Server
+
+Masuk ke folder project:
+
+```bash
+cd /var/www/ikoos-junior/frontend
+```
+
+Ambil perubahan terbaru:
+
+```bash
+git pull
+```
+
+Rebuild dan restart container:
+
+```bash
+docker compose up -d --build
+```
+
+Bersihkan image lama jika perlu:
+
+```bash
+docker image prune -f
+```
+
+### 7. Mengubah Asset Stage Di Server
+
+Karena asset masuk ke image Docker saat build, perubahan file di:
+
+```txt
+public/assets/stages/
+```
+
+perlu diikuti rebuild container:
+
+```bash
+docker compose up -d --build
+```
+
+Jika ingin asset dapat diganti tanpa rebuild image, gunakan volume mount. Contoh:
+
+```yaml
+services:
+  ikoos-junior-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public/assets/stages:/usr/share/nginx/html/assets/stages:ro
+```
+
+Dengan cara ini, perubahan asset di folder host `public/assets/stages` langsung dibaca Nginx. Tetap refresh browser setelah mengganti manifest atau asset.
+
+### 8. Opsi Domain Dan Reverse Proxy
+
+Jika server memakai domain, pola umum adalah:
+
+```txt
+Internet -> Nginx host Ubuntu -> Docker container port 8080
+```
+
+Contoh konfigurasi Nginx host:
+
+```nginx
+server {
+  listen 80;
+  server_name example.com;
+
+  location / {
+    proxy_pass http://127.0.0.1:8080;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+```
+
+Setelah membuat konfigurasi:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+Untuk HTTPS, pasang SSL dengan Certbot sesuai domain server.
+
+### 9. Troubleshooting Docker
+
+Cek container berjalan:
+
+```bash
+docker ps
+```
+
+Cek log container:
+
+```bash
+docker logs ikoos-junior-frontend
+```
+
+Atau jika memakai Compose:
+
+```bash
+docker compose logs -f
+```
+
+Masuk ke container:
+
+```bash
+docker exec -it ikoos-junior-frontend sh
+```
+
+Cek file hasil build di container:
+
+```bash
+ls -la /usr/share/nginx/html
+```
+
+Jika halaman blank, pastikan build berhasil:
+
+```bash
+docker compose build --no-cache
+```
+
+Jika asset tidak terbaca, cek file ini ada di container:
+
+```bash
+docker exec -it ikoos-junior-frontend ls -la /usr/share/nginx/html/assets/stages
+```
+
+Jika port bentrok, ubah mapping port di `docker-compose.yml`, misalnya:
+
+```yaml
+ports:
+  - "8090:80"
+```
+
 ## Troubleshooting
 
 ### Asset belum terbaca
@@ -610,4 +1007,3 @@ Jika project semakin besar, pertimbangkan code splitting atau dynamic import unt
 - Logic game ada di `src/engine`.
 - File legacy Blockly belum menjadi bagian utama UI saat ini dan tidak dipakai oleh flow junior editor.
 - Semua asset stage sebaiknya dikelola dari folder `public/assets/stages`.
-

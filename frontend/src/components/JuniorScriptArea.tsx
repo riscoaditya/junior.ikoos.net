@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import type { JuniorCommand } from '../engine/commandTypes';
 import JuniorCommandBlock from './JuniorCommandBlock';
 import UiIcon from './UiIcon';
@@ -11,6 +12,8 @@ type Props = {
   onRemove: (id: string) => void;
   onClear: () => void;
   onDropCommand: (command: JuniorCommand, slotIndex: number) => void;
+  embedded?: boolean;
+  slotCount?: number;
 };
 
 function readDroppedCommand(dataTransfer: DataTransfer) {
@@ -24,15 +27,76 @@ function readDroppedCommand(dataTransfer: DataTransfer) {
   }
 }
 
-export default function JuniorScriptArea({ commands, activeCommandId, onRemove, onClear, onDropCommand }: Props) {
+function clampColumns(value: number, max: number) {
+  return Math.max(1, Math.min(max, value));
+}
+
+function getBalancedColumns(slotCount: number, fitColumns: number) {
+  const maxColumns = clampColumns(fitColumns, Math.min(5, slotCount));
+  let bestColumns = maxColumns;
+  let bestScore = Number.POSITIVE_INFINITY;
+
+  for (let candidate = maxColumns; candidate >= 1; candidate -= 1) {
+    const rows = Math.ceil(slotCount / candidate);
+    const lastRowCount = slotCount % candidate || candidate;
+    const orphanPenalty = rows > 1 && lastRowCount === 1 ? 100 : 0;
+    const imbalancePenalty = rows > 1 ? (candidate - lastRowCount) * 3 : 0;
+    const compactPenalty = (maxColumns - candidate) * 2;
+    const score = orphanPenalty + imbalancePenalty + compactPenalty + rows * 10;
+
+    if (score < bestScore) {
+      bestColumns = candidate;
+      bestScore = score;
+    }
+  }
+
+  return bestColumns;
+}
+
+export default function JuniorScriptArea({
+  commands,
+  activeCommandId,
+  onRemove,
+  onClear,
+  onDropCommand,
+  embedded = false,
+  slotCount = 5,
+}: Props) {
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
-  const slots = Array.from({ length: 5 });
+  const [columns, setColumns] = useState(5);
+  const slotsRef = useRef<HTMLDivElement | null>(null);
+  const totalSlots = Math.max(1, slotCount, commands.length);
+  const slotIndexes = useMemo(() => Array.from({ length: totalSlots }, (_, index) => index), [totalSlots]);
+  const slotGridStyle = { '--train-columns': columns } as CSSProperties;
+
+  useEffect(() => {
+    const node = slotsRef.current;
+    if (!node) return;
+
+    const updateColumns = () => {
+      const slotMinWidth = embedded ? 74 : 96;
+      const fitColumns = Math.floor(node.clientWidth / slotMinWidth);
+      const nextColumns = getBalancedColumns(totalSlots, fitColumns);
+      setColumns(nextColumns);
+    };
+
+    updateColumns();
+
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', updateColumns);
+      return () => window.removeEventListener('resize', updateColumns);
+    }
+
+    const observer = new ResizeObserver(updateColumns);
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [embedded, totalSlots]);
 
   return (
-    <section className="train-card pro-card">
+    <section className={`train-card ${embedded ? 'embedded' : 'pro-card'}`}>
       <div className="train-head">
-        <div className="section-title"><span className="title-icon"><UiIcon name="train" /></span> Kereta Perintah</div>
-        <button type="button" className="clear-btn" onClick={onClear}><UiIcon name="trash" /> Hapus Semua</button>
+        {!embedded && <div className="section-title"><span className="title-icon"><UiIcon name="train" /></span> Kereta Perintah</div>}
+        <button type="button" className={`clear-btn ${embedded ? 'compact' : ''}`} onClick={onClear}><UiIcon name="trash" /> Hapus Semua</button>
       </div>
 
       <div
@@ -52,12 +116,23 @@ export default function JuniorScriptArea({ commands, activeCommandId, onRemove, 
           onDropCommand(droppedCommand, commands.length);
         }}
       >
+        {embedded && <div className="train-inline-hint">Tarik ikon perintah ke kereta perintah di bawah ini.</div>}
         <div className="train-engine"><TrainIllustration /></div>
-        <div className="train-slots">
-          {slots.map((_, index) => {
+        <div className="train-slots" ref={slotsRef} style={slotGridStyle}>
+          {slotIndexes.map((index) => {
             const command = commands[index];
+            const rowIndex = Math.floor(index / columns);
+            const positionInRow = index % columns;
+            const rowIsForward = rowIndex % 2 === 0;
+            const gridColumn = rowIsForward ? positionInRow + 1 : columns - positionInRow;
+            const hasNext = index < totalSlots - 1;
+            const wrapsToNextRow = hasNext && positionInRow === columns - 1;
+            const arrowClass = wrapsToNextRow
+              ? rowIsForward ? 'turn-right' : 'turn-left'
+              : rowIsForward ? 'right' : 'left';
+
             return (
-              <div className="slot-wrap" key={index}>
+              <div className="slot-wrap" key={index} style={{ gridColumn, gridRow: rowIndex + 1 }}>
                 <div
                   className={`train-slot ${command ? 'filled' : ''} ${dragOverIndex === index ? 'drop-target' : ''}`}
                   onDragOver={(event) => {
@@ -88,15 +163,16 @@ export default function JuniorScriptArea({ commands, activeCommandId, onRemove, 
                       active={activeCommandId === command.id}
                       onRemove={() => onRemove(command.id)}
                     />
-                  ) : null}
+                  ) : (
+                    <span className="slot-number">{index + 1}</span>
+                  )}
                 </div>
-                {index < slots.length - 1 && <span className="slot-arrow">›</span>}
-                <span className="slot-number">{index + 1}</span>
+                {hasNext && <span className={`slot-arrow ${arrowClass}`} aria-hidden="true" />}
               </div>
             );
           })}
         </div>
-        <div className="train-note"><UiIcon name="lightbulb" /> Susun perintah sesuai instruksi Stage 1 di atas, lalu tekan <b>Play</b> untuk melihat hasilnya.</div>
+        {!embedded && <div className="train-note"><UiIcon name="lightbulb" /> Susun perintah sesuai instruksi Stage 1 di atas, lalu tekan <b>Play</b> untuk melihat hasilnya.</div>}
       </div>
     </section>
   );

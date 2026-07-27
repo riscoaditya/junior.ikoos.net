@@ -35,7 +35,6 @@ coverage/
 
 # Temporary browser profiles and screenshots from local visual checks
 .chrome-profile*/
-.chrome-cdp/
+.chrome-cdp*/
 audit-*.png
 bubble-audit.png
-

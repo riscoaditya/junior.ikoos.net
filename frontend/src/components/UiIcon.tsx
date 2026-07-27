@@ -1,5 +1,6 @@
 type IconName =
   | 'book'
+  | 'chevron'
   | 'check'
   | 'clapper'
   | 'folder'
@@ -37,6 +38,12 @@ export default function UiIcon({ name, className }: Props) {
         <svg {...common}>
           <path d="M6 4.5h10.5A1.5 1.5 0 0 1 18 6v14H7.5A2.5 2.5 0 0 1 5 17.5V6.5A2 2 0 0 1 7 4.5Z" />
           <path d="M8 8h7M8 11h6M7.5 17.5H18" />
+        </svg>
+      );
+    case 'chevron':
+      return (
+        <svg {...common}>
+          <path d="m7 10 5 5 5-5" />
         </svg>
       );
     case 'check':

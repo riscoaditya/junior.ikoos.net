@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { JuniorCommand } from '../engine/commandTypes';
 import type { PaletteCommandFromManifest } from '../types/stageAsset';
 import type { StageManifest } from '../types/stageAsset';
@@ -13,15 +14,19 @@ function makeCommand(cmd: PaletteCommandFromManifest) {
 
 type Props = {
   manifest: StageManifest;
+  commands?: PaletteCommandFromManifest[];
   onAdd: (command: JuniorCommand) => void;
+  children?: ReactNode;
 };
 
-export default function JuniorCommandPalette({ manifest, onAdd }: Props) {
+export default function JuniorCommandPalette({ manifest, commands, onAdd, children }: Props) {
+  const paletteCommands = commands || manifest.commands;
+
   return (
     <section className="palette-card pro-card">
       <div className="section-title"><span className="title-icon"><UiIcon name="star" /></span> Kumpulan Perintah</div>
       <div className="command-rack" aria-label="Kumpulan perintah">
-        {manifest.commands.map((cmd) => {
+        {paletteCommands.map((cmd) => {
           const command = { ...cmd, id: `${cmd.type}-${cmd.label}` } as JuniorCommand;
           return (
             <JuniorCommandBlock
@@ -39,7 +44,7 @@ export default function JuniorCommandPalette({ manifest, onAdd }: Props) {
           );
         })}
       </div>
-      <div className="drag-hint">Tarik ikon perintah ke kereta perintah di bawah ini</div>
+      {children || <div className="drag-hint">Tarik ikon perintah ke kereta perintah di bawah ini</div>}
     </section>
   );
 }

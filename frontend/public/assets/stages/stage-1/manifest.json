@@ -67,6 +67,50 @@
     { "id": "success", "name": "Success", "file": "/assets/stages/stage-1/sounds/success.wav" },
     { "id": "salam", "name": "Salam", "file": "/assets/stages/stage-1/sounds/salam.wav" }
   ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Level 1",
+      "label": "Lv 1",
+      "description": "Mulai dari bendera, jalan ke kanan, lompat, bicara, lalu mainkan suara.",
+      "maxCommands": 5,
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+        { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
+        { "order": 3, "command": "jump", "label": "Lompat 4", "icon": "jump", "value": 4 },
+        { "order": 4, "command": "say", "label": "Bicara", "icon": "say", "text": "Assalamu'alaikum!" },
+        { "order": 5, "command": "sound", "label": "Suara", "icon": "sound", "soundId": "salam" }
+      ]
+    },
+    {
+      "id": "level-2",
+      "title": "Level 2",
+      "label": "Lv 2",
+      "description": "Latihan urutan bicara lebih cepat setelah karakter berjalan.",
+      "maxCommands": 5,
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+        { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
+        { "order": 3, "command": "say", "label": "Bicara", "icon": "say", "text": "Assalamu'alaikum!" },
+        { "order": 4, "command": "wait", "label": "Tunggu 1", "icon": "wait", "value": 1 },
+        { "order": 5, "command": "sound", "label": "Suara", "icon": "sound", "soundId": "salam" }
+      ]
+    },
+    {
+      "id": "level-3",
+      "title": "Level 3",
+      "label": "Lv 3",
+      "description": "Tantangan: susun gerakan dan suara tanpa instruksi bicara di tengah.",
+      "maxCommands": 5,
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+        { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
+        { "order": 3, "command": "jump", "label": "Lompat 4", "icon": "jump", "value": 4 },
+        { "order": 4, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
+        { "order": 5, "command": "sound", "label": "Suara", "icon": "sound", "soundId": "salam" }
+      ]
+    }
+  ],
   "instructions": [
     { "order": 1, "command": "start", "label": "Start", "icon": "🚩" },
     { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "➡️", "value": 5 },
@@ -77,7 +121,9 @@
   "commands": [
     { "type": "start", "icon": "🚩", "label": "Start", "color": "#ffd84d" },
     { "type": "moveRight", "value": 5, "icon": "➡️", "label": "Kanan 5", "color": "#168eea" },
+    { "type": "moveLeft", "value": 5, "icon": "➡️", "label": "Kiri 5", "color": "#168eea" },
     { "type": "moveUp", "value": 4, "icon": "⬆️", "label": "Naik 4", "color": "#168eea" },
+    { "type": "moveDown", "value": 4, "icon": "⬆️", "label": "Turun 4", "color": "#168eea" },
     { "type": "jump", "value": 4, "icon": "🦘", "label": "Lompat 4", "color": "#ff9f18" },
     { "type": "say", "text": "Assalamu'alaikum!", "icon": "💬", "label": "Bicara", "color": "#b865dd" },
     { "type": "sound", "soundId": "salam", "icon": "🔊", "label": "Suara", "color": "#27c488" },

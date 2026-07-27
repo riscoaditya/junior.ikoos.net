@@ -10,11 +10,12 @@ import type { JuniorCommand } from '../engine/commandTypes';
 import { CommandRunner } from '../engine/commandRunner';
 import type { JuniorScene } from '../engine/phaserScene';
 import { saveProject, loadProject } from '../utils/storage';
-import type { StageInstruction, StageManifest, StageSummary, StagesIndex } from '../types/stageAsset';
+import type { StageInstruction, StageLevel, StageManifest, StageSummary, StagesIndex } from '../types/stageAsset';
 import { loadDefaultStage, loadStageManifest } from '../utils/loadStageAssets';
 
 type SavedJuniorProject = {
   stageId: string;
+  levelId?: string;
   title: string;
   commands: JuniorCommand[];
   backgroundId: string;
@@ -23,6 +24,15 @@ type SavedJuniorProject = {
 
 function getBackgroundName(manifest: StageManifest | null, id: string) {
   return manifest?.backgrounds.find((background) => background.id === id)?.name || '';
+}
+
+function getInitialLevelId(manifest: StageManifest) {
+  return manifest.levels?.[0]?.id || '';
+}
+
+function getActiveLevel(manifest: StageManifest | null, levelId: string): StageLevel | null {
+  if (!manifest?.levels?.length) return null;
+  return manifest.levels.find((level) => level.id === levelId) || manifest.levels[0] || null;
 }
 
 function commandMatchesInstruction(command: JuniorCommand, instruction: StageInstruction) {
@@ -37,6 +47,7 @@ export default function EditorPage() {
   const [stagesIndex, setStagesIndex] = useState<StagesIndex | null>(null);
   const [activeStage, setActiveStage] = useState<StageSummary | null>(null);
   const [manifest, setManifest] = useState<StageManifest | null>(null);
+  const [activeLevelId, setActiveLevelId] = useState('');
   const [title, setTitle] = useState('IKOOS Junior Coding');
   const [commands, setCommands] = useState<JuniorCommand[]>([]);
   const [selectedBackground, setSelectedBackground] = useState('');
@@ -70,6 +81,7 @@ export default function EditorPage() {
         setStagesIndex(index);
         setActiveStage(summary);
         setManifest(manifest);
+        setActiveLevelId(getInitialLevelId(manifest));
         setTitle(manifest.backgrounds[0]?.name || manifest.title);
         setSelectedBackground(manifest.backgrounds[0]?.id || '');
         setSelectedCharacter(manifest.characters[0]?.id || '');
@@ -96,6 +108,7 @@ export default function EditorPage() {
       const nextManifest = await loadStageManifest(stage.manifest);
       setActiveStage(stage);
       setManifest(nextManifest);
+      setActiveLevelId(getInitialLevelId(nextManifest));
       setTitle(nextManifest.backgrounds[0]?.name || nextManifest.title);
       setCommands([]);
       setFeedback(null);
@@ -110,7 +123,9 @@ export default function EditorPage() {
   };
 
   const addCommand = (command: JuniorCommand, targetIndex = commands.length) => {
-    const maxCommands = manifest?.maxCommands || 5;
+    const activeLevel = getActiveLevel(manifest, activeLevelId);
+    const activeInstructions = activeLevel?.instructions || manifest?.instructions || [];
+    const maxCommands = activeInstructions.length || activeLevel?.maxCommands || manifest?.maxCommands || 5;
     const nextIndex = commands.length;
 
     if (nextIndex >= maxCommands) {
@@ -126,7 +141,7 @@ export default function EditorPage() {
       return;
     }
 
-    const expectedInstruction = manifest?.instructions[nextIndex];
+    const expectedInstruction = activeInstructions[nextIndex];
     if (expectedInstruction && !commandMatchesInstruction(command, expectedInstruction)) {
       showFeedback('Uups, perintah tidak tepat.', `Perintah berikutnya harus ${expectedInstruction.label}.`);
       return;
@@ -154,6 +169,7 @@ export default function EditorPage() {
   const handleSave = () => {
     saveProject('ikoos-jr-pro-project', {
       stageId: activeStage?.id || manifest?.id || 'stage-1',
+      levelId: activeLevelId,
       title,
       commands,
       backgroundId: selectedBackground,
@@ -173,6 +189,7 @@ export default function EditorPage() {
     }
 
     setTitle(saved.title || getBackgroundName(manifest, saved.backgroundId) || manifest?.title || 'Project Junior');
+    setActiveLevelId(saved.levelId || activeLevelId);
     setCommands(saved.commands || []);
     setFeedback(null);
     setSelectedBackground(saved.backgroundId || manifest?.backgrounds[0]?.id || '');
@@ -183,7 +200,10 @@ export default function EditorPage() {
 
   const playExample = () => {
     if (!manifest) return;
-    const sample = manifest.instructions.map((item) => ({
+    const activeLevel = getActiveLevel(manifest, activeLevelId);
+    const activeInstructions = activeLevel?.instructions || manifest.instructions;
+    const activeCommands = activeLevel?.commands || manifest.commands;
+    const sample = activeInstructions.map((item) => ({
       id: `ex-${item.order}-${Date.now()}`,
       type: item.command,
       value: item.value,
@@ -191,7 +211,7 @@ export default function EditorPage() {
       soundId: item.soundId || (item.command === 'sound' ? manifest.sounds?.[0]?.id || 'success' : undefined),
       icon: item.icon,
       label: item.label,
-      color: manifest.commands.find((cmd) => cmd.type === item.command)?.color || '#168eea',
+      color: activeCommands.find((cmd) => cmd.type === item.command)?.color || '#168eea',
     })) as JuniorCommand[];
     setCommands(sample);
     setFeedback(null);
@@ -205,18 +225,30 @@ export default function EditorPage() {
     return <div className="loading-screen"><h1>IKOOS Junior Coding</h1><p>{loadingMessage || 'Menyiapkan kelas...'}</p></div>;
   }
 
+  const activeLevel = getActiveLevel(manifest, activeLevelId);
+  const activeInstructions = activeLevel?.instructions || manifest.instructions;
+  const activeCommands = activeLevel?.commands || manifest.commands;
+  const activeSlotCount = activeInstructions.length || activeLevel?.maxCommands || manifest.maxCommands || 5;
+  const activeLevelLabel = activeLevel?.label || activeLevel?.title || manifest.ui?.stageLabel || 'Stage';
   const selectedCharacterPreview = manifest.characters.find((character) => character.id === selectedCharacter)?.thumbnail;
   const selectedBackgroundName = getBackgroundName(manifest, selectedBackground) || title;
-  const commandColor = (type: JuniorCommand['type']) => manifest.commands.find((command) => command.type === type)?.color || '#168eea';
+  const commandColor = (type: JuniorCommand['type']) => activeCommands.find((command) => command.type === type)?.color || '#168eea';
   const stageTabs = Array.from({ length: 4 }, (_, index) => {
     const stage = stagesIndex.stages[index];
     return {
       stage,
       label: `Stage ${index + 1}`,
-      locked: index === 3 || !stage,
+      locked: !stage || stage.status === 'locked',
       disabled: !stage || stage.status === 'locked',
     };
   });
+  const switchLevel = (levelId: string) => {
+    if (levelId === activeLevelId) return;
+    setActiveLevelId(levelId);
+    setCommands([]);
+    setActiveCommandId(null);
+    setFeedback(null);
+  };
 
   return (
     <div className="app-pro">
@@ -231,7 +263,7 @@ export default function EditorPage() {
       <main className="layout-pro">
         <section className="left-panel">
           <div className="card-pro stage-card-pro">
-            <div className="card-title-row"><h2><UiIcon name="clapper" /> Panggung Cerita</h2><span className="badge-tip"><UiIcon name="spark" /> {manifest.ui?.tip || 'Tekan Play untuk mulai!'}</span></div>
+            <div className="card-title-row"><h2><UiIcon name="clapper" /> Panggung Cerita</h2></div>
             <div className="stage-frame">
               <GameStage manifest={manifest} backgroundId={selectedBackground} characterId={selectedCharacter} onReady={onSceneReady} />
               <div className="stage-scene-label">{selectedBackgroundName}</div>
@@ -266,13 +298,28 @@ export default function EditorPage() {
         <section className="right-panel card-pro">
           <div className="project-header-pro">
             <div className="project-name"><span><UiIcon name="book" /></span><input value={title} onChange={(e) => setTitle(e.target.value)} aria-label="Judul project" /></div>
-            <div className="guide-pills"><button type="button"><UiIcon name="image" /> Pilih ikon</button><button type="button"><UiIcon name="text" /> Susun bawah</button><button type="button" onClick={playExample}><UiIcon name="play" /> Play Contoh</button></div>
+            
           </div>
 
           <div className="learning-row">
             <aside className="instruction-card pro-card">
-              <div className="section-title small"><span><UiIcon name="save" /></span> Instruksi {manifest.ui?.stageLabel || 'Stage'} <b><UiIcon name="star" /> {manifest.ui?.stageLabel || 'Stage'}</b></div>
-              {manifest.instructions.map((item) => (
+              <div className="section-title small"><span><UiIcon name="save" /></span> Instruksi {activeLevelLabel} <b><UiIcon name="star" /> {manifest.ui?.stageLabel || 'Stage'}</b></div>
+              {!!manifest.levels?.length && (
+                <div className="level-tabs" aria-label="Pilih level instruksi">
+                  {manifest.levels.map((level) => (
+                    <button
+                      key={level.id}
+                      type="button"
+                      className={level.id === (activeLevel?.id || activeLevelId) ? 'active' : ''}
+                      onClick={() => switchLevel(level.id)}
+                    >
+                      {level.label || level.title}
+                    </button>
+                  ))}
+                </div>
+              )}
+              {activeLevel?.description && <p className="level-description">{activeLevel.description}</p>}
+              {activeInstructions.map((item) => (
                 <div className="instruction-item" key={item.order}>
                   <span className="number">{item.order}</span>
                   <span className="mini-command" style={{ background: commandColor(item.command) }}><CommandGlyph type={item.command} /></span>
@@ -280,14 +327,20 @@ export default function EditorPage() {
                 </div>
               ))}
             </aside>
-            <JuniorCommandPalette manifest={manifest} onAdd={addCommand} />
+            <JuniorCommandPalette manifest={manifest} commands={activeCommands} onAdd={addCommand}>
+              <JuniorScriptArea
+                commands={commands}
+                activeCommandId={activeCommandId}
+                onRemove={removeCommand}
+                onClear={clearCommands}
+                onDropCommand={addCommand}
+                embedded
+                slotCount={activeSlotCount}
+              />
+            </JuniorCommandPalette>
           </div>
-
-          <JuniorScriptArea commands={commands} activeCommandId={activeCommandId} onRemove={removeCommand} onClear={clearCommands} onDropCommand={addCommand} />
         </section>
       </main>
-
-      <footer className="tips-bar"><UiIcon name="star" /> Tips: Perhatikan urutan perintah agar karakter berjalan sesuai yang diinginkan. <UiIcon name="spark" /></footer>
 
       {feedback && <div className="feedback-toast" role="status" aria-live="polite"><strong>{feedback.title}</strong><span>{feedback.message}</span></div>}
       {reward && <div className="reward-pop"><div className="reward-card">Hebat!<div><UiIcon name="spark" /> <UiIcon name="star" /> <UiIcon name="spark" /></div></div></div>}

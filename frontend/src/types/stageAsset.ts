@@ -63,6 +63,16 @@ export type StageInstruction = {
 
 export type PaletteCommandFromManifest = Omit<JuniorCommand, 'id'>;
 
+export type StageLevel = {
+  id: string;
+  title: string;
+  label?: string;
+  description?: string;
+  maxCommands?: number;
+  instructions: StageInstruction[];
+  commands?: PaletteCommandFromManifest[];
+};
+
 export type StageManifest = {
   id: string;
   /** Ukuran panggung virtual. Pakai 16:9 agar background 1280x720 tidak penyet. */
@@ -82,6 +92,7 @@ export type StageManifest = {
   characters: StageCharacter[];
   objects?: StageObject[];
   sounds?: StageSound[];
+  levels?: StageLevel[];
   instructions: StageInstruction[];
   commands: PaletteCommandFromManifest[];
 };

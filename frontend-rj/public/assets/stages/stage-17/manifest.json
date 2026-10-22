@@ -1,0 +1,568 @@
+{
+  "id": "stage-17",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Sabar Menunggu Giliran",
+  "description": "Wait before action: anak belajar timing dan tertib.",
+  "thumbnail": "/assets/stages/stage-17/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 17,
+  "maxCommands": 8,
+  "ui": {
+    "stageLabel": "Stage 17",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-17-bg-1",
+      "name": "Antri Rapi",
+      "file": "/assets/stages/stage-17/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-17/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-17-bg-2",
+      "name": "Perosotan Ceria",
+      "file": "/assets/stages/stage-17/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-17/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-17-bg-3",
+      "name": "Ayunan Bergilir",
+      "file": "/assets/stages/stage-17/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-17/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "queue-slide",
+      "name": "Antrian",
+      "file": "/assets/stages/shared/objects/queueMarker.png",
+      "kind": "checkpoint",
+      "position": {
+        "x": 610,
+        "y": 725
+      },
+      "displaySize": {
+        "width": 170,
+        "height": 150
+      },
+      "interactionRadius": 210,
+      "label": "Antri",
+      "choiceText": "Aku antri"
+    },
+    {
+      "id": "turn-slide",
+      "name": "Giliran",
+      "file": "/assets/stages/shared/objects/starToken.png",
+      "kind": "target",
+      "position": {
+        "x": 900,
+        "y": 720
+      },
+      "displaySize": {
+        "width": 130,
+        "height": 130
+      },
+      "interactionRadius": 210,
+      "label": "Giliran",
+      "choiceText": "Sekarang giliranku"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Tunggu satu kali sebelum maju.",
+      "maxCommands": 4,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "wait",
+          "label": "Tunggu 1",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "choice",
+          "label": "Antri",
+          "icon": "choice",
+          "text": "Aku antri",
+          "choiceId": "queue-slide"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "wait",
+          "value": 1,
+          "icon": "wait",
+          "label": "Tunggu 1",
+          "color": "#ff8a96"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "queue-slide",
+          "text": "Aku antri",
+          "correct": true,
+          "icon": "choice",
+          "label": "Antri",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-17-badge",
+        "badgeTitle": "Sabar Menunggu",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-17-unlock",
+        "unlockTitle": "Stage 18"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Tunggu lebih lama lalu maju.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "wait",
+          "label": "Tunggu 1",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 3,
+          "command": "wait",
+          "label": "Tunggu 1",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Antri",
+          "icon": "choice",
+          "text": "Aku antri",
+          "choiceId": "queue-slide"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Giliran",
+          "icon": "choice",
+          "text": "Giliranku",
+          "choiceId": "turn-slide"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "wait",
+          "value": 1,
+          "icon": "wait",
+          "label": "Tunggu 1",
+          "color": "#ff8a96"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "queue-slide",
+          "text": "Aku antri",
+          "correct": true,
+          "icon": "choice",
+          "label": "Antri",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "turn-slide",
+          "text": "Giliranku",
+          "correct": true,
+          "icon": "choice",
+          "label": "Giliran",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-17-badge",
+        "badgeTitle": "Antri Rapi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-17-unlock",
+        "unlockTitle": "Stage 18"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Antre beberapa anak.",
+      "maxCommands": 8,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "wait",
+          "label": "Tunggu 1",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "choice",
+          "label": "Antri",
+          "icon": "choice",
+          "text": "Aku antri",
+          "choiceId": "queue-slide"
+        },
+        {
+          "order": 5,
+          "command": "wait",
+          "label": "Tunggu 1",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Giliran",
+          "icon": "choice",
+          "text": "Giliranku",
+          "choiceId": "turn-slide"
+        },
+        {
+          "order": 8,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "wait",
+          "value": 1,
+          "icon": "wait",
+          "label": "Tunggu 1",
+          "color": "#ff8a96"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "queue-slide",
+          "text": "Aku antri",
+          "correct": true,
+          "icon": "choice",
+          "label": "Antri",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "turn-slide",
+          "text": "Giliranku",
+          "correct": true,
+          "icon": "choice",
+          "label": "Giliran",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        },
+        {
+          "type": "choice",
+          "choiceId": "wrong-hurry",
+          "text": "Langsung jalan",
+          "correct": false,
+          "icon": "choice",
+          "label": "Langsung",
+          "color": "#94a3b8"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-17-badge",
+        "badgeTitle": "Penunggu Hebat",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-17-unlock",
+        "unlockTitle": "Stage 18"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "wait",
+      "label": "Tunggu 1",
+      "icon": "wait",
+      "value": 1
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 4,
+      "command": "choice",
+      "label": "Antri",
+      "icon": "choice",
+      "text": "Aku antri",
+      "choiceId": "queue-slide"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "wait",
+      "value": 1,
+      "icon": "wait",
+      "label": "Tunggu 1",
+      "color": "#ff8a96"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "choice",
+      "choiceId": "queue-slide",
+      "text": "Aku antri",
+      "correct": true,
+      "icon": "choice",
+      "label": "Antri",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "turn-slide",
+      "text": "Giliranku",
+      "correct": true,
+      "icon": "choice",
+      "label": "Giliran",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    },
+    {
+      "type": "choice",
+      "choiceId": "wrong-hurry",
+      "text": "Langsung jalan",
+      "correct": false,
+      "icon": "choice",
+      "label": "Langsung",
+      "color": "#94a3b8"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-17-badge",
+    "badgeTitle": "Sabar Menunggu",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-17-unlock",
+    "unlockTitle": "Stage 18"
+  }
+}

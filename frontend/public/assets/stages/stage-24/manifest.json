@@ -1,0 +1,647 @@
+{
+  "id": "stage-24",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Petualangan Anak Saleh",
+  "description": "Creative coding: anak membuat cerita digital sederhana.",
+  "thumbnail": "/assets/stages/stage-24/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 24,
+  "maxCommands": 14,
+  "ui": {
+    "stageLabel": "Stage 24",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-24-bg-1",
+      "name": "Studio Cerita",
+      "file": "/assets/stages/stage-24/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-24/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-24-bg-2",
+      "name": "Panggung Karya",
+      "file": "/assets/stages/stage-24/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-24/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-24-bg-3",
+      "name": "Wisuda Junior",
+      "file": "/assets/stages/stage-24/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-24/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "ikoobot-character",
+      "name": "IKOOBOT",
+      "file": "/assets/stages/shared/objects/ikoobotCharacter.png",
+      "thumbnail": "/assets/stages/shared/objects/ikoobotCharacter.png",
+      "startPosition": {
+        "x": 330,
+        "y": 705
+      },
+      "displaySize": {
+        "width": 420,
+        "height": 420
+      },
+      "scale": 1
+    },
+    {
+      "id": "bee-character",
+      "name": "Lebah",
+      "file": "/assets/stages/shared/objects/beeCharacter.png",
+      "thumbnail": "/assets/stages/shared/objects/beeCharacter.png",
+      "startPosition": {
+        "x": 300,
+        "y": 590
+      },
+      "displaySize": {
+        "width": 345,
+        "height": 345
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "final-certificate",
+      "name": "Sertifikat",
+      "file": "/assets/stages/shared/objects/certificate.png",
+      "kind": "reward",
+      "position": {
+        "x": 870,
+        "y": 690
+      },
+      "displaySize": {
+        "width": 170,
+        "height": 170
+      },
+      "interactionRadius": 210,
+      "label": "Karya"
+    },
+    {
+      "id": "final-mosque",
+      "name": "Masjid",
+      "file": "/assets/stages/shared/objects/mosqueTarget.png",
+      "kind": "target",
+      "position": {
+        "x": 1090,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 160,
+        "height": 160
+      },
+      "interactionRadius": 210,
+      "label": "Masjid"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Cerita pendek dengan salam.",
+      "maxCommands": 4,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Assalamu'alaikum"
+        },
+        {
+          "order": 4,
+          "command": "sound",
+          "label": "Suara Salam",
+          "icon": "sound",
+          "soundId": "salam"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "say",
+          "text": "Assalamu'alaikum",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "salam",
+          "icon": "sound",
+          "label": "Suara Salam",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-24-badge",
+        "badgeTitle": "Pembuat Cerita",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-24-unlock",
+        "unlockTitle": "Koleksi cerita akhir"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Gabungkan gerak, suara, dan ucapan syukur.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 3,
+          "command": "sound",
+          "label": "Bismillah",
+          "icon": "sound",
+          "soundId": "bismillah"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Alhamdulillah"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Alhamdulillah",
+          "icon": "sound",
+          "soundId": "alhamdulillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Bismillah",
+          "color": "#27c488"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "say",
+          "text": "Alhamdulillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "alhamdulillah",
+          "icon": "sound",
+          "label": "Alhamdulillah",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-24-badge",
+        "badgeTitle": "Kreator Junior",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-24-unlock",
+        "unlockTitle": "Koleksi cerita akhir"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Buat cerita bebasmu sendiri.",
+      "maxCommands": 14,
+      "instructions": [],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "moveLeft",
+          "value": 7,
+          "icon": "arrow-left",
+          "label": "Kiri 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "moveUp",
+          "value": 4,
+          "icon": "arrow-up",
+          "label": "Naik 4",
+          "color": "#168eea"
+        },
+        {
+          "type": "moveDown",
+          "value": 4,
+          "icon": "arrow-down",
+          "label": "Turun 4",
+          "color": "#168eea"
+        },
+        {
+          "type": "jump",
+          "value": 4,
+          "icon": "jump",
+          "label": "Lompat 4",
+          "color": "#ff9f18"
+        },
+        {
+          "type": "wait",
+          "value": 1,
+          "icon": "wait",
+          "label": "Tunggu 1",
+          "color": "#ff8a96"
+        },
+        {
+          "type": "say",
+          "text": "Assalamu'alaikum",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "say",
+          "text": "Alhamdulillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "salam",
+          "icon": "sound",
+          "label": "Suara Salam",
+          "color": "#27c488"
+        },
+        {
+          "type": "sound",
+          "soundId": "alhamdulillah",
+          "icon": "sound",
+          "label": "Alhamdulillah",
+          "color": "#27c488"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Ceritaku hebat",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam Suara",
+          "color": "#f0528d"
+        },
+        {
+          "type": "writeMessage",
+          "message": "",
+          "promptText": "Tulis pesan cerita",
+          "icon": "write",
+          "label": "Tulis Pesan",
+          "color": "#31b87d"
+        },
+        {
+          "type": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          },
+          "icon": "repeat",
+          "label": "Ulang Kanan",
+          "color": "#7c5cff"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-24-badge",
+        "badgeTitle": "Junior Coder",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-24-unlock",
+        "unlockTitle": "Koleksi cerita akhir"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "say",
+      "label": "Bicara",
+      "icon": "say",
+      "text": "Assalamu'alaikum"
+    },
+    {
+      "order": 4,
+      "command": "sound",
+      "label": "Suara Salam",
+      "icon": "sound",
+      "soundId": "salam"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "say",
+      "text": "Assalamu'alaikum",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "salam",
+      "icon": "sound",
+      "label": "Suara Salam",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "Bismillah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "bismillah",
+      "icon": "sound",
+      "label": "Bismillah",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "Alhamdulillah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "alhamdulillah",
+      "icon": "sound",
+      "label": "Alhamdulillah",
+      "color": "#27c488"
+    },
+    {
+      "type": "moveLeft",
+      "value": 7,
+      "icon": "arrow-left",
+      "label": "Kiri 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "moveUp",
+      "value": 4,
+      "icon": "arrow-up",
+      "label": "Naik 4",
+      "color": "#168eea"
+    },
+    {
+      "type": "moveDown",
+      "value": 4,
+      "icon": "arrow-down",
+      "label": "Turun 4",
+      "color": "#168eea"
+    },
+    {
+      "type": "jump",
+      "value": 4,
+      "icon": "jump",
+      "label": "Lompat 4",
+      "color": "#ff9f18"
+    },
+    {
+      "type": "wait",
+      "value": 1,
+      "icon": "wait",
+      "label": "Tunggu 1",
+      "color": "#ff8a96"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "Ceritaku hebat",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam Suara",
+      "color": "#f0528d"
+    },
+    {
+      "type": "writeMessage",
+      "message": "",
+      "promptText": "Tulis pesan cerita",
+      "icon": "write",
+      "label": "Tulis Pesan",
+      "color": "#31b87d"
+    },
+    {
+      "type": "repeat",
+      "times": 2,
+      "repeatCommand": {
+        "type": "moveRight",
+        "value": 7
+      },
+      "icon": "repeat",
+      "label": "Ulang Kanan",
+      "color": "#7c5cff"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-24-badge",
+    "badgeTitle": "Pembuat Cerita",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-24-unlock",
+    "unlockTitle": "Koleksi cerita akhir"
+  }
+}

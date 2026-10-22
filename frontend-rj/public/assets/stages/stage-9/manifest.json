@@ -1,0 +1,726 @@
+{
+  "id": "stage-9",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Menjaga Kebersihan",
+  "description": "Mulai memakai command pick dan drop untuk merapikan benda.",
+  "thumbnail": "/assets/stages/stage-9/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 9,
+  "maxCommands": 13,
+  "ui": {
+    "stageLabel": "Stage 9",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-9-bg-1",
+      "name": "Kamar Rapi",
+      "file": "/assets/stages/stage-9/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-9/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-9-bg-2",
+      "name": "Taman Bersih",
+      "file": "/assets/stages/stage-9/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-9/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-9-bg-3",
+      "name": "Rak Buku",
+      "file": "/assets/stages/stage-9/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-9/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "book-clean",
+      "name": "Buku",
+      "file": "/assets/stages/shared/objects/book.png",
+      "kind": "collectible",
+      "position": {
+        "x": 525,
+        "y": 730
+      },
+      "displaySize": {
+        "width": 130,
+        "height": 130
+      },
+      "interactionRadius": 210,
+      "label": "Buku",
+      "targetId": "shelf-clean",
+      "pickupText": "Buku diambil"
+    },
+    {
+      "id": "shelf-clean",
+      "name": "Rak",
+      "file": "/assets/stages/shared/objects/shelf.png",
+      "kind": "target",
+      "position": {
+        "x": 895,
+        "y": 720
+      },
+      "displaySize": {
+        "width": 160,
+        "height": 150
+      },
+      "interactionRadius": 210,
+      "label": "Rak",
+      "dropText": "Buku masuk rak"
+    },
+    {
+      "id": "trash-clean",
+      "name": "Sampah",
+      "file": "/assets/stages/shared/objects/trash.png",
+      "kind": "collectible",
+      "position": {
+        "x": 620,
+        "y": 805
+      },
+      "displaySize": {
+        "width": 110,
+        "height": 110
+      },
+      "interactionRadius": 210,
+      "label": "Sampah",
+      "targetId": "bin-clean",
+      "pickupText": "Sampah diambil"
+    },
+    {
+      "id": "bin-clean",
+      "name": "Tempat Sampah",
+      "file": "/assets/stages/shared/objects/bin.png",
+      "kind": "target",
+      "position": {
+        "x": 1040,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 145,
+        "height": 145
+      },
+      "interactionRadius": 210,
+      "label": "Tempat"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Ambil satu buku lalu taruh di rak.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Buku",
+          "icon": "pick",
+          "objectId": "book-clean"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Taruh Rak",
+          "icon": "drop",
+          "targetId": "shelf-clean"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "book-clean",
+          "icon": "pick",
+          "label": "Ambil Buku",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "shelf-clean",
+          "icon": "drop",
+          "label": "Taruh Rak",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-9-badge",
+        "badgeTitle": "Kamar Rapi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-9-unlock",
+        "unlockTitle": "Stage 10"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Rapikan buku dan sampah.",
+      "maxCommands": 11,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Buku",
+          "icon": "pick",
+          "objectId": "book-clean"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Taruh Rak",
+          "icon": "drop",
+          "targetId": "shelf-clean"
+        },
+        {
+          "order": 8,
+          "command": "moveLeft",
+          "label": "Kiri 7",
+          "icon": "arrow-left",
+          "value": 7
+        },
+        {
+          "order": 9,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "trash-clean"
+        },
+        {
+          "order": 10,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 11,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "bin-clean"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "book-clean",
+          "icon": "pick",
+          "label": "Ambil Buku",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "shelf-clean",
+          "icon": "drop",
+          "label": "Taruh Rak",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "moveLeft",
+          "value": 7,
+          "icon": "arrow-left",
+          "label": "Kiri 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "trash-clean",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "bin-clean",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-9-badge",
+        "badgeTitle": "Penjaga Bersih",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-9-unlock",
+        "unlockTitle": "Stage 10"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Tiga aksi dengan tujuan berbeda.",
+      "maxCommands": 13,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Buku",
+          "icon": "pick",
+          "objectId": "book-clean"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Taruh Rak",
+          "icon": "drop",
+          "targetId": "shelf-clean"
+        },
+        {
+          "order": 8,
+          "command": "moveLeft",
+          "label": "Kiri 7",
+          "icon": "arrow-left",
+          "value": 7
+        },
+        {
+          "order": 9,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "trash-clean"
+        },
+        {
+          "order": 10,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 11,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "bin-clean"
+        },
+        {
+          "order": 12,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Bersih itu indah"
+        },
+        {
+          "order": 13,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "book-clean",
+          "icon": "pick",
+          "label": "Ambil Buku",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "shelf-clean",
+          "icon": "drop",
+          "label": "Taruh Rak",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "moveLeft",
+          "value": 7,
+          "icon": "arrow-left",
+          "label": "Kiri 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "trash-clean",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "bin-clean",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Bersih itu indah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-9-badge",
+        "badgeTitle": "Sahabat Kebersihan",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-9-unlock",
+        "unlockTitle": "Stage 10"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 4,
+      "command": "pick",
+      "label": "Ambil Buku",
+      "icon": "pick",
+      "objectId": "book-clean"
+    },
+    {
+      "order": 5,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 6,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 7,
+      "command": "drop",
+      "label": "Taruh Rak",
+      "icon": "drop",
+      "targetId": "shelf-clean"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "book-clean",
+      "icon": "pick",
+      "label": "Ambil Buku",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "shelf-clean",
+      "icon": "drop",
+      "label": "Taruh Rak",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "moveLeft",
+      "value": 7,
+      "icon": "arrow-left",
+      "label": "Kiri 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "trash-clean",
+      "icon": "pick",
+      "label": "Ambil Sampah",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "bin-clean",
+      "icon": "drop",
+      "label": "Buang Sampah",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "say",
+      "text": "Bersih itu indah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-9-badge",
+    "badgeTitle": "Kamar Rapi",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-9-unlock",
+    "unlockTitle": "Stage 10"
+  }
+}

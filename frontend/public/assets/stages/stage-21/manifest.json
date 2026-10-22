@@ -1,0 +1,614 @@
+{
+  "id": "stage-21",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Pola Bulan dan Bintang",
+  "description": "Anak membaca pola AB dan AAB lewat checkpoint visual.",
+  "thumbnail": "/assets/stages/stage-21/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 21,
+  "maxCommands": 9,
+  "ui": {
+    "stageLabel": "Stage 21",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-21-bg-1",
+      "name": "Bulan Bintang",
+      "file": "/assets/stages/stage-21/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-21/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-21-bg-2",
+      "name": "Karpet Pola",
+      "file": "/assets/stages/stage-21/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-21/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-21-bg-3",
+      "name": "Langit Pola",
+      "file": "/assets/stages/stage-21/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-21/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "pattern-moon",
+      "name": "Bulan",
+      "file": "/assets/stages/shared/objects/crescent.png",
+      "kind": "checkpoint",
+      "position": {
+        "x": 540,
+        "y": 660
+      },
+      "displaySize": {
+        "width": 135,
+        "height": 135
+      },
+      "interactionRadius": 210,
+      "label": "Bulan",
+      "choiceText": "Bulan"
+    },
+    {
+      "id": "pattern-star",
+      "name": "Bintang",
+      "file": "/assets/stages/shared/objects/starToken.png",
+      "kind": "checkpoint",
+      "position": {
+        "x": 750,
+        "y": 660
+      },
+      "displaySize": {
+        "width": 120,
+        "height": 120
+      },
+      "interactionRadius": 210,
+      "label": "Bintang",
+      "choiceText": "Bintang"
+    },
+    {
+      "id": "pattern-next",
+      "name": "Bulan Lagi",
+      "file": "/assets/stages/shared/objects/crescent.png",
+      "kind": "checkpoint",
+      "position": {
+        "x": 960,
+        "y": 660
+      },
+      "displaySize": {
+        "width": 135,
+        "height": 135
+      },
+      "interactionRadius": 210,
+      "label": "Lanjut",
+      "choiceText": "Bulan"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Pola AB: bulan lalu bintang.",
+      "maxCommands": 5,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Bulan",
+          "icon": "choice",
+          "text": "Bulan",
+          "choiceId": "pattern-moon"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Bintang",
+          "icon": "choice",
+          "text": "Bintang",
+          "choiceId": "pattern-star"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-moon",
+          "text": "Bulan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bulan",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-star",
+          "text": "Bintang",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bintang",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-21-badge",
+        "badgeTitle": "Pola AB",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-21-unlock",
+        "unlockTitle": "Stage 22"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Pola AAB sederhana.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Bulan",
+          "icon": "choice",
+          "text": "Bulan",
+          "choiceId": "pattern-moon"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Bintang",
+          "icon": "choice",
+          "text": "Bintang",
+          "choiceId": "pattern-star"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Bulan",
+          "icon": "choice",
+          "text": "Bulan",
+          "choiceId": "pattern-next"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-moon",
+          "text": "Bulan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bulan",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-star",
+          "text": "Bintang",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bintang",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-next",
+          "text": "Bulan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bulan",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-21-badge",
+        "badgeTitle": "Pola AAB",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-21-unlock",
+        "unlockTitle": "Stage 22"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Prediksi lanjutan pola.",
+      "maxCommands": 9,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Bulan",
+          "icon": "choice",
+          "text": "Bulan",
+          "choiceId": "pattern-moon"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Bintang",
+          "icon": "choice",
+          "text": "Bintang",
+          "choiceId": "pattern-star"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Bulan",
+          "icon": "choice",
+          "text": "Bulan",
+          "choiceId": "pattern-next"
+        },
+        {
+          "order": 8,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Polanya selesai"
+        },
+        {
+          "order": 9,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-moon",
+          "text": "Bulan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bulan",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-star",
+          "text": "Bintang",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bintang",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "pattern-next",
+          "text": "Bulan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bulan",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Polanya selesai",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-21-badge",
+        "badgeTitle": "Ahli Pola",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-21-unlock",
+        "unlockTitle": "Stage 22"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "choice",
+      "label": "Bulan",
+      "icon": "choice",
+      "text": "Bulan",
+      "choiceId": "pattern-moon"
+    },
+    {
+      "order": 4,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 5,
+      "command": "choice",
+      "label": "Bintang",
+      "icon": "choice",
+      "text": "Bintang",
+      "choiceId": "pattern-star"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "choice",
+      "choiceId": "pattern-moon",
+      "text": "Bulan",
+      "correct": true,
+      "icon": "choice",
+      "label": "Bulan",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "pattern-star",
+      "text": "Bintang",
+      "correct": true,
+      "icon": "choice",
+      "label": "Bintang",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "pattern-next",
+      "text": "Bulan",
+      "correct": true,
+      "icon": "choice",
+      "label": "Bulan",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "say",
+      "text": "Polanya selesai",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-21-badge",
+    "badgeTitle": "Pola AB",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-21-unlock",
+    "unlockTitle": "Stage 22"
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "id": "stage-10",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Tolong, Maaf, Terima Kasih",
+  "description": "Pilih respons sosial yang tepat di situasi berbeda.",
+  "thumbnail": "/assets/stages/stage-10/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 10,
+  "maxCommands": 8,
+  "ui": {
+    "stageLabel": "Stage 10",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-10-bg-1",
+      "name": "Teman Baik",
+      "file": "/assets/stages/stage-10/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-10-bg-2",
+      "name": "Kelas Peduli",
+      "file": "/assets/stages/stage-10/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-10-bg-3",
+      "name": "Pojok Tolong",
+      "file": "/assets/stages/stage-10/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "friend-help",
+      "name": "Teman",
+      "file": "/assets/stages/shared/characters/teman-main.png",
+      "kind": "choice",
+      "position": {
+        "x": 650,
+        "y": 725
+      },
+      "displaySize": {
+        "width": 360,
+        "height": 360
+      },
+      "interactionRadius": 210,
+      "showHalo": false,
+      "label": "Teman",
+      "choiceText": "Terima kasih"
+    },
+    {
+      "id": "pencil-help",
+      "name": "Pensil",
+      "file": "/assets/stages/shared/objects/pencil.png",
+      "kind": "collectible",
+      "position": {
+        "x": 500,
+        "y": 750
+      },
+      "displaySize": {
+        "width": 120,
+        "height": 120
+      },
+      "interactionRadius": 210,
+      "targetId": "friend-help",
+      "pickupText": "Pensil diambil"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Dipinjami pensil lalu ucap terima kasih.",
+      "maxCommands": 3,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Terima Kasih",
+          "icon": "choice",
+          "text": "Terima kasih",
+          "choiceId": "friend-help"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "friend-help",
+          "text": "Terima kasih",
+          "correct": true,
+          "icon": "choice",
+          "label": "Terima Kasih",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "wrong-hello",
+          "text": "Halo dulu",
+          "correct": false,
+          "icon": "choice",
+          "label": "Halo",
+          "color": "#94a3b8"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-10-badge",
+        "badgeTitle": "Kata Baik",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-10-unlock",
+        "unlockTitle": "Stage 11"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Ambil pensil dan bantu teman.",
+      "maxCommands": 6,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Pensil",
+          "icon": "pick",
+          "objectId": "pencil-help"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Beri Teman",
+          "icon": "drop",
+          "targetId": "friend-help"
+        },
+        {
+          "order": 6,
+          "command": "choice",
+          "label": "Terima Kasih",
+          "icon": "choice",
+          "text": "Terima kasih",
+          "choiceId": "friend-help"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "pencil-help",
+          "icon": "pick",
+          "label": "Ambil Pensil",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "friend-help",
+          "icon": "drop",
+          "label": "Beri Teman",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "friend-help",
+          "text": "Terima kasih",
+          "correct": true,
+          "icon": "choice",
+          "label": "Terima Kasih",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-10-badge",
+        "badgeTitle": "Sahabat Penolong",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-10-unlock",
+        "unlockTitle": "Stage 11"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Pilih kata baik untuk beberapa situasi.",
+      "maxCommands": 8,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Pensil",
+          "icon": "pick",
+          "objectId": "pencil-help"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Beri Teman",
+          "icon": "drop",
+          "targetId": "friend-help"
+        },
+        {
+          "order": 6,
+          "command": "choice",
+          "label": "Terima Kasih",
+          "icon": "choice",
+          "text": "Terima kasih",
+          "choiceId": "friend-help"
+        },
+        {
+          "order": 7,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Maaf ya teman"
+        },
+        {
+          "order": 8,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "pencil-help",
+          "icon": "pick",
+          "label": "Ambil Pensil",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "friend-help",
+          "icon": "drop",
+          "label": "Beri Teman",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "friend-help",
+          "text": "Terima kasih",
+          "correct": true,
+          "icon": "choice",
+          "label": "Terima Kasih",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Maaf ya teman",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        },
+        {
+          "type": "choice",
+          "choiceId": "wrong-later",
+          "text": "Nanti saja",
+          "correct": false,
+          "icon": "choice",
+          "label": "Nanti",
+          "color": "#94a3b8"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-10-badge",
+        "badgeTitle": "Pandai Berkata Baik",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-10-unlock",
+        "unlockTitle": "Stage 11"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "choice",
+      "label": "Terima Kasih",
+      "icon": "choice",
+      "text": "Terima kasih",
+      "choiceId": "friend-help"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "choice",
+      "choiceId": "friend-help",
+      "text": "Terima kasih",
+      "correct": true,
+      "icon": "choice",
+      "label": "Terima Kasih",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "wrong-hello",
+      "text": "Halo dulu",
+      "correct": false,
+      "icon": "choice",
+      "label": "Halo",
+      "color": "#94a3b8"
+    },
+    {
+      "type": "pick",
+      "objectId": "pencil-help",
+      "icon": "pick",
+      "label": "Ambil Pensil",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "friend-help",
+      "icon": "drop",
+      "label": "Beri Teman",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "say",
+      "text": "Maaf ya teman",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    },
+    {
+      "type": "choice",
+      "choiceId": "wrong-later",
+      "text": "Nanti saja",
+      "correct": false,
+      "icon": "choice",
+      "label": "Nanti",
+      "color": "#94a3b8"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-10-badge",
+    "badgeTitle": "Kata Baik",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-10-unlock",
+    "unlockTitle": "Stage 11"
+  }
+}

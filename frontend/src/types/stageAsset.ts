@@ -1,4 +1,4 @@
-import type { JuniorCommand } from '../engine/commandTypes';
+import type { JuniorCommand, RepeatableJuniorCommand } from '../engine/commandTypes';
 
 export type StageSummary = {
   id: string;
@@ -19,6 +19,9 @@ export type StageBackground = {
   name: string;
   file: string;
   thumbnail?: string;
+  completionOnly?: boolean;
+  locked?: boolean;
+  unlockRewardId?: string;
   /**
    * cover  = memenuhi panggung tanpa penyet, bagian tepi boleh terpotong sedikit.
    * contain = seluruh gambar terlihat tanpa penyet, bisa muncul ruang kosong/letterbox.
@@ -31,6 +34,7 @@ export type StageCharacter = {
   name: string;
   file: string;
   thumbnail?: string;
+  instructionAvatar?: string;
   startPosition?: { x: number; y: number };
   displaySize?: { width: number; height: number };
   scale?: number;
@@ -40,15 +44,37 @@ export type StageObject = {
   id: string;
   name: string;
   file: string;
+  kind?: 'collectible' | 'target' | 'checkpoint' | 'obstacle' | 'npc' | 'choice' | 'decoration' | 'reward';
   position?: { x: number; y: number };
   displaySize?: { width: number; height: number };
   scale?: number;
+  depth?: number;
+  interactionRadius?: number;
+  targetId?: string;
+  correct?: boolean;
+  label?: string;
+  pickupText?: string;
+  dropText?: string;
+  choiceText?: string;
+  successText?: string;
+  locked?: boolean;
+  showHalo?: boolean;
 };
 
 export type StageSound = {
   id: string;
   name: string;
   file: string;
+};
+
+export type StageWudhuAction = {
+  id: string;
+  name: string;
+  file: string;
+  cue: string;
+  displaySize?: { width: number; height: number };
+  position?: { x: number; y: number };
+  flipX?: boolean;
 };
 
 export type StageInstruction = {
@@ -58,10 +84,47 @@ export type StageInstruction = {
   icon: string;
   value?: number;
   text?: string;
+  targetText?: string;
+  objectId?: string;
+  targetId?: string;
+  choiceId?: string;
+  times?: number;
+  repeatCommand?: RepeatableJuniorCommand;
+  duration?: number;
+  promptText?: string;
   soundId?: string;
+  actionId?: string;
+  hideValue?: boolean;
 };
 
 export type PaletteCommandFromManifest = Omit<JuniorCommand, 'id'>;
+
+export type StageReward = {
+  stars?: number;
+  badgeId?: string;
+  badgeTitle?: string;
+  badgeText?: string;
+  unlockId?: string;
+  unlockTitle?: string;
+};
+
+export type StageRoutePoint = {
+  x: number;
+  y: number;
+  actorPosition?: { x: number; y: number };
+  kind?: 'start' | 'path' | 'goal';
+  hint?: JuniorCommand['type'];
+  hintColor?: string;
+};
+
+export type StageRoute = {
+  points: StageRoutePoint[];
+  actorFootOffset?: number;
+  tileSize?: { width: number; height: number };
+  missionTitle?: string;
+  startLabel?: string;
+  goalLabel?: string;
+};
 
 export type StageLevel = {
   id: string;
@@ -71,6 +134,13 @@ export type StageLevel = {
   maxCommands?: number;
   instructions: StageInstruction[];
   commands?: PaletteCommandFromManifest[];
+  objects?: StageObject[];
+  instructionMode?: 'list' | 'visual-route';
+  route?: StageRoute;
+  startBackgroundId?: string;
+  completionBackgroundId?: string;
+  completionMessage?: string;
+  reward?: StageReward;
 };
 
 export type StageManifest = {
@@ -92,7 +162,9 @@ export type StageManifest = {
   characters: StageCharacter[];
   objects?: StageObject[];
   sounds?: StageSound[];
+  wudhuActions?: StageWudhuAction[];
   levels?: StageLevel[];
   instructions: StageInstruction[];
   commands: PaletteCommandFromManifest[];
+  reward?: StageReward;
 };

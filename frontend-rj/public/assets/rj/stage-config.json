@@ -1,0 +1,292 @@
+{
+  "stages": [
+    {
+      "id": 1,
+      "title": "Pilih Biji",
+      "shortTitle": "Pilih Biji",
+      "subtitle": "Stage 1 - Saatnya memilih biji terbaik.",
+      "icon": "seedBean",
+      "sceneType": "seed-choice",
+      "mission": "Pilih biji buah apel yang benar.",
+      "bubble": "Kita belajar memilih biji yang baik sebelum menanam.",
+      "trainSign": "Pilih Biji Terbaik",
+      "bottomTip": "Biji yang baik akan menjadi awal tanaman yang sehat.",
+      "palette": ["start", "seedSunflower", "seedBean", "seedMango", "talk", "finish"],
+      "solution": ["start", "seedBean", "talk", "finish"],
+      "instructions": [
+        { "command": "start", "label": "Start" },
+        { "command": "seedBean", "label": "Pilih Biji Buah Apel" },
+        { "command": "talk", "label": "Buble Text \"Bismillah biji buah apel yg terbaik!\"", "targetText": "Bismillah biji buah apel yg terbaik!" },
+        { "command": "finish", "label": "Finish" }
+      ],
+      "slots": 4,
+      "bubbleText": "Bismillah biji buah apel yg terbaik!",
+      "levels": {
+        "1": {
+          "label": "Lv 1",
+          "palette": ["start", "seedSunflower", "seedBean", "seedMango", "talk", "finish"],
+          "solution": ["start", "seedBean", "talk", "finish"],
+          "instructions": [
+            { "command": "start", "label": "Start" },
+            { "command": "seedBean", "label": "Pilih Biji Buah Apel" },
+            { "command": "talk", "label": "Buble Text \"Bismillah biji buah apel yg terbaik!\"", "targetText": "Bismillah biji buah apel yg terbaik!" },
+            { "command": "finish", "label": "Finish" }
+          ],
+          "slots": 4,
+          "bubbleText": "Bismillah biji buah apel yg terbaik!"
+        },
+        "2": {
+          "label": "Lv 2",
+          "mission": "Cari dan pilih biji buah apel yang benar.",
+          "palette": ["start", "seedSunflower", "seedBean", "seedMango", "talk", "finish"],
+          "solution": ["start", "talk", "seedBean", "talk", "finish"],
+          "instructions": [
+            { "command": "start", "label": "Start" },
+            { "command": "talk", "label": "Buble Text \"Aku mencari biji buah Apel!\"", "targetText": "Aku mencari biji buah Apel!" },
+            { "command": "seedBean", "label": "Pilih biji buah apel" },
+            { "command": "talk", "label": "Buble Text \"Bismillah biji buah apel yg terbaik!\"", "targetText": "Bismillah biji buah apel yg terbaik!" },
+            { "command": "finish", "label": "Finish" }
+          ],
+          "slots": 5,
+          "bubbleText": "Bismillah biji buah apel yg terbaik!"
+        },
+        "3": {
+          "label": "Lv 3",
+          "mission": "Cari biji buah apel, lalu rekam Bismillah.",
+          "palette": ["start", "seedSunflower", "seedBean", "seedMango", "talk", "voiceText", "finish"],
+          "solution": ["start", "talk", "seedBean", "voiceText", "finish"],
+          "instructions": [
+            { "command": "start", "label": "Start" },
+            { "command": "talk", "label": "Buble Text \"Aku mencari biji buah Apel!\"", "targetText": "Aku mencari biji buah Apel!" },
+            { "command": "seedBean", "label": "Pilih biji buah apel" },
+            { "command": "voiceText", "label": "Rekam suara \"Bismillah\"", "targetText": "Bismillah", "duration": 3 },
+            { "command": "finish", "label": "Finish" }
+          ],
+          "slots": 5,
+          "voiceText": "Bismillah"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "Tanam Biji",
+      "shortTitle": "Tanam Biji",
+      "subtitle": "Stage 2 - Saatnya menanam biji kebaikan.",
+      "icon": "coverSoil",
+      "sceneType": "planting",
+      "mission": "Susun langkah menanam biji yang benar.",
+      "bubble": "Kita belajar merawat tanaman sebagai ciptaan Allah. Menanam hari ini, menuai kebaikan nanti.",
+      "trainSign": "Kecil Langkahnya Besar Manfaatnya",
+      "bottomTip": "Urutan yang benar akan membuat tanaman tumbuh dengan baik.",
+      "palette": ["start", "moveRight", "moveLeft", "moveUp", "moveDown", "dig", "insertSeed", "coverSoil", "talk", "sound", "finish"],
+      "solution": ["start", "dig", "insertSeed", "coverSoil", "talk", "finish"],
+      "instructions": [
+        { "command": "start", "label": "Start" },
+        { "command": "dig", "label": "Gali tanah" },
+        { "command": "insertSeed", "label": "Masukkan Biji" },
+        { "command": "coverSoil", "label": "Tutup tanah" },
+        { "command": "talk", "label": "Buble Text \"MasyaAllah, ikhtiar menanam sudah selesai.\"", "targetText": "MasyaAllah, ikhtiar menanam sudah selesai." },
+        { "command": "finish", "label": "Finish" }
+      ],
+      "slots": 6,
+      "bubbleText": "MasyaAllah, ikhtiar menanam sudah selesai.",
+      "levels": {
+        "1": {
+          "label": "Lv 1",
+          "palette": ["start", "moveRight", "moveLeft", "moveUp", "moveDown", "dig", "insertSeed", "coverSoil", "talk", "sound", "finish"],
+          "solution": ["start", "dig", "insertSeed", "coverSoil", "talk", "finish"],
+          "instructions": [
+            { "command": "start", "label": "Start" },
+            { "command": "dig", "label": "Gali tanah" },
+            { "command": "insertSeed", "label": "Masukkan Biji" },
+            { "command": "coverSoil", "label": "Tutup tanah" },
+            { "command": "talk", "label": "Buble Text \"MasyaAllah, ikhtiar menanam sudah selesai.\"", "targetText": "MasyaAllah, ikhtiar menanam sudah selesai." },
+            { "command": "finish", "label": "Finish" }
+          ],
+          "slots": 6,
+          "bubbleText": "MasyaAllah, ikhtiar menanam sudah selesai."
+        },
+        "2": {
+          "label": "Lv 2",
+          "mission": "Susun langkah menanam biji, lalu rekam Bismillah sebelum menggali tanah.",
+          "palette": ["start", "voiceText", "moveRight", "moveLeft", "moveUp", "moveDown", "dig", "insertSeed", "coverSoil", "talk", "sound", "finish"],
+          "solution": ["start", "voiceText", "dig", "insertSeed", "coverSoil", "talk", "finish"],
+          "instructions": [
+            { "command": "start", "label": "Start" },
+            { "command": "voiceText", "label": "Voice rekaman dari microphone \"Bismillah\"", "targetText": "Bismillah", "duration": 3 },
+            { "command": "dig", "label": "Gali tanah" },
+            { "command": "insertSeed", "label": "Masukkan Biji" },
+            { "command": "coverSoil", "label": "Tutup tanah" },
+            { "command": "talk", "label": "Buble Text \"MasyaAllah, ikhtiar menanam sudah selesai.\"", "targetText": "MasyaAllah, ikhtiar menanam sudah selesai." },
+            { "command": "finish", "label": "Finish" }
+          ],
+          "slots": 7,
+          "voiceText": "Bismillah",
+          "bubbleText": "MasyaAllah, ikhtiar menanam sudah selesai."
+        },
+        "3": {
+          "label": "Lv 3",
+          "mission": "Susun langkah menanam biji dengan dua rekaman doa singkat.",
+          "palette": ["start", "voiceText", "moveRight", "moveLeft", "moveUp", "moveDown", "dig", "insertSeed", "coverSoil", "talk", "sound", "finish"],
+          "solution": ["start", "voiceText", "dig", "insertSeed", "coverSoil", "voiceText", "talk"],
+          "instructions": [
+            { "command": "start", "label": "Start" },
+            { "command": "voiceText", "label": "Voice rekaman dari microphone \"Bismillah\"", "targetText": "Bismillah", "duration": 3 },
+            { "command": "dig", "label": "Gali tanah" },
+            { "command": "insertSeed", "label": "Masukkan biji" },
+            { "command": "coverSoil", "label": "Tutup tanah" },
+            { "command": "voiceText", "label": "Voice rekaman dari microphone \"Alhamdulillah\"", "targetText": "Alhamdulillah", "duration": 3 },
+            { "command": "talk", "label": "Buble Text \"MasyaAllah, ikhtiar menanam sudah selesai.\"", "targetText": "MasyaAllah, ikhtiar menanam sudah selesai." }
+          ],
+          "slots": 7,
+          "bubbleText": "MasyaAllah, ikhtiar menanam sudah selesai."
+        }
+      },
+      "animations": {
+        "dig": {
+          "frameMs": 135,
+          "loop": true,
+          "characters": {
+            "ali": [
+              "/assets/rj/animations/iko/dig/dig-01.png",
+              "/assets/rj/animations/iko/dig/dig-02.png",
+              "/assets/rj/animations/iko/dig/dig-03.png",
+              "/assets/rj/animations/iko/dig/dig-04.png",
+              "/assets/rj/animations/iko/dig/dig-05.png"
+            ],
+            "aisyah": [
+              "/assets/rj/animations/ozi/dig/dig-01.png",
+              "/assets/rj/animations/ozi/dig/dig-02.png",
+              "/assets/rj/animations/ozi/dig/dig-03.png",
+              "/assets/rj/animations/ozi/dig/dig-04.png",
+              "/assets/rj/animations/ozi/dig/dig-05.png"
+            ]
+          }
+        },
+        "insert-seed": {
+          "frameMs": 135,
+          "loop": true,
+          "characters": {
+            "ali": [
+              "/assets/rj/animations/iko/planting/planting-01.png",
+              "/assets/rj/animations/iko/planting/planting-02.png",
+              "/assets/rj/animations/iko/planting/planting-03.png",
+              "/assets/rj/animations/iko/planting/planting-04.png",
+              "/assets/rj/animations/iko/planting/planting-05.png"
+            ],
+            "aisyah": [
+              "/assets/rj/animations/ozi/planting/planting-01.png",
+              "/assets/rj/animations/ozi/planting/planting-02.png",
+              "/assets/rj/animations/ozi/planting/planting-03.png",
+              "/assets/rj/animations/ozi/planting/planting-04.png",
+              "/assets/rj/animations/ozi/planting/planting-05.png"
+            ]
+          }
+        },
+        "cover-soil": {
+          "frameMs": 145,
+          "loop": true,
+          "characters": {
+            "ali": [
+              "/assets/rj/animations/iko/soil/soil-01.png",
+              "/assets/rj/animations/iko/soil/soil-02.png",
+              "/assets/rj/animations/iko/soil/soil-03.png",
+              "/assets/rj/animations/iko/soil/soil-04.png",
+              "/assets/rj/animations/iko/soil/soil-05.png"
+            ],
+            "aisyah": [
+              "/assets/rj/animations/ozi/soil/soil-01.png",
+              "/assets/rj/animations/ozi/soil/soil-02.png",
+              "/assets/rj/animations/ozi/soil/soil-03.png",
+              "/assets/rj/animations/ozi/soil/soil-04.png",
+              "/assets/rj/animations/ozi/soil/soil-05.png"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "Siram Tanaman",
+      "shortTitle": "Siram Tanaman",
+      "subtitle": "Stage 3 - Saatnya membantu tanaman tumbuh.",
+      "icon": "water",
+      "mission": "Pilih benda yang dibutuhkan tanaman.",
+      "bubble": "Air adalah nikmat dari Allah. Yuk pilih alat yang tepat untuk membantu tanaman tumbuh!",
+      "trainSign": "Air Membantu Tanaman Tumbuh",
+      "bottomTip": "Tanaman membutuhkan air agar tumbuh dengan baik.",
+      "palette": ["start", "wateringCan", "stone", "toyCar", "water", "talk", "sound", "finish"],
+      "solution": ["start", "wateringCan", "water", "finish"],
+      "instructions": [
+        { "command": "start", "label": "Start" },
+        { "command": "wateringCan", "label": "Pilih penyiram air" },
+        { "command": "water", "label": "Siram tanaman" },
+        { "command": "finish", "label": "Selesai" }
+      ],
+      "slots": 4
+    },
+    {
+      "id": 4,
+      "title": "Rawat & Tunggu",
+      "shortTitle": "Rawat & Tunggu",
+      "subtitle": "Stage 4 - Saatnya merawat tanaman agar tumbuh.",
+      "icon": "sunlight",
+      "mission": "Lakukan perawatan ini 3 kali.",
+      "bubble": "Tanaman perlu dirawat berulang kali. Siram, beri sinar matahari, lalu tunggu ya!",
+      "trainSign": "Diulang 3 Kali",
+      "bottomTip": "Perawatan yang diulang akan membantu tanaman tumbuh dengan baik.",
+      "palette": ["start", "water", "sunlight", "wait", "repeat3", "talk", "sound", "finish"],
+      "solution": ["start", "water", "sunlight", "wait", "repeat3", "finish"],
+      "instructions": [
+        { "command": "start", "label": "Start" },
+        { "command": "water", "label": "Siram" },
+        { "command": "sunlight", "label": "Sinar matahari" },
+        { "command": "wait", "label": "Tunggu" },
+        { "command": "repeat3", "label": "Ulangi x3" },
+        { "command": "finish", "label": "Selesai" }
+      ],
+      "slots": 6
+    },
+    {
+      "id": 5,
+      "title": "Pilih Buah Matang",
+      "shortTitle": "Pilih Buah Matang",
+      "subtitle": "Stage 5 - Pilih buah yang siap dipanen.",
+      "icon": "fruitRipe",
+      "mission": "Pilih buah yang sudah matang.",
+      "bubble": "Buah matang siap dipetik. Pilih yang merah dan baik, lalu panen dengan hati bersyukur.",
+      "trainSign": "Jika Matang, Panen",
+      "bottomTip": "Pilih buah matang, lalu panen dengan mengucap Alhamdulillah.",
+      "palette": ["start", "fruitGreen", "fruitRipe", "wait", "harvest", "talk", "sound", "finish"],
+      "solution": ["start", "fruitRipe", "harvest", "finish"],
+      "instructions": [
+        { "command": "start", "label": "Start" },
+        { "command": "fruitRipe", "label": "Pilih buah matang" },
+        { "command": "harvest", "label": "Panen" },
+        { "command": "finish", "label": "Selesai" }
+      ],
+      "slots": 4
+    },
+    {
+      "id": 6,
+      "title": "Berbagi Hasil",
+      "shortTitle": "Berbagi Hasil",
+      "subtitle": "Stage 6 - Bagikan hasil panen.",
+      "icon": "shareFamily",
+      "mission": "Bagikan hasil panen.",
+      "bubble": "MasyaAllah, buahnya banyak. Yuk ambil hasil panen lalu berbagi kepada keluarga dan teman.",
+      "trainSign": "Berbagi Membuat Hati Gembira",
+      "bottomTip": "Berbagi hasil panen mengajarkan syukur dan kasih sayang.",
+      "palette": ["start", "takeFruit", "shareAli", "shareFamily", "shareFriend", "talk", "sound", "finish"],
+      "solution": ["start", "takeFruit", "shareFamily", "shareFriend", "finish"],
+      "instructions": [
+        { "command": "start", "label": "Start" },
+        { "command": "takeFruit", "label": "Ambil buah" },
+        { "command": "shareFamily", "label": "Beri ke keluarga" },
+        { "command": "shareFriend", "label": "Beri ke teman" },
+        { "command": "finish", "label": "Selesai" }
+      ],
+      "slots": 5
+    }
+  ]
+}

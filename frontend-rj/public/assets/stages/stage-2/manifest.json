@@ -1,0 +1,656 @@
+{
+  "id": "stage-2",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Mengucap Alhamdulillah",
+  "description": "Dengarkan contoh suara, lalu latih mengucapkan Alhamdulillah saat menerima nikmat.",
+  "thumbnail": "/assets/stages/stage-2/thumbnails/stage-preview.png",
+  "status": "active",
+  "difficulty": 2,
+  "maxCommands": 10,
+  "ui": {
+    "stageLabel": "Stage 2",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-2-taman",
+      "name": "Taman Nikmat",
+      "file": "/assets/stages/stage-2/backgrounds/taman.png",
+      "thumbnail": "/assets/stages/stage-2/thumbnails/taman.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-2-masjid",
+      "name": "Masjid Syukur",
+      "file": "/assets/stages/stage-2/backgrounds/masjid.png",
+      "thumbnail": "/assets/stages/stage-2/thumbnails/masjid.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-2-sekolah",
+      "name": "Sekolah Syukur",
+      "file": "/assets/stages/stage-2/backgrounds/sekolah.png",
+      "thumbnail": "/assets/stages/stage-2/thumbnails/sekolah.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-2-food-reveal",
+      "name": "Nikmat Makanan",
+      "file": "/assets/stages/stage-2/backgrounds/reveal-food.png",
+      "thumbnail": "/assets/stages/stage-2/backgrounds/reveal-food.png",
+      "fit": "cover",
+      "completionOnly": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Susun 5 blok, dengarkan contoh, lalu ucapkan Alhamdulillah.",
+      "maxCommands": 5,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Alhamdulillah"
+        },
+        {
+          "order": 5,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "alhamdulillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "alhamdulillah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Alhamdulillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Alhamdulillah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-2-badge",
+        "badgeTitle": "Anak Bersyukur",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-2-unlock",
+        "unlockTitle": "Stage 3"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-2-taman",
+      "completionBackgroundId": "stage-2-food-reveal",
+      "completionMessage": "Wah, banyak makanan lezat!\nAyo ucapkan Alhamdulillah."
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Susun 7 blok dan dengarkan kembali ucapan Alhamdulillah.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Alhamdulillah"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "alhamdulillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "alhamdulillah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Alhamdulillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Alhamdulillah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-2-badge",
+        "badgeTitle": "Syukur Hebat",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-2-unlock",
+        "unlockTitle": "Stage 3"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-2-taman",
+      "completionBackgroundId": "stage-2-food-reveal",
+      "completionMessage": "Alhamdulillah, Allah memberi banyak nikmat.\nAyo ucapkan bersama."
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Susun 10 blok, lalu rekam ucapan Alhamdulillah dengan suara sendiri.",
+      "maxCommands": 10,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Alhamdulillah"
+        },
+        {
+          "order": 10,
+          "command": "recordVoice",
+          "label": "Rekam",
+          "icon": "mic",
+          "targetText": "Alhamdulillah",
+          "duration": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "alhamdulillah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Alhamdulillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Alhamdulillah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-2-badge",
+        "badgeTitle": "Sahabat Syukur",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-2-unlock",
+        "unlockTitle": "Stage 3"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-2-taman",
+      "completionBackgroundId": "stage-2-food-reveal",
+      "completionMessage": "Makanannya sudah siap.\nUcapkan Alhamdulillah dengan suara lantang!"
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 3,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 7,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "say",
+      "label": "Bicara",
+      "icon": "say",
+      "text": "Alhamdulillah"
+    },
+    {
+      "order": 5,
+      "command": "sound",
+      "label": "Suara",
+      "icon": "sound",
+      "soundId": "alhamdulillah"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 3,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 3,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 3,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "sound",
+      "soundId": "alhamdulillah",
+      "icon": "sound",
+      "label": "Suara",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "Alhamdulillah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "Alhamdulillah",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam",
+      "color": "#f0528d"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-2-badge",
+    "badgeTitle": "Anak Bersyukur",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-2-unlock",
+    "unlockTitle": "Stage 3"
+  }
+}

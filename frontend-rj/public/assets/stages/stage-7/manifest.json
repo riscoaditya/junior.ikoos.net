@@ -1,0 +1,914 @@
+{
+  "id": "stage-7",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Janji Baik, InsyaAllah",
+  "description": "Aisyah membuat rencana baik, berusaha menepatinya, lalu mengucapkan InsyaAllah.",
+  "thumbnail": "/assets/stages/stage-7/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 7,
+  "maxCommands": 10,
+  "ui": {
+    "stageLabel": "Stage 7",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-7-bg-1",
+      "name": "Sudut Rencana",
+      "file": "/assets/stages/stage-7/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-7/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-7-bg-2",
+      "name": "Jalan ke Tempat Mengaji",
+      "file": "/assets/stages/stage-7/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-7/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-7-bg-3",
+      "name": "Jalur Janji Baik",
+      "file": "/assets/stages/stage-7/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-7/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 145,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 330,
+        "height": 330
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Ikuti jalur ke kartu rencana, pilih ucapan yang tepat, lalu ucapkan InsyaAllah.",
+      "maxCommands": 6,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Pilih InsyaAllah",
+          "icon": "choice",
+          "text": "InsyaAllah",
+          "choiceId": "stage-7-plan"
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Ucap InsyaAllah",
+          "icon": "say",
+          "text": "Besok mengaji, InsyaAllah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "choice",
+          "choiceId": "stage-7-plan",
+          "text": "InsyaAllah",
+          "correct": true,
+          "icon": "choice",
+          "label": "Pilih InsyaAllah",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Besok mengaji, InsyaAllah",
+          "icon": "say",
+          "label": "Ucap InsyaAllah",
+          "color": "#b865dd"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-7-badge",
+        "badgeTitle": "Niat Baik",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-7-unlock",
+        "unlockTitle": "Stage 8"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 126,
+          "height": 76
+        },
+        "missionTitle": "Rencana Besok",
+        "startLabel": "START",
+        "goalLabel": "JANJI BAIK",
+        "points": [
+          {
+            "x": 290,
+            "y": 735,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 500,
+            "y": 735,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 500,
+            "y": 560,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 720,
+            "y": 560,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 900,
+            "y": 560,
+            "kind": "path",
+            "hint": "choice",
+            "hintColor": "#8b5cf6"
+          },
+          {
+            "x": 1090,
+            "y": 560,
+            "kind": "goal",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-7-plan",
+          "name": "Rencana Mengaji",
+          "file": "/assets/stages/shared/objects/planCard.png",
+          "kind": "choice",
+          "position": {
+            "x": 760,
+            "y": 480
+          },
+          "displaySize": {
+            "width": 150,
+            "height": 172
+          },
+          "interactionRadius": 290,
+          "label": "Rencana Besok",
+          "choiceText": "Besok mengaji, InsyaAllah.",
+          "depth": 1.25
+        }
+      ],
+      "startBackgroundId": "stage-7-bg-1"
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Susun rute menuju tempat mengaji dan sampaikan rencana baik dengan InsyaAllah.",
+      "maxCommands": 8,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Pilih InsyaAllah",
+          "icon": "choice",
+          "text": "InsyaAllah",
+          "choiceId": "stage-7-plan"
+        },
+        {
+          "order": 6,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "say",
+          "label": "Ucap InsyaAllah",
+          "icon": "say",
+          "text": "Besok mengaji, InsyaAllah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "choice",
+          "choiceId": "stage-7-plan",
+          "text": "InsyaAllah",
+          "correct": true,
+          "icon": "choice",
+          "label": "Pilih InsyaAllah",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Besok mengaji, InsyaAllah",
+          "icon": "say",
+          "label": "Ucap InsyaAllah",
+          "color": "#b865dd"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-7-badge",
+        "badgeTitle": "Rencana Rapi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-7-unlock",
+        "unlockTitle": "Stage 8"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 126,
+          "height": 76
+        },
+        "missionTitle": "Pergi Mengaji",
+        "startLabel": "START",
+        "goalLabel": "TEMPAT MENGAJI",
+        "points": [
+          {
+            "x": 285,
+            "y": 750,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 500,
+            "y": 750,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 500,
+            "y": 590,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 730,
+            "y": 590,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 900,
+            "y": 590,
+            "kind": "path",
+            "hint": "choice",
+            "hintColor": "#8b5cf6"
+          },
+          {
+            "x": 900,
+            "y": 420,
+            "actorPosition": {
+              "x": 730,
+              "y": 420
+            },
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1120,
+            "y": 420,
+            "actorPosition": {
+              "x": 1000,
+              "y": 420
+            },
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1300,
+            "y": 420,
+            "kind": "goal",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-7-plan",
+          "name": "Rencana Mengaji",
+          "file": "/assets/stages/shared/objects/planCard.png",
+          "kind": "choice",
+          "position": {
+            "x": 770,
+            "y": 535
+          },
+          "displaySize": {
+            "width": 150,
+            "height": 172
+          },
+          "interactionRadius": 290,
+          "label": "Rencana Besok",
+          "choiceText": "Besok mengaji, InsyaAllah.",
+          "depth": 1.25
+        }
+      ],
+      "startBackgroundId": "stage-7-bg-2"
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Selesaikan jalur berkelok, lalu rekam janji baik dengan suara sendiri.",
+      "maxCommands": 10,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Pilih InsyaAllah",
+          "icon": "choice",
+          "text": "InsyaAllah",
+          "choiceId": "stage-7-plan"
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "say",
+          "label": "Ucap InsyaAllah",
+          "icon": "say",
+          "text": "Besok mengaji, InsyaAllah"
+        },
+        {
+          "order": 10,
+          "command": "recordVoice",
+          "label": "Rekam Janji",
+          "icon": "mic",
+          "targetText": "Besok mengaji, InsyaAllah",
+          "duration": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "choice",
+          "choiceId": "stage-7-plan",
+          "text": "InsyaAllah",
+          "correct": true,
+          "icon": "choice",
+          "label": "Pilih InsyaAllah",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Besok mengaji, InsyaAllah",
+          "icon": "say",
+          "label": "Ucap InsyaAllah",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Besok mengaji, InsyaAllah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam Janji",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-7-badge",
+        "badgeTitle": "Penjaga Janji",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-7-unlock",
+        "unlockTitle": "Stage 8"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 108,
+          "height": 70
+        },
+        "missionTitle": "Janji Baik",
+        "startLabel": "START",
+        "goalLabel": "INSYAALLAH",
+        "points": [
+          {
+            "x": 275,
+            "y": 760,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 275,
+            "y": 610,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 490,
+            "y": 610,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 700,
+            "y": 610,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 865,
+            "y": 610,
+            "kind": "path",
+            "hint": "choice",
+            "hintColor": "#8b5cf6"
+          },
+          {
+            "x": 650,
+            "y": 610,
+            "actorPosition": {
+              "x": 500,
+              "y": 610
+            },
+            "kind": "path",
+            "hint": "moveLeft",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 650,
+            "y": 450,
+            "actorPosition": {
+              "x": 500,
+              "y": 450
+            },
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 890,
+            "y": 450,
+            "actorPosition": {
+              "x": 780,
+              "y": 450
+            },
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1080,
+            "y": 450,
+            "kind": "path",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          },
+          {
+            "x": 1270,
+            "y": 450,
+            "kind": "goal",
+            "hint": "recordVoice",
+            "hintColor": "#f0528d"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-7-plan",
+          "name": "Rencana Mengaji",
+          "file": "/assets/stages/shared/objects/planCard.png",
+          "kind": "choice",
+          "position": {
+            "x": 740,
+            "y": 540
+          },
+          "displaySize": {
+            "width": 150,
+            "height": 172
+          },
+          "interactionRadius": 290,
+          "label": "Rencana Besok",
+          "choiceText": "Besok mengaji, InsyaAllah.",
+          "depth": 1.25
+        }
+      ],
+      "startBackgroundId": "stage-7-bg-3"
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 5,
+      "command": "choice",
+      "label": "Pilih InsyaAllah",
+      "icon": "choice",
+      "text": "InsyaAllah",
+      "choiceId": "stage-7-plan"
+    },
+    {
+      "order": 6,
+      "command": "say",
+      "label": "Ucap InsyaAllah",
+      "icon": "say",
+      "text": "Besok mengaji, InsyaAllah"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 27,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 27,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 6,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 6,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "choice",
+      "choiceId": "stage-7-plan",
+      "text": "InsyaAllah",
+      "correct": true,
+      "icon": "choice",
+      "label": "Pilih InsyaAllah",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "say",
+      "text": "Besok mengaji, InsyaAllah",
+      "icon": "say",
+      "label": "Ucap InsyaAllah",
+      "color": "#b865dd"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "Besok mengaji, InsyaAllah",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam Janji",
+      "color": "#f0528d"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-7-badge",
+    "badgeTitle": "Niat Baik",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-7-unlock",
+    "unlockTitle": "Stage 8"
+  }
+}

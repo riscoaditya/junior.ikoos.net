@@ -14,6 +14,7 @@ type Props = {
   onDropCommand: (command: JuniorCommand, slotIndex: number) => void;
   embedded?: boolean;
   slotCount?: number;
+  instructionLabel?: string;
 };
 
 function readDroppedCommand(dataTransfer: DataTransfer) {
@@ -61,6 +62,7 @@ export default function JuniorScriptArea({
   onDropCommand,
   embedded = false,
   slotCount = 5,
+  instructionLabel = 'stage ini',
 }: Props) {
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
   const [columns, setColumns] = useState(5);
@@ -74,7 +76,7 @@ export default function JuniorScriptArea({
     if (!node) return;
 
     const updateColumns = () => {
-      const slotMinWidth = embedded ? 74 : 96;
+      const slotMinWidth = embedded ? 48 : 96;
       const fitColumns = Math.floor(node.clientWidth / slotMinWidth);
       const nextColumns = getBalancedColumns(totalSlots, fitColumns);
       setColumns(nextColumns);
@@ -99,80 +101,73 @@ export default function JuniorScriptArea({
         <button type="button" className={`clear-btn ${embedded ? 'compact' : ''}`} onClick={onClear}><UiIcon name="trash" /> Hapus Semua</button>
       </div>
 
-      <div
-        className={`train-track ${dragOverIndex === commands.length ? 'drop-target-track' : ''}`}
-        onDragOver={(event) => {
-          if (!event.dataTransfer.types.includes(DRAG_COMMAND_TYPE)) return;
-          event.preventDefault();
-          event.dataTransfer.dropEffect = 'copy';
-          setDragOverIndex(commands.length);
-        }}
-        onDragLeave={() => setDragOverIndex(null)}
-        onDrop={(event) => {
-          const droppedCommand = readDroppedCommand(event.dataTransfer);
-          if (!droppedCommand) return;
-          event.preventDefault();
-          setDragOverIndex(null);
-          onDropCommand(droppedCommand, commands.length);
-        }}
-      >
-        {embedded && <div className="train-inline-hint">Tarik ikon perintah ke kereta perintah di bawah ini.</div>}
+      <div className="train-board">
         <div className="train-engine"><TrainIllustration /></div>
-        <div className="train-slots" ref={slotsRef} style={slotGridStyle}>
-          {slotIndexes.map((index) => {
-            const command = commands[index];
-            const rowIndex = Math.floor(index / columns);
-            const positionInRow = index % columns;
-            const rowIsForward = rowIndex % 2 === 0;
-            const gridColumn = rowIsForward ? positionInRow + 1 : columns - positionInRow;
-            const hasNext = index < totalSlots - 1;
-            const wrapsToNextRow = hasNext && positionInRow === columns - 1;
-            const arrowClass = wrapsToNextRow
-              ? rowIsForward ? 'turn-right' : 'turn-left'
-              : rowIsForward ? 'right' : 'left';
 
-            return (
-              <div className="slot-wrap" key={index} style={{ gridColumn, gridRow: rowIndex + 1 }}>
-                <div
-                  className={`train-slot ${command ? 'filled' : ''} ${dragOverIndex === index ? 'drop-target' : ''}`}
-                  onDragOver={(event) => {
-                    if (!event.dataTransfer.types.includes(DRAG_COMMAND_TYPE)) return;
-                    event.preventDefault();
-                    event.stopPropagation();
-                    event.dataTransfer.dropEffect = 'copy';
-                    setDragOverIndex(index);
-                  }}
-                  onDragLeave={(event) => {
-                    event.stopPropagation();
-                    setDragOverIndex((current) => current === index ? null : current);
-                  }}
-                  onDrop={(event) => {
-                    const droppedCommand = readDroppedCommand(event.dataTransfer);
-                    if (!droppedCommand) return;
-                    event.preventDefault();
-                    event.stopPropagation();
-                    setDragOverIndex(null);
-                    onDropCommand(droppedCommand, index);
-                  }}
-                  aria-label={`Slot perintah ${index + 1}`}
-                >
-                  {command ? (
-                    <JuniorCommandBlock
-                      command={command}
-                      compact
-                      active={activeCommandId === command.id}
-                      onRemove={() => onRemove(command.id)}
-                    />
-                  ) : (
-                    <span className="slot-number">{index + 1}</span>
-                  )}
+        <div
+          className={`train-track ${dragOverIndex === commands.length ? 'drop-target-track' : ''}`}
+          onDragOver={(event) => {
+            if (!event.dataTransfer.types.includes(DRAG_COMMAND_TYPE)) return;
+            event.preventDefault();
+            event.dataTransfer.dropEffect = 'copy';
+            setDragOverIndex(commands.length);
+          }}
+          onDragLeave={() => setDragOverIndex(null)}
+          onDrop={(event) => {
+            const droppedCommand = readDroppedCommand(event.dataTransfer);
+            if (!droppedCommand) return;
+            event.preventDefault();
+            setDragOverIndex(null);
+            onDropCommand(droppedCommand, commands.length);
+          }}
+        >
+          {embedded && <div className="train-inline-hint">Tarik ikon perintah ke kereta perintah di bawah ini.</div>}
+          <div className="train-slots" ref={slotsRef} style={slotGridStyle}>
+            {slotIndexes.map((index) => {
+              const command = commands[index];
+
+              return (
+                <div className="slot-wrap" key={index}>
+                  <div
+                    className={`train-slot ${command ? 'filled' : ''} ${dragOverIndex === index ? 'drop-target' : ''}`}
+                    onDragOver={(event) => {
+                      if (!event.dataTransfer.types.includes(DRAG_COMMAND_TYPE)) return;
+                      event.preventDefault();
+                      event.stopPropagation();
+                      event.dataTransfer.dropEffect = 'copy';
+                      setDragOverIndex(index);
+                    }}
+                    onDragLeave={(event) => {
+                      event.stopPropagation();
+                      setDragOverIndex((current) => current === index ? null : current);
+                    }}
+                    onDrop={(event) => {
+                      const droppedCommand = readDroppedCommand(event.dataTransfer);
+                      if (!droppedCommand) return;
+                      event.preventDefault();
+                      event.stopPropagation();
+                      setDragOverIndex(null);
+                      onDropCommand(droppedCommand, index);
+                    }}
+                    aria-label={`Slot perintah ${index + 1}`}
+                  >
+                    {command ? (
+                      <JuniorCommandBlock
+                        command={command}
+                        compact
+                        active={activeCommandId === command.id}
+                        onRemove={() => onRemove(command.id)}
+                      />
+                    ) : (
+                      <span className="slot-number">{index + 1}</span>
+                    )}
+                  </div>
                 </div>
-                {hasNext && <span className={`slot-arrow ${arrowClass}`} aria-hidden="true" />}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          {!embedded && <div className="train-note"><UiIcon name="lightbulb" /> Susun perintah sesuai instruksi {instructionLabel}, lalu tekan <b>Play</b>.</div>}
         </div>
-        {!embedded && <div className="train-note"><UiIcon name="lightbulb" /> Susun perintah sesuai instruksi Stage 1 di atas, lalu tekan <b>Play</b> untuk melihat hasilnya.</div>}
       </div>
     </section>
   );

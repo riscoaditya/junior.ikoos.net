@@ -1,132 +1,675 @@
 {
   "id": "stage-1",
-  "stageSize": { "width": 1500, "height": 1000, "aspectRatio": "3:2" },
-  "title": "Masjid Ceria",
-  "description": "Susun perintah agar karakter berjalan ke masjid, lompat, bicara, dan mengeluarkan suara.",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Mengucap Salam",
+  "description": "Kita belajar menjadi anak baik dengan selalu mengucap salam.",
   "thumbnail": "/assets/stages/stage-1/thumbnails/stage-preview.png",
   "status": "active",
   "difficulty": 1,
-  "maxCommands": 5,
+  "maxCommands": 10,
   "ui": {
     "stageLabel": "Stage 1",
-    "tip": "Tekan Play untuk mulai!",
-    "theme": "islamic-green"
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
   },
   "backgrounds": [
     {
       "id": "masjid-ceria",
       "name": "Masjid Ceria",
       "file": "/assets/stages/stage-1/backgrounds/masjid.png",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/masjid.png"
+      "thumbnail": "/assets/stages/stage-1/thumbnails/masjid.png",
+      "fit": "cover"
     },
     {
       "id": "taman",
       "name": "Taman Ceria",
       "file": "/assets/stages/stage-1/backgrounds/taman.png",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/taman.png"
+      "thumbnail": "/assets/stages/stage-1/thumbnails/taman.png",
+      "fit": "cover"
     },
     {
       "id": "sekolah",
       "name": "Sekolah Ceria",
       "file": "/assets/stages/stage-1/backgrounds/sekolah.png",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/sekolah.png"
+      "thumbnail": "/assets/stages/stage-1/thumbnails/sekolah.png",
+      "fit": "cover"
     }
   ],
   "characters": [
     {
       "id": "anak-muslim",
-      "name": "Anak Muslim",
-      "file": "/assets/stages/stage-1/characters/anak-muslim-laki2.png",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/anak-muslim-laki2.png",
-      "startPosition": { "x": 340, "y": 720 },
-      "displaySize": { "width": 360, "height": 360 },
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
       "scale": 1
     },
     {
       "id": "anak-ceria",
-      "name": "Anak Ceria",
-      "file": "/assets/stages/stage-1/characters/anak-muslim-perempuan.png",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/anak-muslim-perempuan.png",
-      "startPosition": { "x": 340, "y": 720 },
-      "displaySize": { "width": 360, "height": 360 },
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
       "scale": 1
     },
     {
       "id": "kucing-lucu",
-      "name": "Kucing Lucu",
+      "name": "Kucing",
       "file": "/assets/stages/stage-1/characters/kucing.png",
       "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
-      "startPosition": { "x": 340, "y": 760 },
-      "displaySize": { "width": 320, "height": 320 },
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
       "scale": 1
     }
   ],
-  "objects": [],
+  "objects": [
+    {
+      "id": "friend-salam",
+      "name": "Teman",
+      "file": "/assets/stages/shared/characters/teman-main.png",
+      "kind": "npc",
+      "position": {
+        "x": 910,
+        "y": 670
+      },
+      "displaySize": {
+        "width": 585,
+        "height": 585
+      },
+      "interactionRadius": 210,
+      "showHalo": false,
+      "label": "Teman",
+      "choiceText": "Assalamu'alaikum!"
+    }
+  ],
   "sounds": [
-    { "id": "pop", "name": "Pop", "file": "/assets/stages/stage-1/sounds/pop.wav" },
-    { "id": "success", "name": "Success", "file": "/assets/stages/stage-1/sounds/success.wav" },
-    { "id": "salam", "name": "Salam", "file": "/assets/stages/stage-1/sounds/salam.wav" }
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
   ],
   "levels": [
     {
       "id": "level-1",
-      "title": "Level 1",
+      "title": "Lv 1",
       "label": "Lv 1",
-      "description": "Mulai dari bendera, jalan ke kanan, lompat, bicara, lalu mainkan suara.",
+      "description": "Jalan ke teman lalu ucap salam.",
       "maxCommands": 5,
       "instructions": [
-        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
-        { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
-        { "order": 3, "command": "jump", "label": "Lompat 4", "icon": "jump", "value": 4 },
-        { "order": 4, "command": "say", "label": "Bicara", "icon": "say", "text": "Assalamu'alaikum!" },
-        { "order": 5, "command": "sound", "label": "Suara", "icon": "sound", "soundId": "salam" }
-      ]
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Assalamu'alaikum!"
+        },
+        {
+          "order": 5,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "salam"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "salam",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Assalamu'alaikum!",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Assalamu'alaikum!",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-1-badge",
+        "badgeTitle": "Pemula Salam",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-1-unlock",
+        "unlockTitle": "Stage 2"
+      }
     },
     {
       "id": "level-2",
-      "title": "Level 2",
+      "title": "Lv 2",
       "label": "Lv 2",
-      "description": "Latihan urutan bicara lebih cepat setelah karakter berjalan.",
-      "maxCommands": 5,
+      "description": "Jalur sedikit lebih menantang tanpa blok tunggu.",
+      "maxCommands": 7,
       "instructions": [
-        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
-        { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
-        { "order": 3, "command": "say", "label": "Bicara", "icon": "say", "text": "Assalamu'alaikum!" },
-        { "order": 4, "command": "wait", "label": "Tunggu 1", "icon": "wait", "value": 1 },
-        { "order": 5, "command": "sound", "label": "Suara", "icon": "sound", "soundId": "salam" }
-      ]
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Assalamu'alaikum!"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "salam"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "salam",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Assalamu'alaikum!",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Assalamu'alaikum!",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-1-badge",
+        "badgeTitle": "Salam Rapi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-1-unlock",
+        "unlockTitle": "Stage 2"
+      }
     },
     {
       "id": "level-3",
-      "title": "Level 3",
+      "title": "Lv 3",
       "label": "Lv 3",
-      "description": "Tantangan: susun gerakan dan suara tanpa instruksi bicara di tengah.",
-      "maxCommands": 5,
+      "description": "Susun 10 blok, dekati teman, lalu rekam salam dengan suara sendiri.",
+      "maxCommands": 10,
       "instructions": [
-        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
-        { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
-        { "order": 3, "command": "jump", "label": "Lompat 4", "icon": "jump", "value": 4 },
-        { "order": 4, "command": "moveRight", "label": "Kanan 5", "icon": "arrow-right", "value": 5 },
-        { "order": 5, "command": "sound", "label": "Suara", "icon": "sound", "soundId": "salam" }
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Assalamu'alaikum!"
+        },
+        {
+          "order": 10,
+          "command": "recordVoice",
+          "label": "Rekam",
+          "icon": "mic",
+          "targetText": "Assalamu'alaikum!",
+          "duration": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "salam",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Assalamu'alaikum!",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Assalamu'alaikum!",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-1-badge",
+        "badgeTitle": "Sahabat Salam",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-1-unlock",
+        "unlockTitle": "Stage 2"
+      },
+      "objects": [
+        {
+          "id": "friend-salam",
+          "name": "Teman",
+          "file": "/assets/stages/shared/characters/teman-main.png",
+          "kind": "npc",
+          "position": {
+            "x": 1180,
+            "y": 670
+          },
+          "displaySize": {
+            "width": 585,
+            "height": 585
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "label": "Teman",
+          "choiceText": "Assalamu'alaikum!"
+        }
       ]
     }
   ],
   "instructions": [
-    { "order": 1, "command": "start", "label": "Start", "icon": "🚩" },
-    { "order": 2, "command": "moveRight", "label": "Kanan 5", "icon": "➡️", "value": 5 },
-    { "order": 3, "command": "jump", "label": "Lompat 4", "icon": "⬆️", "value": 4 },
-    { "order": 4, "command": "say", "label": "Bicara", "icon": "💬", "text": "Assalamu'alaikum!" },
-    { "order": 5, "command": "sound", "label": "Suara", "icon": "🔊", "soundId": "salam" }
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 7,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 7,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "say",
+      "label": "Bicara",
+      "icon": "say",
+      "text": "Assalamu'alaikum!"
+    },
+    {
+      "order": 5,
+      "command": "sound",
+      "label": "Suara",
+      "icon": "sound",
+      "soundId": "salam"
+    }
   ],
   "commands": [
-    { "type": "start", "icon": "🚩", "label": "Start", "color": "#ffd84d" },
-    { "type": "moveRight", "value": 5, "icon": "➡️", "label": "Kanan 5", "color": "#168eea" },
-    { "type": "moveLeft", "value": 5, "icon": "➡️", "label": "Kiri 5", "color": "#168eea" },
-    { "type": "moveUp", "value": 4, "icon": "⬆️", "label": "Naik 4", "color": "#168eea" },
-    { "type": "moveDown", "value": 4, "icon": "⬆️", "label": "Turun 4", "color": "#168eea" },
-    { "type": "jump", "value": 4, "icon": "🦘", "label": "Lompat 4", "color": "#ff9f18" },
-    { "type": "say", "text": "Assalamu'alaikum!", "icon": "💬", "label": "Bicara", "color": "#b865dd" },
-    { "type": "sound", "soundId": "salam", "icon": "🔊", "label": "Suara", "color": "#27c488" },
-    { "type": "wait", "value": 1, "icon": "⌛", "label": "Tunggu", "color": "#ff8a96" }
-  ]
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 3,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 3,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 3,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "sound",
+      "soundId": "salam",
+      "icon": "sound",
+      "label": "Suara",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "Assalamu'alaikum!",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "Assalamu'alaikum!",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam",
+      "color": "#f0528d"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-1-badge",
+    "badgeTitle": "Pemula Salam",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-1-unlock",
+    "unlockTitle": "Stage 2"
+  }
 }

@@ -1,0 +1,313 @@
+{
+  "id": "stage-11",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Belajar Wudhu",
+  "description": "Susun urutan wudhu yang benar. Basuhan utama dilakukan 3 kali, sedangkan kepala dan telinga diusap 1 kali.",
+  "thumbnail": "/assets/stages/stage-11/backgrounds/wudhu-awal-v2.png",
+  "status": "active",
+  "difficulty": 11,
+  "maxCommands": 28,
+  "ui": {
+    "stageLabel": "Stage 11",
+    "tip": "Mulai dengan Bismillah, dahulukan bagian kanan, lakukan dengan tertib, lalu akhiri dengan membasuh kaki sampai mata kaki.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-11-bg-awal",
+      "name": "Area Wudhu Ceria",
+      "file": "/assets/stages/stage-11/backgrounds/wudhu-awal-v2.png",
+      "thumbnail": "/assets/stages/stage-11/backgrounds/wudhu-awal-v2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-11-bg-lanjutan",
+      "name": "Paviliun Wudhu",
+      "file": "/assets/stages/stage-11/backgrounds/wudhu-lanjutan-v2.png",
+      "thumbnail": "/assets/stages/stage-11/backgrounds/wudhu-lanjutan-v2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-11-bg-lengkap",
+      "name": "Taman Wudhu Tertib",
+      "file": "/assets/stages/stage-11/backgrounds/wudhu-lengkap-v2.png",
+      "thumbnail": "/assets/stages/stage-11/backgrounds/wudhu-lengkap-v2.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": { "x": 430, "y": 680 },
+      "displaySize": { "width": 650, "height": 650 },
+      "scale": 1
+    }
+  ],
+  "wudhuActions": [
+    {
+      "id": "wudhu-tangan",
+      "name": "Cuci Tangan",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-tangan-v2.png",
+      "cue": "Cuci kedua tangan hingga pergelangan.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-kumur",
+      "name": "Berkumur",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-kumur-v2.png",
+      "cue": "Berkumur, lalu keluarkan air.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-hidung",
+      "name": "Bersihkan Hidung",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-hidung-v2.png",
+      "cue": "Bersihkan hidung dengan lembut.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-wajah",
+      "name": "Basuh Wajah",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-wajah-v2.png",
+      "cue": "Basuh seluruh wajah.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-lengan-kanan",
+      "name": "Lengan Kanan",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-lengan-v2.png",
+      "cue": "Basuh lengan kanan sampai siku.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-lengan-kiri",
+      "name": "Lengan Kiri",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-lengan-v2.png",
+      "cue": "Lanjutkan membasuh lengan kiri sampai siku.",
+      "displaySize": { "width": 650, "height": 650 },
+      "flipX": true
+    },
+    {
+      "id": "wudhu-kepala",
+      "name": "Usap Kepala",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-kepala-v2.png",
+      "cue": "Usap kepala 1 kali dengan tangan yang basah.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-telinga",
+      "name": "Bersihkan Telinga",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-telinga-v2.png",
+      "cue": "Bersihkan kedua telinga 1 kali.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-kaki-kanan",
+      "name": "Kaki Kanan",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-kaki-v2.png",
+      "cue": "Basuh kaki kanan sampai mata kaki.",
+      "displaySize": { "width": 650, "height": 650 }
+    },
+    {
+      "id": "wudhu-kaki-kiri",
+      "name": "Kaki Kiri",
+      "file": "/assets/stages/stage-11/characters/ali-wudhu-kaki-v2.png",
+      "cue": "Lanjutkan membasuh kaki kiri sampai mata kaki.",
+      "displaySize": { "width": 650, "height": 650 },
+      "flipX": true
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    { "id": "pop", "name": "Pop", "file": "/assets/stages/stage-1/sounds/pop.wav" },
+    { "id": "success", "name": "Success", "file": "/assets/stages/stage-1/sounds/success.wav" },
+    { "id": "bismillah", "name": "Bismillah", "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3" }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Gerakan Awal 3 Kali",
+      "label": "Lv 1",
+      "description": "Mulai dengan Bismillah. Cuci tangan, berkumur, bersihkan hidung, dan basuh wajah—masing-masing 3 kali.",
+      "maxCommands": 14,
+      "startBackgroundId": "stage-11-bg-awal",
+      "completionMessage": "Hebat! Empat gerakan awal sudah dilakukan masing-masing tiga kali.",
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+        { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+        { "order": 3, "command": "wudhu", "label": "Cuci Tangan 1/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+        { "order": 4, "command": "wudhu", "label": "Cuci Tangan 2/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+        { "order": 5, "command": "wudhu", "label": "Cuci Tangan 3/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+        { "order": 6, "command": "wudhu", "label": "Berkumur 1/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+        { "order": 7, "command": "wudhu", "label": "Berkumur 2/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+        { "order": 8, "command": "wudhu", "label": "Berkumur 3/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+        { "order": 9, "command": "wudhu", "label": "Bersihkan Hidung 1/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+        { "order": 10, "command": "wudhu", "label": "Bersihkan Hidung 2/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+        { "order": 11, "command": "wudhu", "label": "Bersihkan Hidung 3/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+        { "order": 12, "command": "wudhu", "label": "Basuh Wajah 1/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+        { "order": 13, "command": "wudhu", "label": "Basuh Wajah 2/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+        { "order": 14, "command": "wudhu", "label": "Basuh Wajah 3/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" }
+      ],
+      "commands": [
+        { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+        { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#22c55e" },
+        { "type": "wudhu", "actionId": "wudhu-tangan", "icon": "wudhu-tangan", "label": "Cuci Tangan", "color": "#0891b2" },
+        { "type": "wudhu", "actionId": "wudhu-kumur", "icon": "wudhu-kumur", "label": "Berkumur", "color": "#0ea5e9" },
+        { "type": "wudhu", "actionId": "wudhu-hidung", "icon": "wudhu-hidung", "label": "Bersihkan Hidung", "color": "#2563eb" },
+        { "type": "wudhu", "actionId": "wudhu-wajah", "icon": "wudhu-wajah", "label": "Basuh Wajah", "color": "#6366f1" }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-11-level-1-badge",
+        "badgeTitle": "Gerakan Awal Wudhu",
+        "badgeText": "Kamu sudah memahami empat gerakan awal dan hitungan tiga kali.",
+        "unlockId": "stage-11-level-2-unlock",
+        "unlockTitle": "Gerakan Kanan dan Kiri"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Gerakan Kanan dan Kiri",
+      "label": "Lv 2",
+      "description": "Basuh lengan kanan dan kiri 3 kali, usap kepala dan telinga 1 kali, lalu basuh kaki kanan dan kiri 3 kali.",
+      "maxCommands": 15,
+      "startBackgroundId": "stage-11-bg-lanjutan",
+      "completionMessage": "MasyaAllah! Kamu sudah mendahulukan bagian kanan dan menyelesaikan gerakan sampai kaki.",
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+        { "order": 2, "command": "wudhu", "label": "Lengan Kanan 1/3", "icon": "wudhu-lengan-kanan", "actionId": "wudhu-lengan-kanan" },
+        { "order": 3, "command": "wudhu", "label": "Lengan Kanan 2/3", "icon": "wudhu-lengan-kanan", "actionId": "wudhu-lengan-kanan" },
+        { "order": 4, "command": "wudhu", "label": "Lengan Kanan 3/3", "icon": "wudhu-lengan-kanan", "actionId": "wudhu-lengan-kanan" },
+        { "order": 5, "command": "wudhu", "label": "Lengan Kiri 1/3", "icon": "wudhu-lengan-kiri", "actionId": "wudhu-lengan-kiri" },
+        { "order": 6, "command": "wudhu", "label": "Lengan Kiri 2/3", "icon": "wudhu-lengan-kiri", "actionId": "wudhu-lengan-kiri" },
+        { "order": 7, "command": "wudhu", "label": "Lengan Kiri 3/3", "icon": "wudhu-lengan-kiri", "actionId": "wudhu-lengan-kiri" },
+        { "order": 8, "command": "wudhu", "label": "Usap Kepala 1 Kali", "icon": "wudhu-kepala", "actionId": "wudhu-kepala" },
+        { "order": 9, "command": "wudhu", "label": "Bersihkan Telinga 1 Kali", "icon": "wudhu-telinga", "actionId": "wudhu-telinga" },
+        { "order": 10, "command": "wudhu", "label": "Kaki Kanan 1/3", "icon": "wudhu-kaki-kanan", "actionId": "wudhu-kaki-kanan" },
+        { "order": 11, "command": "wudhu", "label": "Kaki Kanan 2/3", "icon": "wudhu-kaki-kanan", "actionId": "wudhu-kaki-kanan" },
+        { "order": 12, "command": "wudhu", "label": "Kaki Kanan 3/3", "icon": "wudhu-kaki-kanan", "actionId": "wudhu-kaki-kanan" },
+        { "order": 13, "command": "wudhu", "label": "Kaki Kiri 1/3", "icon": "wudhu-kaki-kiri", "actionId": "wudhu-kaki-kiri" },
+        { "order": 14, "command": "wudhu", "label": "Kaki Kiri 2/3", "icon": "wudhu-kaki-kiri", "actionId": "wudhu-kaki-kiri" },
+        { "order": 15, "command": "wudhu", "label": "Kaki Kiri 3/3", "icon": "wudhu-kaki-kiri", "actionId": "wudhu-kaki-kiri" }
+      ],
+      "commands": [
+        { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+        { "type": "wudhu", "actionId": "wudhu-lengan-kanan", "icon": "wudhu-lengan-kanan", "label": "Lengan Kanan", "color": "#8b5cf6" },
+        { "type": "wudhu", "actionId": "wudhu-lengan-kiri", "icon": "wudhu-lengan-kiri", "label": "Lengan Kiri", "color": "#7c3aed" },
+        { "type": "wudhu", "actionId": "wudhu-kepala", "icon": "wudhu-kepala", "label": "Usap Kepala", "color": "#a855f7" },
+        { "type": "wudhu", "actionId": "wudhu-telinga", "icon": "wudhu-telinga", "label": "Bersihkan Telinga", "color": "#d946ef" },
+        { "type": "wudhu", "actionId": "wudhu-kaki-kanan", "icon": "wudhu-kaki-kanan", "label": "Kaki Kanan", "color": "#ec4899" },
+        { "type": "wudhu", "actionId": "wudhu-kaki-kiri", "icon": "wudhu-kaki-kiri", "label": "Kaki Kiri", "color": "#e11d48" }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-11-level-2-badge",
+        "badgeTitle": "Dahulukan yang Kanan",
+        "badgeText": "Kamu sudah memahami urutan kanan, kiri, kepala, telinga, dan kaki.",
+        "unlockId": "stage-11-level-3-unlock",
+        "unlockTitle": "Urutan Wudhu Lengkap"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Urutan Wudhu Lengkap",
+      "label": "Lv 3",
+      "description": "Rangkai seluruh urutan: Bismillah, basuhan 3 kali, bagian kanan sebelum kiri, serta usap kepala dan telinga 1 kali.",
+      "maxCommands": 28,
+      "startBackgroundId": "stage-11-bg-lengkap",
+      "completionMessage": "Alhamdulillah! Urutan wudhu lengkap sudah kamu susun dengan benar dan tertib.",
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+        { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+        { "order": 3, "command": "wudhu", "label": "Cuci Tangan 1/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+        { "order": 4, "command": "wudhu", "label": "Cuci Tangan 2/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+        { "order": 5, "command": "wudhu", "label": "Cuci Tangan 3/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+        { "order": 6, "command": "wudhu", "label": "Berkumur 1/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+        { "order": 7, "command": "wudhu", "label": "Berkumur 2/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+        { "order": 8, "command": "wudhu", "label": "Berkumur 3/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+        { "order": 9, "command": "wudhu", "label": "Bersihkan Hidung 1/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+        { "order": 10, "command": "wudhu", "label": "Bersihkan Hidung 2/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+        { "order": 11, "command": "wudhu", "label": "Bersihkan Hidung 3/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+        { "order": 12, "command": "wudhu", "label": "Basuh Wajah 1/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+        { "order": 13, "command": "wudhu", "label": "Basuh Wajah 2/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+        { "order": 14, "command": "wudhu", "label": "Basuh Wajah 3/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+        { "order": 15, "command": "wudhu", "label": "Lengan Kanan 1/3", "icon": "wudhu-lengan-kanan", "actionId": "wudhu-lengan-kanan" },
+        { "order": 16, "command": "wudhu", "label": "Lengan Kanan 2/3", "icon": "wudhu-lengan-kanan", "actionId": "wudhu-lengan-kanan" },
+        { "order": 17, "command": "wudhu", "label": "Lengan Kanan 3/3", "icon": "wudhu-lengan-kanan", "actionId": "wudhu-lengan-kanan" },
+        { "order": 18, "command": "wudhu", "label": "Lengan Kiri 1/3", "icon": "wudhu-lengan-kiri", "actionId": "wudhu-lengan-kiri" },
+        { "order": 19, "command": "wudhu", "label": "Lengan Kiri 2/3", "icon": "wudhu-lengan-kiri", "actionId": "wudhu-lengan-kiri" },
+        { "order": 20, "command": "wudhu", "label": "Lengan Kiri 3/3", "icon": "wudhu-lengan-kiri", "actionId": "wudhu-lengan-kiri" },
+        { "order": 21, "command": "wudhu", "label": "Usap Kepala 1 Kali", "icon": "wudhu-kepala", "actionId": "wudhu-kepala" },
+        { "order": 22, "command": "wudhu", "label": "Bersihkan Telinga 1 Kali", "icon": "wudhu-telinga", "actionId": "wudhu-telinga" },
+        { "order": 23, "command": "wudhu", "label": "Kaki Kanan 1/3", "icon": "wudhu-kaki-kanan", "actionId": "wudhu-kaki-kanan" },
+        { "order": 24, "command": "wudhu", "label": "Kaki Kanan 2/3", "icon": "wudhu-kaki-kanan", "actionId": "wudhu-kaki-kanan" },
+        { "order": 25, "command": "wudhu", "label": "Kaki Kanan 3/3", "icon": "wudhu-kaki-kanan", "actionId": "wudhu-kaki-kanan" },
+        { "order": 26, "command": "wudhu", "label": "Kaki Kiri 1/3", "icon": "wudhu-kaki-kiri", "actionId": "wudhu-kaki-kiri" },
+        { "order": 27, "command": "wudhu", "label": "Kaki Kiri 2/3", "icon": "wudhu-kaki-kiri", "actionId": "wudhu-kaki-kiri" },
+        { "order": 28, "command": "wudhu", "label": "Kaki Kiri 3/3", "icon": "wudhu-kaki-kiri", "actionId": "wudhu-kaki-kiri" }
+      ],
+      "commands": [
+        { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+        { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#22c55e" },
+        { "type": "wudhu", "actionId": "wudhu-tangan", "icon": "wudhu-tangan", "label": "Cuci Tangan", "color": "#0891b2" },
+        { "type": "wudhu", "actionId": "wudhu-kumur", "icon": "wudhu-kumur", "label": "Berkumur", "color": "#0ea5e9" },
+        { "type": "wudhu", "actionId": "wudhu-hidung", "icon": "wudhu-hidung", "label": "Bersihkan Hidung", "color": "#2563eb" },
+        { "type": "wudhu", "actionId": "wudhu-wajah", "icon": "wudhu-wajah", "label": "Basuh Wajah", "color": "#6366f1" },
+        { "type": "wudhu", "actionId": "wudhu-lengan-kanan", "icon": "wudhu-lengan-kanan", "label": "Lengan Kanan", "color": "#8b5cf6" },
+        { "type": "wudhu", "actionId": "wudhu-lengan-kiri", "icon": "wudhu-lengan-kiri", "label": "Lengan Kiri", "color": "#7c3aed" },
+        { "type": "wudhu", "actionId": "wudhu-kepala", "icon": "wudhu-kepala", "label": "Usap Kepala", "color": "#a855f7" },
+        { "type": "wudhu", "actionId": "wudhu-telinga", "icon": "wudhu-telinga", "label": "Bersihkan Telinga", "color": "#d946ef" },
+        { "type": "wudhu", "actionId": "wudhu-kaki-kanan", "icon": "wudhu-kaki-kanan", "label": "Kaki Kanan", "color": "#ec4899" },
+        { "type": "wudhu", "actionId": "wudhu-kaki-kiri", "icon": "wudhu-kaki-kiri", "label": "Kaki Kiri", "color": "#e11d48" }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-11-level-3-badge",
+        "badgeTitle": "Sahabat Wudhu Tertib",
+        "badgeText": "Kamu berhasil menyusun urutan lengkap, jumlah basuhan, serta kanan dan kiri dengan benar.",
+        "unlockId": "stage-11-unlock",
+        "unlockTitle": "Stage 12"
+      }
+    }
+  ],
+  "instructions": [
+    { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+    { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+    { "order": 3, "command": "wudhu", "label": "Cuci Tangan 1/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+    { "order": 4, "command": "wudhu", "label": "Cuci Tangan 2/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+    { "order": 5, "command": "wudhu", "label": "Cuci Tangan 3/3", "icon": "wudhu-tangan", "actionId": "wudhu-tangan" },
+    { "order": 6, "command": "wudhu", "label": "Berkumur 1/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+    { "order": 7, "command": "wudhu", "label": "Berkumur 2/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+    { "order": 8, "command": "wudhu", "label": "Berkumur 3/3", "icon": "wudhu-kumur", "actionId": "wudhu-kumur" },
+    { "order": 9, "command": "wudhu", "label": "Bersihkan Hidung 1/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+    { "order": 10, "command": "wudhu", "label": "Bersihkan Hidung 2/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+    { "order": 11, "command": "wudhu", "label": "Bersihkan Hidung 3/3", "icon": "wudhu-hidung", "actionId": "wudhu-hidung" },
+    { "order": 12, "command": "wudhu", "label": "Basuh Wajah 1/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+    { "order": 13, "command": "wudhu", "label": "Basuh Wajah 2/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" },
+    { "order": 14, "command": "wudhu", "label": "Basuh Wajah 3/3", "icon": "wudhu-wajah", "actionId": "wudhu-wajah" }
+  ],
+  "commands": [
+    { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+    { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#22c55e" },
+    { "type": "wudhu", "actionId": "wudhu-tangan", "icon": "wudhu-tangan", "label": "Cuci Tangan", "color": "#0891b2" },
+    { "type": "wudhu", "actionId": "wudhu-kumur", "icon": "wudhu-kumur", "label": "Berkumur", "color": "#0ea5e9" },
+    { "type": "wudhu", "actionId": "wudhu-hidung", "icon": "wudhu-hidung", "label": "Bersihkan Hidung", "color": "#2563eb" },
+    { "type": "wudhu", "actionId": "wudhu-wajah", "icon": "wudhu-wajah", "label": "Basuh Wajah", "color": "#6366f1" }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-11-level-3-badge",
+    "badgeTitle": "Sahabat Wudhu Tertib",
+    "badgeText": "Kamu berhasil menyusun urutan lengkap, jumlah basuhan, serta kanan dan kiri dengan benar.",
+    "unlockId": "stage-11-unlock",
+    "unlockTitle": "Stage 12"
+  }
+}

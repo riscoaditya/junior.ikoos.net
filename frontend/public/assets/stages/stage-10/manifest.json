@@ -1,0 +1,436 @@
+{
+  "id": "stage-10",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Tolong, Maaf, Terima Kasih",
+  "description": "Susun rute sosial, rapikan benda, pilih kata yang tepat, lalu rekam ucapanmu sendiri.",
+  "thumbnail": "/assets/stages/stage-10/backgrounds/classroom-tolong-v2.png",
+  "status": "active",
+  "difficulty": 10,
+  "maxCommands": 31,
+  "ui": {
+    "stageLabel": "Stage 10",
+    "tip": "Perhatikan situasinya: minta tolong dengan sopan, berani meminta maaf, lalu ucapkan terima kasih dengan suara sendiri.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-10-bg-1",
+      "name": "Kelas Kata Tolong",
+      "file": "/assets/stages/stage-10/backgrounds/classroom-tolong-v2.png",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/classroom-tolong-v2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-10-bg-2",
+      "name": "Pojok Berani Minta Maaf",
+      "file": "/assets/stages/stage-10/backgrounds/creative-corner-maaf-v2.png",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/creative-corner-maaf-v2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-10-bg-3",
+      "name": "Aula Tiga Kata Baik",
+      "file": "/assets/stages/stage-10/backgrounds/friendship-hall-v2.png",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/friendship-hall-v2.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": { "x": 260, "y": 700 },
+      "displaySize": { "width": 520, "height": 520 },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": { "x": 260, "y": 700 },
+      "displaySize": { "width": 520, "height": 520 },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Kata Tolong",
+      "label": "Lv 1",
+      "description": "Temui teman, pilih kata yang sopan, rekam permintaan tolong, pinjam pensil, lalu kembalikan.",
+      "maxCommands": 13,
+      "startBackgroundId": "stage-10-bg-1",
+      "completionMessage": "Hebat! Kamu sudah meminta tolong dengan sopan dan mengembalikan barang pinjaman.",
+      "objects": [
+        {
+          "id": "friend-tolong-l1",
+          "name": "Teman Pemilik Pensil",
+          "file": "/assets/stages/shared/characters/teman-main.png",
+          "kind": "choice",
+          "position": { "x": 720, "y": 390 },
+          "displaySize": { "width": 520, "height": 520 },
+          "interactionRadius": 300,
+          "showHalo": false,
+          "label": "Teman",
+          "choiceText": "Tolong, boleh pinjam pensil?",
+          "dropText": "Pensil sudah dikembalikan. Terima kasih!"
+        },
+        {
+          "id": "blue-pencil-l1",
+          "name": "Pensil",
+          "file": "/assets/stages/shared/objects/pencil.png",
+          "kind": "collectible",
+          "position": { "x": 730, "y": 610 },
+          "displaySize": { "width": 120, "height": 120 },
+          "interactionRadius": 240,
+          "targetId": "friend-tolong-l1",
+          "label": "Pensil",
+          "pickupText": "Pensil dipinjam. Gunakan dengan hati-hati."
+        }
+      ],
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+        { "order": 2, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 3, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 4, "command": "moveRight", "label": "Dekati Teman", "icon": "arrow-right", "value": 7 },
+        { "order": 5, "command": "choice", "label": "Pilih Kata Tolong", "icon": "choice", "text": "Tolong", "choiceId": "friend-tolong-l1" },
+        { "order": 6, "command": "recordVoice", "label": "Rekam Ucapan Tolong", "icon": "mic", "targetText": "Tolong, boleh pinjam pensil biru?", "duration": 4 },
+        { "order": 7, "command": "moveRight", "label": "Dekati Pensil", "icon": "arrow-right", "value": 7 },
+        { "order": 8, "command": "pick", "label": "Pinjam Pensil", "icon": "pick", "objectId": "blue-pencil-l1" },
+        { "order": 9, "command": "moveDown", "label": "Turun 6", "icon": "arrow-down", "value": 6 },
+        { "order": 10, "command": "moveRight", "label": "Gunakan Pensil", "icon": "arrow-right", "value": 7 },
+        { "order": 11, "command": "moveLeft", "label": "Kembali", "icon": "arrow-left", "value": 7 },
+        { "order": 12, "command": "moveUp", "label": "Dekati Teman", "icon": "arrow-up", "value": 6 },
+        { "order": 13, "command": "drop", "label": "Kembalikan Pensil", "icon": "drop", "targetId": "friend-tolong-l1" }
+      ],
+      "commands": [
+        { "type": "start", "icon": "flag", "label": "Start", "color": "#ffd84d" },
+        { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+        { "type": "moveLeft", "value": 7, "icon": "arrow-left", "label": "Kiri 7", "color": "#168eea" },
+        { "type": "moveUp", "value": 6, "icon": "arrow-up", "label": "Naik 6", "color": "#168eea" },
+        { "type": "moveDown", "value": 6, "icon": "arrow-down", "label": "Turun 6", "color": "#168eea" },
+        { "type": "choice", "choiceId": "friend-tolong-l1", "text": "Tolong", "correct": true, "icon": "choice", "label": "Pilih Tolong", "color": "#8b5cf6" },
+        { "type": "recordVoice", "targetText": "Tolong, boleh pinjam pensil biru?", "duration": 4, "icon": "mic", "label": "Rekam Tolong", "color": "#f0528d" },
+        { "type": "pick", "objectId": "blue-pencil-l1", "icon": "pick", "label": "Pinjam Pensil", "color": "#f97316" },
+        { "type": "drop", "targetId": "friend-tolong-l1", "icon": "drop", "label": "Kembalikan", "color": "#14b8a6" },
+        { "type": "choice", "choiceId": "wrong-grab-l1", "text": "Aku ambil, ya", "correct": false, "icon": "choice", "label": "Ambil Saja", "color": "#94a3b8" },
+        { "type": "choice", "choiceId": "wrong-command-l1", "text": "Cepat pinjamkan", "correct": false, "icon": "choice", "label": "Cepat", "color": "#94a3b8" }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-10-level-1-badge",
+        "badgeTitle": "Pandai Meminta Tolong",
+        "badgeText": "Kamu meminta bantuan dengan sopan dan menjaga barang pinjaman.",
+        "unlockId": "stage-10-level-2-unlock",
+        "unlockTitle": "Kata Maaf"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Kata Maaf",
+      "label": "Lv 2",
+      "description": "Rapikan dua pensil yang terjatuh, pilih respons yang bertanggung jawab, lalu rekam permintaan maaf.",
+      "maxCommands": 22,
+      "startBackgroundId": "stage-10-bg-2",
+      "completionMessage": "MasyaAllah! Kamu berani mengakui kesalahan, merapikannya, dan meminta maaf.",
+      "objects": [
+        {
+          "id": "friend-maaf-l2",
+          "name": "Teman di Pojok Karya",
+          "file": "/assets/stages/shared/characters/teman-main.png",
+          "kind": "choice",
+          "position": { "x": 850, "y": 590 },
+          "displaySize": { "width": 520, "height": 520 },
+          "interactionRadius": 320,
+          "showHalo": false,
+          "label": "Teman",
+          "choiceText": "Maaf, aku tidak sengaja menjatuhkan pensilmu."
+        },
+        {
+          "id": "red-pencil-l2",
+          "name": "Pensil Merah",
+          "file": "/assets/stages/shared/objects/pencil.png",
+          "kind": "collectible",
+          "position": { "x": 580, "y": 560 },
+          "displaySize": { "width": 112, "height": 112 },
+          "interactionRadius": 240,
+          "targetId": "pencil-cup-l2",
+          "label": "Pensil 1",
+          "pickupText": "Satu pensil sudah diambil."
+        },
+        {
+          "id": "blue-pencil-l2",
+          "name": "Pensil Biru",
+          "file": "/assets/stages/shared/objects/pencil.png",
+          "kind": "collectible",
+          "position": { "x": 430, "y": 730 },
+          "displaySize": { "width": 112, "height": 112 },
+          "interactionRadius": 240,
+          "targetId": "pencil-cup-l2",
+          "label": "Pensil 2",
+          "pickupText": "Pensil kedua sudah diambil."
+        },
+        {
+          "id": "pencil-cup-l2",
+          "name": "Tempat Pensil",
+          "file": "/assets/stages/shared/objects/pencil-holder-v2.png",
+          "kind": "target",
+          "position": { "x": 700, "y": 460 },
+          "displaySize": { "width": 155, "height": 155 },
+          "interactionRadius": 260,
+          "label": "Tempat Pensil",
+          "dropText": "Pensil sudah dirapikan."
+        }
+      ],
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+        { "order": 2, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 3, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 4, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 5, "command": "pick", "label": "Ambil Pensil 1", "icon": "pick-pencil-1", "objectId": "red-pencil-l2" },
+        { "order": 6, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 7, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 8, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 9, "command": "moveRight", "label": "Dekati Tempat", "icon": "arrow-right", "value": 7 },
+        { "order": 10, "command": "drop", "label": "Rapikan Pensil 1", "icon": "drop-pencil-cup", "targetId": "pencil-cup-l2" },
+        { "order": 11, "command": "moveDown", "label": "Turun 6", "icon": "arrow-down", "value": 6 },
+        { "order": 12, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 13, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 14, "command": "moveDown", "label": "Turun 6", "icon": "arrow-down", "value": 6 },
+        { "order": 15, "command": "pick", "label": "Ambil Pensil 2", "icon": "pick-pencil-2", "objectId": "blue-pencil-l2" },
+        { "order": 16, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 17, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 18, "command": "moveRight", "label": "Dekati Tempat", "icon": "arrow-right", "value": 7 },
+        { "order": 19, "command": "drop", "label": "Rapikan Pensil 2", "icon": "drop-pencil-cup", "targetId": "pencil-cup-l2" },
+        { "order": 20, "command": "choice", "label": "Pilih Kata Maaf", "icon": "choice-maaf", "text": "Maaf", "choiceId": "friend-maaf-l2" },
+        { "order": 21, "command": "recordVoice", "label": "Rekam Ucapan Maaf", "icon": "mic-maaf", "targetText": "Maaf, aku tidak sengaja menjatuhkan pensilmu.", "duration": 5 },
+        { "order": 22, "command": "sound", "label": "Misi Selesai", "icon": "sound", "soundId": "success" }
+      ],
+      "commands": [
+        { "type": "start", "icon": "flag", "label": "Start", "color": "#ffd84d" },
+        { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+        { "type": "moveLeft", "value": 7, "icon": "arrow-left", "label": "Kiri 7", "color": "#168eea" },
+        { "type": "moveUp", "value": 6, "icon": "arrow-up", "label": "Naik 6", "color": "#168eea" },
+        { "type": "moveDown", "value": 6, "icon": "arrow-down", "label": "Turun 6", "color": "#168eea" },
+        { "type": "pick", "objectId": "red-pencil-l2", "icon": "pick-pencil-1", "label": "Ambil Pensil 1", "color": "#f97316" },
+        { "type": "pick", "objectId": "blue-pencil-l2", "icon": "pick-pencil-2", "label": "Ambil Pensil 2", "color": "#fb923c" },
+        { "type": "drop", "targetId": "pencil-cup-l2", "icon": "drop-pencil-cup", "label": "Rapikan Pensil", "color": "#14b8a6" },
+        { "type": "choice", "choiceId": "friend-maaf-l2", "text": "Maaf", "correct": true, "icon": "choice-maaf", "label": "Pilih Maaf", "color": "#8b5cf6" },
+        { "type": "recordVoice", "targetText": "Maaf, aku tidak sengaja menjatuhkan pensilmu.", "duration": 5, "icon": "mic-maaf", "label": "Rekam Maaf", "color": "#f0528d" },
+        { "type": "sound", "soundId": "success", "icon": "sound", "label": "Misi Selesai", "color": "#27c488" },
+        { "type": "choice", "choiceId": "wrong-deny-l2", "text": "Bukan aku", "correct": false, "icon": "choice-wrong", "label": "Bukan Aku", "color": "#94a3b8" },
+        { "type": "choice", "choiceId": "wrong-ignore-l2", "text": "Biarkan saja", "correct": false, "icon": "choice-wrong", "label": "Biarkan", "color": "#94a3b8" }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-10-level-2-badge",
+        "badgeTitle": "Berani Meminta Maaf",
+        "badgeText": "Kamu bertanggung jawab, memperbaiki kesalahan, dan meminta maaf dengan tulus.",
+        "unlockId": "stage-10-level-3-unlock",
+        "unlockTitle": "Tiga Kata Baik"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Misi Tiga Kata Baik",
+      "label": "Lv 3",
+      "description": "Selesaikan tiga cerita berurutan: minta izin meminjam pensil, minta maaf sebelum merapikan buku yang jatuh, lalu ucapkan terima kasih saat menerima buku titipan.",
+      "maxCommands": 31,
+      "startBackgroundId": "stage-10-bg-3",
+      "completionMessage": "Luar biasa! Kamu sudah meminta izin, bertanggung jawab, dan menghargai bantuan teman.",
+      "objects": [
+        {
+          "id": "friend-tolong-l3",
+          "name": "Teman Pemilik Pensil",
+          "file": "/assets/stages/shared/characters/teman-main.png",
+          "kind": "choice",
+          "position": { "x": 620, "y": 590 },
+          "displaySize": { "width": 480, "height": 480 },
+          "interactionRadius": 310,
+          "showHalo": false,
+          "label": "Pinjam Pensil",
+          "choiceText": "Tolong, boleh aku meminjam pensilmu?",
+          "dropText": "Pensil sudah dikembalikan dengan baik."
+        },
+        {
+          "id": "borrowed-pencil-l3",
+          "name": "Pensil Pinjaman",
+          "file": "/assets/stages/shared/objects/pencil.png",
+          "kind": "collectible",
+          "position": { "x": 730, "y": 600 },
+          "displaySize": { "width": 108, "height": 108 },
+          "interactionRadius": 240,
+          "targetId": "friend-tolong-l3",
+          "label": "Pensil",
+          "pickupText": "Pensil dipinjam setelah mendapat izin."
+        },
+        {
+          "id": "friend-social-l3",
+          "name": "Teman Pemilik Buku",
+          "file": "/assets/stages/shared/objects/friend.png",
+          "kind": "choice",
+          "position": { "x": 1080, "y": 430 },
+          "displaySize": { "width": 480, "height": 480 },
+          "interactionRadius": 350,
+          "showHalo": false,
+          "label": "Pemilik Buku"
+        },
+        {
+          "id": "fallen-book-l3",
+          "name": "Buku yang Jatuh",
+          "file": "/assets/stages/shared/objects/book.png",
+          "kind": "collectible",
+          "position": { "x": 820, "y": 500 },
+          "displaySize": { "width": 125, "height": 125 },
+          "interactionRadius": 250,
+          "targetId": "shelf-l3",
+          "label": "Buku Jatuh",
+          "pickupText": "Buku diambil untuk dirapikan."
+        },
+        {
+          "id": "returned-book-l3",
+          "name": "Buku Titipan dari Teman",
+          "file": "/assets/stages/shared/objects/book.png",
+          "kind": "collectible",
+          "position": { "x": 930, "y": 720 },
+          "displaySize": { "width": 125, "height": 125 },
+          "interactionRadius": 250,
+          "targetId": "shelf-l3",
+          "label": "Buku Titipan",
+          "pickupText": "Buku titipan sudah diterima dari teman."
+        },
+        {
+          "id": "shelf-l3",
+          "name": "Rak Buku",
+          "file": "/assets/stages/shared/objects/shelf.png",
+          "kind": "target",
+          "position": { "x": 1260, "y": 600 },
+          "displaySize": { "width": 220, "height": 205 },
+          "interactionRadius": 540,
+          "label": "Rak Buku",
+          "dropText": "Buku tersusun rapi di rak."
+        }
+      ],
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+        { "order": 2, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 3, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 4, "command": "moveRight", "label": "Dekati Teman", "icon": "arrow-right", "value": 7 },
+        { "order": 5, "command": "choice", "label": "Minta Izin dengan Tolong", "icon": "choice-tolong", "text": "Tolong", "choiceId": "friend-tolong-l3" },
+        { "order": 6, "command": "recordVoice", "label": "Rekam Permintaan Izin", "icon": "mic-tolong", "targetText": "Tolong, boleh aku meminjam pensilmu?", "duration": 4 },
+        { "order": 7, "command": "moveRight", "label": "Dekati Pensil", "icon": "arrow-right", "value": 7 },
+        { "order": 8, "command": "pick", "label": "Ambil Pensil", "icon": "pick-pencil", "objectId": "borrowed-pencil-l3" },
+        { "order": 9, "command": "moveDown", "label": "Bawa ke Meja Karya", "icon": "arrow-down", "value": 6 },
+        { "order": 10, "command": "moveLeft", "label": "Selesai Menggambar", "icon": "arrow-left", "value": 7 },
+        { "order": 11, "command": "moveUp", "label": "Kembali ke Teman", "icon": "arrow-up", "value": 6 },
+        { "order": 12, "command": "drop", "label": "Kembalikan Pensil", "icon": "drop-pencil-return", "targetId": "friend-tolong-l3" },
+        { "order": 13, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 14, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 15, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 16, "command": "choice", "label": "Akui Kesalahan", "icon": "choice-maaf", "text": "Maaf, bukumu tadi tidak sengaja jatuh.", "choiceId": "friend-social-l3" },
+        { "order": 17, "command": "recordVoice", "label": "Rekam Permintaan Maaf", "icon": "mic-maaf", "targetText": "Maaf, bukumu tadi tidak sengaja jatuh.", "duration": 5 },
+        { "order": 18, "command": "pick", "label": "Ambil Buku Jatuh", "icon": "pick-book-fallen", "objectId": "fallen-book-l3" },
+        { "order": 19, "command": "moveRight", "label": "Bawa ke Rak", "icon": "arrow-right", "value": 7 },
+        { "order": 20, "command": "drop", "label": "Rapikan Buku", "icon": "drop-book-shelf", "targetId": "shelf-l3" },
+        { "order": 21, "command": "moveDown", "label": "Turun 6", "icon": "arrow-down", "value": 6 },
+        { "order": 22, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 23, "command": "moveDown", "label": "Turun 6", "icon": "arrow-down", "value": 6 },
+        { "order": 24, "command": "moveRight", "label": "Dekati Buku Titipan", "icon": "arrow-right", "value": 7 },
+        { "order": 25, "command": "pick", "label": "Terima Buku Titipan", "icon": "pick-book-gift", "objectId": "returned-book-l3" },
+        { "order": 26, "command": "choice", "label": "Hargai Bantuan Teman", "icon": "choice-thanks", "text": "Terima kasih sudah membawakan bukuku.", "choiceId": "friend-social-l3" },
+        { "order": 27, "command": "recordVoice", "label": "Rekam Terima Kasih", "icon": "mic-thanks", "targetText": "Terima kasih sudah membawakan bukuku.", "duration": 5 },
+        { "order": 28, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 29, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+        { "order": 30, "command": "drop", "label": "Simpan Buku", "icon": "drop-book-shelf", "targetId": "shelf-l3" },
+        { "order": 31, "command": "sound", "label": "Tiga Kata Hebat", "icon": "sound", "soundId": "success" }
+      ],
+      "commands": [
+        { "type": "start", "icon": "flag", "label": "Start", "color": "#ffd84d" },
+        { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+        { "type": "moveLeft", "value": 7, "icon": "arrow-left", "label": "Kiri 7", "color": "#168eea" },
+        { "type": "moveUp", "value": 6, "icon": "arrow-up", "label": "Naik 6", "color": "#168eea" },
+        { "type": "moveDown", "value": 6, "icon": "arrow-down", "label": "Turun 6", "color": "#168eea" },
+        { "type": "choice", "choiceId": "friend-tolong-l3", "text": "Tolong", "correct": true, "icon": "choice-tolong", "label": "Minta Izin", "color": "#8b5cf6" },
+        { "type": "recordVoice", "targetText": "Tolong, boleh aku meminjam pensilmu?", "duration": 4, "icon": "mic-tolong", "label": "Rekam Tolong", "color": "#f0528d" },
+        { "type": "pick", "objectId": "borrowed-pencil-l3", "icon": "pick-pencil", "label": "Ambil Pensil", "color": "#f97316" },
+        { "type": "drop", "targetId": "friend-tolong-l3", "icon": "drop-pencil-return", "label": "Kembalikan Pensil", "color": "#14b8a6" },
+        { "type": "choice", "choiceId": "friend-social-l3", "text": "Maaf, bukumu tadi tidak sengaja jatuh.", "correct": true, "icon": "choice-maaf", "label": "Akui Kesalahan", "color": "#7c3aed" },
+        { "type": "recordVoice", "targetText": "Maaf, bukumu tadi tidak sengaja jatuh.", "duration": 5, "icon": "mic-maaf", "label": "Rekam Maaf", "color": "#ec4899" },
+        { "type": "pick", "objectId": "fallen-book-l3", "icon": "pick-book-fallen", "label": "Ambil Buku Jatuh", "color": "#fb923c" },
+        { "type": "drop", "targetId": "shelf-l3", "icon": "drop-book-shelf", "label": "Rapikan Buku", "color": "#0d9488" },
+        { "type": "pick", "objectId": "returned-book-l3", "icon": "pick-book-gift", "label": "Terima Buku Titipan", "color": "#f59e0b" },
+        { "type": "choice", "choiceId": "friend-social-l3", "text": "Terima kasih sudah membawakan bukuku.", "correct": true, "icon": "choice-thanks", "label": "Hargai Bantuan", "color": "#6d28d9" },
+        { "type": "recordVoice", "targetText": "Terima kasih sudah membawakan bukuku.", "duration": 5, "icon": "mic-thanks", "label": "Rekam Terima Kasih", "color": "#db2777" },
+        { "type": "sound", "soundId": "success", "icon": "sound", "label": "Tiga Kata Hebat", "color": "#27c488" },
+        { "type": "choice", "choiceId": "wrong-demand-l3", "text": "Cepat bantu aku", "correct": false, "icon": "choice-wrong", "label": "Menyuruh", "color": "#94a3b8" },
+        { "type": "choice", "choiceId": "wrong-deny-l3", "text": "Bukan salahku", "correct": false, "icon": "choice-wrong", "label": "Menyangkal", "color": "#94a3b8" },
+        { "type": "choice", "choiceId": "wrong-silent-l3", "text": "Diam saja", "correct": false, "icon": "choice-wrong", "label": "Diam", "color": "#94a3b8" }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-10-badge",
+        "badgeTitle": "Bintang Tiga Kata Baik",
+        "badgeText": "Kamu mampu meminta izin, memperbaiki kesalahan, dan menghargai bantuan teman dengan tiga kata baik.",
+        "unlockId": "stage-10-unlock",
+        "unlockTitle": "Stage 11"
+      }
+    }
+  ],
+  "instructions": [
+    { "order": 1, "command": "start", "label": "Start", "icon": "flag" },
+    { "order": 2, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+    { "order": 3, "command": "moveUp", "label": "Naik 6", "icon": "arrow-up", "value": 6 },
+    { "order": 4, "command": "moveRight", "label": "Dekati Teman", "icon": "arrow-right", "value": 7 },
+    { "order": 5, "command": "choice", "label": "Pilih Kata Tolong", "icon": "choice", "text": "Tolong", "choiceId": "friend-tolong-l1" },
+    { "order": 6, "command": "recordVoice", "label": "Rekam Ucapan Tolong", "icon": "mic", "targetText": "Tolong, boleh pinjam pensil biru?", "duration": 4 },
+    { "order": 7, "command": "moveRight", "label": "Dekati Pensil", "icon": "arrow-right", "value": 7 },
+    { "order": 8, "command": "pick", "label": "Pinjam Pensil", "icon": "pick", "objectId": "blue-pencil-l1" },
+    { "order": 9, "command": "moveDown", "label": "Turun 6", "icon": "arrow-down", "value": 6 },
+    { "order": 10, "command": "moveRight", "label": "Gunakan Pensil", "icon": "arrow-right", "value": 7 },
+    { "order": 11, "command": "moveLeft", "label": "Kembali", "icon": "arrow-left", "value": 7 },
+    { "order": 12, "command": "moveUp", "label": "Dekati Teman", "icon": "arrow-up", "value": 6 },
+    { "order": 13, "command": "drop", "label": "Kembalikan Pensil", "icon": "drop", "targetId": "friend-tolong-l1" }
+  ],
+  "commands": [
+    { "type": "start", "icon": "flag", "label": "Start", "color": "#ffd84d" },
+    { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+    { "type": "moveLeft", "value": 7, "icon": "arrow-left", "label": "Kiri 7", "color": "#168eea" },
+    { "type": "moveUp", "value": 6, "icon": "arrow-up", "label": "Naik 6", "color": "#168eea" },
+    { "type": "moveDown", "value": 6, "icon": "arrow-down", "label": "Turun 6", "color": "#168eea" },
+    { "type": "choice", "choiceId": "friend-tolong-l1", "text": "Tolong", "correct": true, "icon": "choice", "label": "Pilih Tolong", "color": "#8b5cf6" },
+    { "type": "recordVoice", "targetText": "Tolong, boleh pinjam pensil biru?", "duration": 4, "icon": "mic", "label": "Rekam Tolong", "color": "#f0528d" },
+    { "type": "pick", "objectId": "blue-pencil-l1", "icon": "pick", "label": "Pinjam Pensil", "color": "#f97316" },
+    { "type": "drop", "targetId": "friend-tolong-l1", "icon": "drop", "label": "Kembalikan", "color": "#14b8a6" },
+    { "type": "choice", "choiceId": "wrong-grab-l1", "text": "Aku ambil, ya", "correct": false, "icon": "choice", "label": "Ambil Saja", "color": "#94a3b8" }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-10-badge",
+    "badgeTitle": "Bintang Tiga Kata Baik",
+    "badgeText": "Kamu mampu memilih dan mengucapkan kata baik pada situasi yang tepat.",
+    "unlockId": "stage-10-unlock",
+    "unlockTitle": "Stage 11"
+  }
+}

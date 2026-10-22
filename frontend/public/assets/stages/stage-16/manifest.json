@@ -1,0 +1,556 @@
+{
+  "id": "stage-16",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Jujur Itu Hebat",
+  "description": "Branch choice: pilih jalan mengaku dan belajar sebab-akibat.",
+  "thumbnail": "/assets/stages/stage-16/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 16,
+  "maxCommands": 7,
+  "ui": {
+    "stageLabel": "Stage 16",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-16-bg-1",
+      "name": "Jalan Jujur",
+      "file": "/assets/stages/stage-16/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-16/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-16-bg-2",
+      "name": "Rumah Amanah",
+      "file": "/assets/stages/stage-16/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-16/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-16-bg-3",
+      "name": "Pilihan Baik",
+      "file": "/assets/stages/stage-16/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-16/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "honest-choice",
+      "name": "Mengaku",
+      "file": "/assets/stages/shared/objects/honestPath.png",
+      "kind": "choice",
+      "position": {
+        "x": 700,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 165,
+        "height": 165
+      },
+      "interactionRadius": 210,
+      "label": "Jujur",
+      "choiceText": "Aku jujur"
+    },
+    {
+      "id": "hide-choice",
+      "name": "Sembunyi",
+      "file": "/assets/stages/shared/objects/pond.png",
+      "kind": "choice",
+      "position": {
+        "x": 930,
+        "y": 730
+      },
+      "displaySize": {
+        "width": 140,
+        "height": 110
+      },
+      "interactionRadius": 210,
+      "label": "Salah",
+      "correct": false,
+      "choiceText": "Sembunyi"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Pilih mengaku saat gelas pecah.",
+      "maxCommands": 4,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "choice",
+          "label": "Mengaku",
+          "icon": "choice",
+          "text": "Aku jujur",
+          "choiceId": "honest-choice"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "honest-choice",
+          "text": "Aku jujur",
+          "correct": true,
+          "icon": "choice",
+          "label": "Mengaku",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "wrong-hide",
+          "text": "Sembunyikan",
+          "correct": false,
+          "icon": "choice",
+          "label": "Sembunyi",
+          "color": "#94a3b8"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-16-badge",
+        "badgeTitle": "Jujur Hebat",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-16-unlock",
+        "unlockTitle": "Stage 17"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Mengaku lalu minta maaf.",
+      "maxCommands": 6,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "choice",
+          "label": "Mengaku",
+          "icon": "choice",
+          "text": "Aku jujur",
+          "choiceId": "honest-choice"
+        },
+        {
+          "order": 5,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Maaf ya"
+        },
+        {
+          "order": 6,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "honest-choice",
+          "text": "Aku jujur",
+          "correct": true,
+          "icon": "choice",
+          "label": "Mengaku",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Maaf ya",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-16-badge",
+        "badgeTitle": "Berani Mengaku",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-16-unlock",
+        "unlockTitle": "Stage 17"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Pilih jalan baik dan lihat akibatnya.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "choice",
+          "label": "Mengaku",
+          "icon": "choice",
+          "text": "Aku jujur",
+          "choiceId": "honest-choice"
+        },
+        {
+          "order": 5,
+          "command": "wait",
+          "label": "Tunggu 1",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Aku akan memperbaiki"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "honest-choice",
+          "text": "Aku jujur",
+          "correct": true,
+          "icon": "choice",
+          "label": "Mengaku",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "wait",
+          "value": 1,
+          "icon": "wait",
+          "label": "Tunggu 1",
+          "color": "#ff8a96"
+        },
+        {
+          "type": "say",
+          "text": "Aku akan memperbaiki",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        },
+        {
+          "type": "choice",
+          "choiceId": "wrong-hide",
+          "text": "Sembunyikan",
+          "correct": false,
+          "icon": "choice",
+          "label": "Sembunyi",
+          "color": "#94a3b8"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-16-badge",
+        "badgeTitle": "Anak Amanah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-16-unlock",
+        "unlockTitle": "Stage 17"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 4,
+      "command": "choice",
+      "label": "Mengaku",
+      "icon": "choice",
+      "text": "Aku jujur",
+      "choiceId": "honest-choice"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "choice",
+      "choiceId": "honest-choice",
+      "text": "Aku jujur",
+      "correct": true,
+      "icon": "choice",
+      "label": "Mengaku",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "wrong-hide",
+      "text": "Sembunyikan",
+      "correct": false,
+      "icon": "choice",
+      "label": "Sembunyi",
+      "color": "#94a3b8"
+    },
+    {
+      "type": "say",
+      "text": "Maaf ya",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    },
+    {
+      "type": "wait",
+      "value": 1,
+      "icon": "wait",
+      "label": "Tunggu 1",
+      "color": "#ff8a96"
+    },
+    {
+      "type": "say",
+      "text": "Aku akan memperbaiki",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-16-badge",
+    "badgeTitle": "Jujur Hebat",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-16-unlock",
+    "unlockTitle": "Stage 17"
+  }
+}

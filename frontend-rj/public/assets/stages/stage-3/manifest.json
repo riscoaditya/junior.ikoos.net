@@ -1,0 +1,656 @@
+{
+  "id": "stage-3",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Mengucap MasyaAllah",
+  "description": "Dengarkan contoh suara, lalu latih mengucapkan MasyaAllah saat melihat ciptaan Allah.",
+  "thumbnail": "/assets/stages/stage-3/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 3,
+  "maxCommands": 10,
+  "ui": {
+    "stageLabel": "Stage 3",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-3-bg-1",
+      "name": "Taman Indah",
+      "file": "/assets/stages/stage-3/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-3/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-3-bg-2",
+      "name": "Pelangi Ceria",
+      "file": "/assets/stages/stage-3/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-3/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-3-bg-3",
+      "name": "Kebun Bunga",
+      "file": "/assets/stages/stage-3/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-3/backgrounds/bg-3.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-3-nature-reveal",
+      "name": "Pegunungan MasyaAllah",
+      "file": "/assets/stages/stage-3/backgrounds/reveal-nature.png",
+      "thumbnail": "/assets/stages/stage-3/backgrounds/reveal-nature.png",
+      "fit": "cover",
+      "completionOnly": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Susun 5 blok, dengarkan contoh, lalu ucapkan MasyaAllah.",
+      "maxCommands": 5,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "MasyaAllah"
+        },
+        {
+          "order": 5,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "masyaallah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "masyaallah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "MasyaAllah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "MasyaAllah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-3-badge",
+        "badgeTitle": "Penjelajah Indah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-3-unlock",
+        "unlockTitle": "Stage 4"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-3-bg-1",
+      "completionBackgroundId": "stage-3-nature-reveal",
+      "completionMessage": "MasyaAllah, indah sekali ciptaan Allah!\nAyo ucapkan MasyaAllah."
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Susun 7 blok dan dengarkan kembali ucapan MasyaAllah.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "MasyaAllah"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "masyaallah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "masyaallah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "MasyaAllah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "MasyaAllah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-3-badge",
+        "badgeTitle": "Kagum Ciptaan Allah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-3-unlock",
+        "unlockTitle": "Stage 4"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-3-bg-1",
+      "completionBackgroundId": "stage-3-nature-reveal",
+      "completionMessage": "Lihat gunung dan air terjunnya.\nMasyaAllah!"
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Susun 10 blok, lalu rekam ucapan MasyaAllah dengan suara sendiri.",
+      "maxCommands": 10,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "MasyaAllah"
+        },
+        {
+          "order": 10,
+          "command": "recordVoice",
+          "label": "Rekam",
+          "icon": "mic",
+          "targetText": "MasyaAllah",
+          "duration": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "masyaallah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "MasyaAllah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "MasyaAllah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-3-badge",
+        "badgeTitle": "Pilihan Kagum",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-3-unlock",
+        "unlockTitle": "Stage 4"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-3-bg-1",
+      "completionBackgroundId": "stage-3-nature-reveal",
+      "completionMessage": "Alam ini indah dan menakjubkan.\nUcapkan MasyaAllah dengan suara lantang!"
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 7,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 3,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "say",
+      "label": "Bicara",
+      "icon": "say",
+      "text": "MasyaAllah"
+    },
+    {
+      "order": 5,
+      "command": "sound",
+      "label": "Suara",
+      "icon": "sound",
+      "soundId": "masyaallah"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 3,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 3,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 3,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "sound",
+      "soundId": "masyaallah",
+      "icon": "sound",
+      "label": "Suara",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "MasyaAllah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "MasyaAllah",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam",
+      "color": "#f0528d"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-3-badge",
+    "badgeTitle": "Penjelajah Indah",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-3-unlock",
+    "unlockTitle": "Stage 4"
+  }
+}

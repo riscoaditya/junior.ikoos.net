@@ -1,0 +1,666 @@
+{
+  "id": "stage-23",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "IKOOBOT Misi Kebaikan",
+  "description": "Multi-mission challenge dengan robot ramah anak.",
+  "thumbnail": "/assets/stages/stage-23/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 23,
+  "maxCommands": 9,
+  "ui": {
+    "stageLabel": "Stage 23",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-23-bg-1",
+      "name": "IKOOBOT Peduli",
+      "file": "/assets/stages/stage-23/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-23/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-23-bg-2",
+      "name": "Kota Mini",
+      "file": "/assets/stages/stage-23/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-23/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-23-bg-3",
+      "name": "Misi Kebaikan",
+      "file": "/assets/stages/stage-23/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-23/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "ikoobot-character",
+      "name": "IKOOBOT",
+      "file": "/assets/stages/shared/objects/ikoobotCharacter.png",
+      "thumbnail": "/assets/stages/shared/objects/ikoobotCharacter.png",
+      "startPosition": {
+        "x": 330,
+        "y": 705
+      },
+      "displaySize": {
+        "width": 420,
+        "height": 420
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "bot-trash",
+      "name": "Sampah",
+      "file": "/assets/stages/shared/objects/trash.png",
+      "kind": "collectible",
+      "position": {
+        "x": 500,
+        "y": 760
+      },
+      "displaySize": {
+        "width": 110,
+        "height": 110
+      },
+      "interactionRadius": 210,
+      "targetId": "bot-bin",
+      "pickupText": "Sampah diambil"
+    },
+    {
+      "id": "bot-bin",
+      "name": "Tempat Sampah",
+      "file": "/assets/stages/shared/objects/bin.png",
+      "kind": "target",
+      "position": {
+        "x": 790,
+        "y": 730
+      },
+      "displaySize": {
+        "width": 140,
+        "height": 140
+      },
+      "interactionRadius": 210,
+      "label": "Tempat",
+      "dropText": "Lingkungan bersih"
+    },
+    {
+      "id": "bot-friend",
+      "name": "Teman",
+      "file": "/assets/stages/shared/characters/teman-main.png",
+      "kind": "choice",
+      "position": {
+        "x": 1010,
+        "y": 720
+      },
+      "displaySize": {
+        "width": 360,
+        "height": 360
+      },
+      "interactionRadius": 210,
+      "showHalo": false,
+      "label": "Teman",
+      "choiceText": "Assalamu'alaikum"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Dua misi: sampah dan salam.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "bot-trash"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "bot-bin"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Salam",
+          "icon": "choice",
+          "text": "Assalamu'alaikum",
+          "choiceId": "bot-friend"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "bot-trash",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "bot-bin",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "bot-friend",
+          "text": "Assalamu'alaikum",
+          "correct": true,
+          "icon": "choice",
+          "label": "Salam",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-23-badge",
+        "badgeTitle": "IKOOBOT Peduli",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-23-unlock",
+        "unlockTitle": "Stage 24"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Tiga misi dengan suara.",
+      "maxCommands": 8,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "bot-trash"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "bot-bin"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Salam",
+          "icon": "choice",
+          "text": "Assalamu'alaikum",
+          "choiceId": "bot-friend"
+        },
+        {
+          "order": 8,
+          "command": "sound",
+          "label": "Suara Salam",
+          "icon": "sound",
+          "soundId": "salam"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "bot-trash",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "bot-bin",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "bot-friend",
+          "text": "Assalamu'alaikum",
+          "correct": true,
+          "icon": "choice",
+          "label": "Salam",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "sound",
+          "soundId": "salam",
+          "icon": "sound",
+          "label": "Suara Salam",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-23-badge",
+        "badgeTitle": "Robot Kebaikan",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-23-unlock",
+        "unlockTitle": "Stage 24"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Empat misi dalam satu panggung.",
+      "maxCommands": 9,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "bot-trash"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "bot-bin"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Salam",
+          "icon": "choice",
+          "text": "Assalamu'alaikum",
+          "choiceId": "bot-friend"
+        },
+        {
+          "order": 8,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Aku suka menolong"
+        },
+        {
+          "order": 9,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "bot-trash",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "bot-bin",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "bot-friend",
+          "text": "Assalamu'alaikum",
+          "correct": true,
+          "icon": "choice",
+          "label": "Salam",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "say",
+          "text": "Aku suka menolong",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-23-badge",
+        "badgeTitle": "Junior Mission Planner",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-23-unlock",
+        "unlockTitle": "Stage 24"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "pick",
+      "label": "Ambil Sampah",
+      "icon": "pick",
+      "objectId": "bot-trash"
+    },
+    {
+      "order": 4,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 5,
+      "command": "drop",
+      "label": "Buang Sampah",
+      "icon": "drop",
+      "targetId": "bot-bin"
+    },
+    {
+      "order": 6,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 7,
+      "command": "choice",
+      "label": "Salam",
+      "icon": "choice",
+      "text": "Assalamu'alaikum",
+      "choiceId": "bot-friend"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "bot-trash",
+      "icon": "pick",
+      "label": "Ambil Sampah",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "bot-bin",
+      "icon": "drop",
+      "label": "Buang Sampah",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "bot-friend",
+      "text": "Assalamu'alaikum",
+      "correct": true,
+      "icon": "choice",
+      "label": "Salam",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "sound",
+      "soundId": "salam",
+      "icon": "sound",
+      "label": "Suara Salam",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "Aku suka menolong",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-23-badge",
+    "badgeTitle": "IKOOBOT Peduli",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-23-unlock",
+    "unlockTitle": "Stage 24"
+  }
+}

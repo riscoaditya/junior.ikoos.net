@@ -1,0 +1,697 @@
+{
+  "id": "stage-20",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Menjaga Alam",
+  "description": "Eco multi-mission: buang sampah dan siram tanaman.",
+  "thumbnail": "/assets/stages/stage-20/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 20,
+  "maxCommands": 12,
+  "ui": {
+    "stageLabel": "Stage 20",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-20-bg-1",
+      "name": "Taman Hijau",
+      "file": "/assets/stages/stage-20/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-20/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-20-bg-2",
+      "name": "Rumah Hemat",
+      "file": "/assets/stages/stage-20/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-20/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-20-bg-3",
+      "name": "Kelas Bersih",
+      "file": "/assets/stages/stage-20/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-20/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "eco-trash",
+      "name": "Sampah",
+      "file": "/assets/stages/shared/objects/trash.png",
+      "kind": "collectible",
+      "position": {
+        "x": 500,
+        "y": 775
+      },
+      "displaySize": {
+        "width": 110,
+        "height": 110
+      },
+      "interactionRadius": 210,
+      "targetId": "eco-bin",
+      "pickupText": "Sampah diambil"
+    },
+    {
+      "id": "eco-bin",
+      "name": "Tempat Sampah",
+      "file": "/assets/stages/shared/objects/bin.png",
+      "kind": "target",
+      "position": {
+        "x": 830,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 140,
+        "height": 140
+      },
+      "interactionRadius": 210,
+      "label": "Tempat",
+      "dropText": "Sampah dibuang"
+    },
+    {
+      "id": "eco-water",
+      "name": "Air",
+      "file": "/assets/stages/shared/objects/wateringCan.png",
+      "kind": "collectible",
+      "position": {
+        "x": 650,
+        "y": 760
+      },
+      "displaySize": {
+        "width": 125,
+        "height": 125
+      },
+      "interactionRadius": 210,
+      "targetId": "eco-flower",
+      "pickupText": "Air diambil"
+    },
+    {
+      "id": "eco-flower",
+      "name": "Tanaman",
+      "file": "/assets/stages/shared/objects/flower.png",
+      "kind": "target",
+      "position": {
+        "x": 1040,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 135,
+        "height": 135
+      },
+      "interactionRadius": 210,
+      "label": "Tanaman",
+      "dropText": "Tanaman disiram"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Satu target: buang sampah.",
+      "maxCommands": 6,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "eco-trash"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "eco-bin"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "eco-trash",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "eco-bin",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-20-badge",
+        "badgeTitle": "Jaga Taman",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-20-unlock",
+        "unlockTitle": "Stage 21"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Dua target: sampah dan tanaman.",
+      "maxCommands": 10,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "eco-trash"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "eco-bin"
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri 7",
+          "icon": "arrow-left",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "pick",
+          "label": "Ambil Air",
+          "icon": "pick",
+          "objectId": "eco-water"
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 9,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 10,
+          "command": "drop",
+          "label": "Siram Tanaman",
+          "icon": "drop",
+          "targetId": "eco-flower"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "eco-trash",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "eco-bin",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "moveLeft",
+          "value": 7,
+          "icon": "arrow-left",
+          "label": "Kiri 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "eco-water",
+          "icon": "pick",
+          "label": "Ambil Air",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "eco-flower",
+          "icon": "drop",
+          "label": "Siram Tanaman",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-20-badge",
+        "badgeTitle": "Penjaga Alam",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-20-unlock",
+        "unlockTitle": "Stage 21"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Multi aksi dalam satu panggung.",
+      "maxCommands": 12,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sampah",
+          "icon": "pick",
+          "objectId": "eco-trash"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Buang Sampah",
+          "icon": "drop",
+          "targetId": "eco-bin"
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri 7",
+          "icon": "arrow-left",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "pick",
+          "label": "Ambil Air",
+          "icon": "pick",
+          "objectId": "eco-water"
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 9,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 10,
+          "command": "drop",
+          "label": "Siram Tanaman",
+          "icon": "drop",
+          "targetId": "eco-flower"
+        },
+        {
+          "order": 11,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Alam bersih"
+        },
+        {
+          "order": 12,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "eco-trash",
+          "icon": "pick",
+          "label": "Ambil Sampah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "eco-bin",
+          "icon": "drop",
+          "label": "Buang Sampah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "moveLeft",
+          "value": 7,
+          "icon": "arrow-left",
+          "label": "Kiri 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "eco-water",
+          "icon": "pick",
+          "label": "Ambil Air",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "eco-flower",
+          "icon": "drop",
+          "label": "Siram Tanaman",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Alam bersih",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-20-badge",
+        "badgeTitle": "Sahabat Alam",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-20-unlock",
+        "unlockTitle": "Stage 21"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 4,
+      "command": "pick",
+      "label": "Ambil Sampah",
+      "icon": "pick",
+      "objectId": "eco-trash"
+    },
+    {
+      "order": 5,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 6,
+      "command": "drop",
+      "label": "Buang Sampah",
+      "icon": "drop",
+      "targetId": "eco-bin"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "eco-trash",
+      "icon": "pick",
+      "label": "Ambil Sampah",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "eco-bin",
+      "icon": "drop",
+      "label": "Buang Sampah",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "moveLeft",
+      "value": 7,
+      "icon": "arrow-left",
+      "label": "Kiri 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "eco-water",
+      "icon": "pick",
+      "label": "Ambil Air",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "eco-flower",
+      "icon": "drop",
+      "label": "Siram Tanaman",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "say",
+      "text": "Alam bersih",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-20-badge",
+    "badgeTitle": "Jaga Taman",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-20-unlock",
+    "unlockTitle": "Stage 21"
+  }
+}

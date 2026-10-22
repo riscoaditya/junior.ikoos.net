@@ -1,0 +1,672 @@
+{
+  "id": "stage-4",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Mengucap Bismillah",
+  "description": "Dengarkan contoh suara, lalu latih mengucapkan Bismillah sebelum memulai kegiatan baik.",
+  "thumbnail": "/assets/stages/stage-4/backgrounds/bismillah-meal.png",
+  "status": "active",
+  "difficulty": 4,
+  "maxCommands": 10,
+  "ui": {
+    "stageLabel": "Stage 4",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-4-taman",
+      "name": "Taman Ceria",
+      "file": "/assets/stages/stage-1/backgrounds/taman.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/taman.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-4-sekolah",
+      "name": "Sekolah Ceria",
+      "file": "/assets/stages/stage-1/backgrounds/sekolah.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/sekolah.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-4-masjid-ceria",
+      "name": "Masjid Ceria",
+      "file": "/assets/stages/stage-1/backgrounds/masjid.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/masjid.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-4-bismillah-meal",
+      "name": "Bismillah Sebelum Makan",
+      "file": "/assets/stages/stage-4/backgrounds/bismillah-meal.png",
+      "thumbnail": "/assets/stages/stage-4/backgrounds/bismillah-meal.png",
+      "fit": "cover",
+      "completionOnly": true
+    },
+    {
+      "id": "stage-4-bismillah-study",
+      "name": "Bismillah Sebelum Belajar",
+      "file": "/assets/stages/stage-4/backgrounds/bismillah-study.png",
+      "thumbnail": "/assets/stages/stage-4/backgrounds/bismillah-study.png",
+      "fit": "cover",
+      "completionOnly": true
+    },
+    {
+      "id": "stage-4-bismillah-travel",
+      "name": "Bismillah Sebelum Bepergian",
+      "file": "/assets/stages/stage-4/backgrounds/bismillah-travel.png",
+      "thumbnail": "/assets/stages/stage-4/backgrounds/bismillah-travel.png",
+      "fit": "cover",
+      "completionOnly": true
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Susun 5 blok, dengarkan contoh, lalu ucapkan Bismillah sebelum makan.",
+      "maxCommands": 5,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 5,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "bismillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Bismillah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-4-badge",
+        "badgeTitle": "Siap Makan dengan Bismillah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-4-unlock",
+        "unlockTitle": "Stage 5"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-4-taman",
+      "completionBackgroundId": "stage-4-bismillah-meal",
+      "completionMessage": "Makanan sudah siap.\nAyo ucapkan Bismillah sebelum makan."
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Susun 7 blok dan dengarkan kembali ucapan Bismillah sebelum belajar.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Suara",
+          "icon": "sound",
+          "soundId": "bismillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Bismillah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-4-badge",
+        "badgeTitle": "Belajar dengan Bismillah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-4-unlock",
+        "unlockTitle": "Stage 5"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-4-sekolah",
+      "completionBackgroundId": "stage-4-bismillah-study",
+      "completionMessage": "Waktunya belajar.\nUcapkan Bismillah sebelum mulai."
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Susun 10 blok, lalu rekam ucapan Bismillah sebelum bepergian.",
+      "maxCommands": 10,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveDown",
+          "label": "Turun",
+          "icon": "arrow-down",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 3,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 10,
+          "command": "recordVoice",
+          "label": "Rekam",
+          "icon": "mic",
+          "targetText": "Bismillah",
+          "duration": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 3,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 3,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 3,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Suara",
+          "color": "#27c488"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Bismillah",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-4-badge",
+        "badgeTitle": "Sahabat Bismillah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-4-unlock",
+        "unlockTitle": "Stage 5"
+      },
+      "objects": [],
+      "startBackgroundId": "stage-4-masjid-ceria",
+      "completionBackgroundId": "stage-4-bismillah-travel",
+      "completionMessage": "Kita siap bepergian.\nUcapkan Bismillah sebelum berangkat."
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveDown",
+      "label": "Turun",
+      "icon": "arrow-down",
+      "value": 3,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 7,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "say",
+      "label": "Bicara",
+      "icon": "say",
+      "text": "Bismillah"
+    },
+    {
+      "order": 5,
+      "command": "sound",
+      "label": "Suara",
+      "icon": "sound",
+      "soundId": "bismillah"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 3,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 3,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 3,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "sound",
+      "soundId": "bismillah",
+      "icon": "sound",
+      "label": "Suara",
+      "color": "#27c488"
+    },
+    {
+      "type": "say",
+      "text": "Bismillah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "Bismillah",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam",
+      "color": "#f0528d"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-4-badge",
+    "badgeTitle": "Siap Makan dengan Bismillah",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-4-unlock",
+    "unlockTitle": "Stage 5"
+  }
+}

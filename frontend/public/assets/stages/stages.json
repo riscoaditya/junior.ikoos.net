@@ -3,7 +3,7 @@
   "stages": [
     {
       "id": "stage-1",
-      "title": "Masjid Ceria",
+      "title": "Mengucap Salam",
       "manifest": "/assets/stages/stage-1/manifest.json",
       "thumbnail": "/assets/stages/stage-1/thumbnails/stage-preview.png",
       "status": "active",
@@ -11,27 +11,187 @@
     },
     {
       "id": "stage-2",
-      "title": "Sedekah Yuk",
+      "title": "Mengucap Alhamdulillah",
       "manifest": "/assets/stages/stage-2/manifest.json",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/stage-preview.png",
-      "status": "locked",
+      "thumbnail": "/assets/stages/stage-2/thumbnails/stage-preview.png",
+      "status": "active",
       "difficulty": 2
     },
     {
       "id": "stage-3",
-      "title": "Kelas Ceria",
+      "title": "Mengucap MasyaAllah",
       "manifest": "/assets/stages/stage-3/manifest.json",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/sekolah.png",
-      "status": "locked",
+      "thumbnail": "/assets/stages/stage-3/backgrounds/bg-1.png",
+      "status": "active",
       "difficulty": 3
     },
     {
       "id": "stage-4",
-      "title": "Petualangan Baru",
+      "title": "Mengucap Bismillah",
       "manifest": "/assets/stages/stage-4/manifest.json",
-      "thumbnail": "/assets/stages/stage-1/thumbnails/taman.png",
-      "status": "locked",
+      "thumbnail": "/assets/stages/stage-4/backgrounds/bismillah-meal.png",
+      "status": "active",
       "difficulty": 4
+    },
+    {
+      "id": "stage-5",
+      "title": "Antar Ali ke Masjid",
+      "manifest": "/assets/stages/stage-5/manifest.json",
+      "thumbnail": "/assets/stages/stage-5/backgrounds/masjid-board-lv1.png",
+      "status": "active",
+      "difficulty": 5
+    },
+    {
+      "id": "stage-6",
+      "title": "Adab Masuk Masjid",
+      "manifest": "/assets/stages/stage-6/manifest.json",
+      "thumbnail": "/assets/stages/stage-6/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 6
+    },
+    {
+      "id": "stage-7",
+      "title": "Janji Baik, InsyaAllah",
+      "manifest": "/assets/stages/stage-7/manifest.json",
+      "thumbnail": "/assets/stages/stage-7/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 7
+    },
+    {
+      "id": "stage-8",
+      "title": "Jalur Adab Makan",
+      "manifest": "/assets/stages/stage-8/manifest.json",
+      "thumbnail": "/assets/stages/stage-8/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 8
+    },
+    {
+      "id": "stage-9",
+      "title": "Menjaga Kebersihan",
+      "manifest": "/assets/stages/stage-9/manifest.json",
+      "thumbnail": "/assets/stages/stage-9/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 9
+    },
+    {
+      "id": "stage-10",
+      "title": "Tolong, Maaf, Terima Kasih",
+      "manifest": "/assets/stages/stage-10/manifest.json",
+      "thumbnail": "/assets/stages/stage-10/backgrounds/classroom-tolong-v2.png",
+      "status": "active",
+      "difficulty": 10
+    },
+    {
+      "id": "stage-11",
+      "title": "Belajar Wudhu",
+      "manifest": "/assets/stages/stage-11/manifest.json",
+      "thumbnail": "/assets/stages/stage-11/backgrounds/wudhu-awal-v2.png",
+      "status": "active",
+      "difficulty": 11
+    },
+    {
+      "id": "stage-12",
+      "title": "Perlengkapan Shalat",
+      "manifest": "/assets/stages/stage-12/manifest.json",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 12
+    },
+    {
+      "id": "stage-13",
+      "title": "Shalat 5 Waktu",
+      "manifest": "/assets/stages/stage-13/manifest.json",
+      "thumbnail": "/assets/stages/stage-13/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 13
+    },
+    {
+      "id": "stage-14",
+      "title": "Sedekah",
+      "manifest": "/assets/stages/stage-14/manifest.json",
+      "thumbnail": "/assets/stages/stage-14/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 14
+    },
+    {
+      "id": "stage-15",
+      "title": "Berbagi dengan Teman",
+      "manifest": "/assets/stages/stage-15/manifest.json",
+      "thumbnail": "/assets/stages/stage-15/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 15
+    },
+    {
+      "id": "stage-16",
+      "title": "Jujur Itu Hebat",
+      "manifest": "/assets/stages/stage-16/manifest.json",
+      "thumbnail": "/assets/stages/stage-16/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 16
+    },
+    {
+      "id": "stage-17",
+      "title": "Sabar Menunggu Giliran",
+      "manifest": "/assets/stages/stage-17/manifest.json",
+      "thumbnail": "/assets/stages/stage-17/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 17
+    },
+    {
+      "id": "stage-18",
+      "title": "Suka Menolong",
+      "manifest": "/assets/stages/stage-18/manifest.json",
+      "thumbnail": "/assets/stages/stage-18/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 18
+    },
+    {
+      "id": "stage-19",
+      "title": "Sayang Hewan Ciptaan Allah",
+      "manifest": "/assets/stages/stage-19/manifest.json",
+      "thumbnail": "/assets/stages/stage-19/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 19
+    },
+    {
+      "id": "stage-20",
+      "title": "Menjaga Alam",
+      "manifest": "/assets/stages/stage-20/manifest.json",
+      "thumbnail": "/assets/stages/stage-20/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 20
+    },
+    {
+      "id": "stage-21",
+      "title": "Pola Bulan dan Bintang",
+      "manifest": "/assets/stages/stage-21/manifest.json",
+      "thumbnail": "/assets/stages/stage-21/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 21
+    },
+    {
+      "id": "stage-22",
+      "title": "Lebah Mencari Bunga",
+      "manifest": "/assets/stages/stage-22/manifest.json",
+      "thumbnail": "/assets/stages/stage-22/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 22
+    },
+    {
+      "id": "stage-23",
+      "title": "IKOOBOT Misi Kebaikan",
+      "manifest": "/assets/stages/stage-23/manifest.json",
+      "thumbnail": "/assets/stages/stage-23/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 23
+    },
+    {
+      "id": "stage-24",
+      "title": "Petualangan Anak Saleh",
+      "manifest": "/assets/stages/stage-24/manifest.json",
+      "thumbnail": "/assets/stages/stage-24/backgrounds/bg-1.png",
+      "status": "active",
+      "difficulty": 24
     }
   ]
 }

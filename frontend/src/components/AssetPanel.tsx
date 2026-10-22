@@ -15,13 +15,9 @@ type OpenPanel = 'background' | 'character' | null;
 
 export default function AssetPanel({ manifest, backgroundId, characterId, onBackgroundChange, onCharacterChange }: Props) {
   const [openPanel, setOpenPanel] = useState<OpenPanel>(null);
-  const sceneTiles: SceneTile[] = [...manifest.backgrounds];
+  const sceneTiles: SceneTile[] = manifest.backgrounds.filter((scene) => !scene.completionOnly);
   const selectedBackground = manifest.backgrounds.find((scene) => scene.id === backgroundId);
   const selectedCharacter = manifest.characters.find((character) => character.id === characterId);
-
-  while (sceneTiles.length < 4) {
-    sceneTiles.push({ id: `locked-scene-${sceneTiles.length + 1}`, name: 'Terkunci', locked: true });
-  }
 
   const togglePanel = (panel: Exclude<OpenPanel, null>) => {
     setOpenPanel((current) => current === panel ? null : panel);
@@ -43,7 +39,7 @@ export default function AssetPanel({ manifest, backgroundId, characterId, onBack
         <div className="asset-accordion-body">
           <div className="stage-list">
           {sceneTiles.map((scene, index) => {
-            const locked = 'locked' in scene;
+            const locked = 'locked' in scene && scene.locked === true;
             return (
               <button
                 key={scene.id}

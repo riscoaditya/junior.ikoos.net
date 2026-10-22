@@ -1,0 +1,851 @@
+{
+  "id": "stage-6",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Adab Masuk Masjid",
+  "description": "Bantu Ali merapikan sandal, membaca doa masuk masjid, lalu berjalan tenang menuju saf.",
+  "thumbnail": "/assets/stages/stage-6/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 6,
+  "maxCommands": 9,
+  "ui": {
+    "stageLabel": "Stage 6",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-6-bg-1",
+      "name": "Halaman Masjid",
+      "file": "/assets/stages/stage-6/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-6/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-6-bg-2",
+      "name": "Serambi Masjid",
+      "file": "/assets/stages/stage-6/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-6/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-6-bg-3",
+      "name": "Ruang Shalat",
+      "file": "/assets/stages/stage-6/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-6/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 145,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 330,
+        "height": 330
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Ikuti jalur, ambil sandal Ali, lalu letakkan rapi di rak.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Sandal",
+          "icon": "pick",
+          "objectId": "stage-6-sandals"
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Rapikan di Rak",
+          "icon": "drop",
+          "targetId": "stage-6-shelf"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "pick",
+          "objectId": "stage-6-sandals",
+          "icon": "pick",
+          "label": "Ambil Sandal",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "stage-6-shelf",
+          "icon": "drop",
+          "label": "Rapikan di Rak",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-6-badge",
+        "badgeTitle": "Sandal Rapi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-6-unlock",
+        "unlockTitle": "Stage 7"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 126,
+          "height": 76
+        },
+        "missionTitle": "Adab Masuk Masjid",
+        "startLabel": "START",
+        "goalLabel": "RAK RAPI",
+        "points": [
+          {
+            "x": 290,
+            "y": 710,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 500,
+            "y": 710,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 700,
+            "y": 710,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 850,
+            "y": 710,
+            "kind": "path",
+            "hint": "pick",
+            "hintColor": "#f97316"
+          },
+          {
+            "x": 850,
+            "y": 530,
+            "actorPosition": {
+              "x": 700,
+              "y": 530
+            },
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1060,
+            "y": 530,
+            "actorPosition": {
+              "x": 970,
+              "y": 530
+            },
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1320,
+            "y": 530,
+            "kind": "goal",
+            "hint": "drop",
+            "hintColor": "#14b8a6"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-6-sandals",
+          "name": "Sandal Ali",
+          "file": "/assets/stages/shared/objects/sandals.png",
+          "kind": "collectible",
+          "position": {
+            "x": 780,
+            "y": 720
+          },
+          "displaySize": {
+            "width": 112,
+            "height": 88
+          },
+          "interactionRadius": 270,
+          "targetId": "stage-6-shelf",
+          "pickupText": "Sandal sudah diambil.",
+          "depth": 1.32
+        },
+        {
+          "id": "stage-6-shelf",
+          "name": "Rak Sandal",
+          "file": "/assets/stages/shared/objects/shelf.png",
+          "kind": "target",
+          "position": {
+            "x": 1190,
+            "y": 500
+          },
+          "displaySize": {
+            "width": 170,
+            "height": 170
+          },
+          "interactionRadius": 310,
+          "dropText": "MasyaAllah, sandal Ali tersusun rapi.",
+          "depth": 1.28
+        }
+      ],
+      "startBackgroundId": "stage-6-bg-1"
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Sampai di pintu masjid, ucapkan \"Allahummaftah li abwaba rahmatik\", lalu rekam suaramu.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Baca Doa Masuk",
+          "icon": "say",
+          "text": "Allahummaftah li abwaba rahmatik"
+        },
+        {
+          "order": 7,
+          "command": "recordVoice",
+          "label": "Rekam Doa Masuk",
+          "icon": "mic",
+          "targetText": "Allahummaftah li abwaba rahmatik",
+          "duration": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "say",
+          "text": "Allahummaftah li abwaba rahmatik",
+          "icon": "say",
+          "label": "Baca Doa Masuk",
+          "color": "#b865dd"
+        },
+        {
+          "type": "recordVoice",
+          "targetText": "Allahummaftah li abwaba rahmatik",
+          "duration": 3,
+          "icon": "mic",
+          "label": "Rekam Doa Masuk",
+          "color": "#f0528d"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-6-badge",
+        "badgeTitle": "Sahabat Doa Masjid",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-6-unlock",
+        "unlockTitle": "Stage 7"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 118,
+          "height": 72
+        },
+        "missionTitle": "Doa Masuk Masjid",
+        "startLabel": "START",
+        "goalLabel": "REKAM DOA",
+        "points": [
+          {
+            "x": 285,
+            "y": 750,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 285,
+            "y": 590,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 520,
+            "y": 590,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 760,
+            "y": 590,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 760,
+            "y": 400,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 980,
+            "y": 400,
+            "kind": "path",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          },
+          {
+            "x": 1210,
+            "y": 400,
+            "kind": "goal",
+            "hint": "recordVoice",
+            "hintColor": "#f0528d"
+          }
+        ]
+      },
+      "objects": [],
+      "startBackgroundId": "stage-6-bg-2"
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Ikuti arah di karpet dan antar Ali berjalan tenang sampai ke saf depan.",
+      "maxCommands": 9,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-6-badge",
+        "badgeTitle": "Saf Depan",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-6-unlock",
+        "unlockTitle": "Stage 7"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 110,
+          "height": 70
+        },
+        "missionTitle": "Menuju Saf Depan",
+        "startLabel": "START",
+        "goalLabel": "SAF DEPAN",
+        "points": [
+          {
+            "x": 270,
+            "y": 760,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 470,
+            "y": 760,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 470,
+            "y": 620,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 700,
+            "y": 620,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 700,
+            "y": 490,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 540,
+            "y": 490,
+            "kind": "path",
+            "hint": "moveLeft",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 540,
+            "y": 360,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 800,
+            "y": 360,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 800,
+            "y": 230,
+            "kind": "goal",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          }
+        ]
+      },
+      "objects": [],
+      "startBackgroundId": "stage-6-bg-3"
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "pick",
+      "label": "Ambil Sandal",
+      "icon": "pick",
+      "objectId": "stage-6-sandals"
+    },
+    {
+      "order": 5,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    },
+    {
+      "order": 6,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 7,
+      "command": "drop",
+      "label": "Rapikan di Rak",
+      "icon": "drop",
+      "targetId": "stage-6-shelf"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 27,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 27,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 6,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 6,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "pick",
+      "objectId": "stage-6-sandals",
+      "icon": "pick",
+      "label": "Ambil Sandal",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "stage-6-shelf",
+      "icon": "drop",
+      "label": "Rapikan di Rak",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "say",
+      "text": "Allahummaftah li abwaba rahmatik",
+      "icon": "say",
+      "label": "Baca Doa Masuk",
+      "color": "#b865dd"
+    },
+    {
+      "type": "recordVoice",
+      "targetText": "Allahummaftah li abwaba rahmatik",
+      "duration": 3,
+      "icon": "mic",
+      "label": "Rekam Doa Masuk",
+      "color": "#f0528d"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-6-badge",
+    "badgeTitle": "Sandal Rapi",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-6-unlock",
+    "unlockTitle": "Stage 7"
+  }
+}

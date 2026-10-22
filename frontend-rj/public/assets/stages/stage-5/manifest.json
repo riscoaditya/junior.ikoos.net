@@ -1,0 +1,1063 @@
+{
+  "id": "stage-5",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Antar Ali ke Masjid",
+  "description": "Bantu Ali mengikuti jalur taman hingga tiba di masjid.",
+  "thumbnail": "/assets/stages/stage-5/backgrounds/masjid-board-lv1.png",
+  "status": "active",
+  "difficulty": 5,
+  "maxCommands": 16,
+  "ui": {
+    "stageLabel": "Stage 5",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-5-masjid-route-lv1",
+      "name": "Papan Jalur Masjid Lv 1",
+      "file": "/assets/stages/stage-5/backgrounds/masjid-board-lv1.png",
+      "thumbnail": "/assets/stages/stage-5/backgrounds/masjid-board-lv1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-5-masjid-route-lv2",
+      "name": "Papan Jalur Masjid Lv 2",
+      "file": "/assets/stages/stage-5/backgrounds/masjid-board-lv2.png",
+      "thumbnail": "/assets/stages/stage-5/backgrounds/masjid-board-lv2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-5-masjid-route-lv3",
+      "name": "Papan Jalur Masjid Lv 3",
+      "file": "/assets/stages/stage-5/backgrounds/masjid-board-lv3.png",
+      "thumbnail": "/assets/stages/stage-5/backgrounds/masjid-board-lv3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 145,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 330,
+        "height": 330
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Ikuti tanda panah dari START. Lompat saat bertemu kayu, lalu antar Ali ke masjid.",
+      "maxCommands": 9,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "jump",
+          "label": "Lompat",
+          "icon": "jump",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "jump",
+          "value": 7,
+          "icon": "jump",
+          "label": "Lompat",
+          "color": "#ff9f18",
+          "hideValue": true
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-5-badge",
+        "badgeTitle": "Penjelajah Masjid",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-5-unlock",
+        "unlockTitle": "Stage 6"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 135,
+        "tileSize": {
+          "width": 140,
+          "height": 82
+        },
+        "points": [
+          {
+            "x": 330,
+            "y": 705,
+            "kind": "start",
+            "hint": "start"
+          },
+          {
+            "x": 550,
+            "y": 705,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 780,
+            "y": 705,
+            "kind": "path",
+            "hint": "jump"
+          },
+          {
+            "x": 1080,
+            "y": 705,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 1080,
+            "y": 565,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 1080,
+            "y": 425,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 880,
+            "y": 425,
+            "kind": "path",
+            "hint": "moveLeft"
+          },
+          {
+            "x": 880,
+            "y": 285,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 880,
+            "y": 150,
+            "kind": "goal",
+            "hint": "moveUp"
+          }
+        ],
+        "missionTitle": "Jalur Masjid",
+        "startLabel": "START",
+        "goalLabel": "MASJID"
+      },
+      "objects": [
+        {
+          "id": "level-1-jump-log-1",
+          "name": "Batang Kayu",
+          "file": "/assets/stages/shared/objects/log.png",
+          "kind": "obstacle",
+          "position": {
+            "x": 665,
+            "y": 840
+          },
+          "displaySize": {
+            "width": 90,
+            "height": 46
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 3
+        }
+      ],
+      "startBackgroundId": "stage-5-masjid-route-lv1"
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Ikuti tanda panah pada jalur yang lebih panjang dan lompati dua batang kayu.",
+      "maxCommands": 12,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "jump",
+          "label": "Lompat",
+          "icon": "jump",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 10,
+          "command": "jump",
+          "label": "Lompat",
+          "icon": "jump",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 11,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 12,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "jump",
+          "value": 7,
+          "icon": "jump",
+          "label": "Lompat",
+          "color": "#ff9f18",
+          "hideValue": true
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-5-badge",
+        "badgeTitle": "Ahli Jalur Taman",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-5-unlock",
+        "unlockTitle": "Stage 6"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 135,
+        "tileSize": {
+          "width": 132,
+          "height": 84
+        },
+        "points": [
+          {
+            "x": 220,
+            "y": 755,
+            "kind": "start",
+            "hint": "start"
+          },
+          {
+            "x": 220,
+            "y": 620,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 500,
+            "y": 620,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 750,
+            "y": 620,
+            "kind": "path",
+            "hint": "jump"
+          },
+          {
+            "x": 1030,
+            "y": 620,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 1030,
+            "y": 470,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 780,
+            "y": 470,
+            "kind": "path",
+            "hint": "moveLeft"
+          },
+          {
+            "x": 780,
+            "y": 340,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 1030,
+            "y": 340,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 1250,
+            "y": 340,
+            "kind": "path",
+            "hint": "jump"
+          },
+          {
+            "x": 1250,
+            "y": 200,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 1080,
+            "y": 200,
+            "kind": "goal",
+            "hint": "moveLeft"
+          }
+        ],
+        "missionTitle": "Jalur Masjid",
+        "startLabel": "START",
+        "goalLabel": "MASJID"
+      },
+      "objects": [
+        {
+          "id": "level-2-jump-log-1",
+          "name": "Batang Kayu",
+          "file": "/assets/stages/shared/objects/log.png",
+          "kind": "obstacle",
+          "position": {
+            "x": 625,
+            "y": 755
+          },
+          "displaySize": {
+            "width": 90,
+            "height": 46
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 3
+        },
+        {
+          "id": "level-2-jump-log-2",
+          "name": "Batang Kayu",
+          "file": "/assets/stages/shared/objects/log.png",
+          "kind": "obstacle",
+          "position": {
+            "x": 1140,
+            "y": 475
+          },
+          "displaySize": {
+            "width": 90,
+            "height": 46
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 3
+        }
+      ],
+      "startBackgroundId": "stage-5-masjid-route-lv2"
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Baca semua tanda arah, ikuti jalur berkelok, dan lompati setiap batang kayu.",
+      "maxCommands": 16,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "jump",
+          "label": "Lompat",
+          "icon": "jump",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 8,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 10,
+          "command": "jump",
+          "label": "Lompat",
+          "icon": "jump",
+          "value": 7,
+          "hideValue": true
+        },
+        {
+          "order": 11,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 12,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 13,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 14,
+          "command": "moveLeft",
+          "label": "Kiri",
+          "icon": "arrow-left",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 15,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 16,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "jump",
+          "value": 7,
+          "icon": "jump",
+          "label": "Lompat",
+          "color": "#ff9f18",
+          "hideValue": true
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-5-badge",
+        "badgeTitle": "Navigator Masjid",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-5-unlock",
+        "unlockTitle": "Stage 6"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 135,
+        "tileSize": {
+          "width": 116,
+          "height": 76
+        },
+        "points": [
+          {
+            "x": 220,
+            "y": 785,
+            "kind": "start",
+            "hint": "start"
+          },
+          {
+            "x": 430,
+            "y": 785,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 650,
+            "y": 785,
+            "kind": "path",
+            "hint": "jump"
+          },
+          {
+            "x": 920,
+            "y": 785,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 920,
+            "y": 650,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 720,
+            "y": 650,
+            "kind": "path",
+            "hint": "moveLeft"
+          },
+          {
+            "x": 510,
+            "y": 650,
+            "kind": "path",
+            "hint": "moveLeft"
+          },
+          {
+            "x": 510,
+            "y": 520,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 740,
+            "y": 520,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 970,
+            "y": 520,
+            "kind": "path",
+            "hint": "jump"
+          },
+          {
+            "x": 1220,
+            "y": 520,
+            "kind": "path",
+            "hint": "moveRight"
+          },
+          {
+            "x": 1220,
+            "y": 390,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 1010,
+            "y": 390,
+            "kind": "path",
+            "hint": "moveLeft"
+          },
+          {
+            "x": 800,
+            "y": 390,
+            "kind": "path",
+            "hint": "moveLeft"
+          },
+          {
+            "x": 800,
+            "y": 220,
+            "kind": "path",
+            "hint": "moveUp"
+          },
+          {
+            "x": 1040,
+            "y": 220,
+            "kind": "goal",
+            "hint": "moveRight"
+          }
+        ],
+        "missionTitle": "Jalur Masjid",
+        "startLabel": "START",
+        "goalLabel": "MASJID"
+      },
+      "objects": [
+        {
+          "id": "level-3-jump-log-1",
+          "name": "Batang Kayu",
+          "file": "/assets/stages/shared/objects/log.png",
+          "kind": "obstacle",
+          "position": {
+            "x": 540,
+            "y": 920
+          },
+          "displaySize": {
+            "width": 90,
+            "height": 46
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 3
+        },
+        {
+          "id": "level-3-jump-log-2",
+          "name": "Batang Kayu",
+          "file": "/assets/stages/shared/objects/log.png",
+          "kind": "obstacle",
+          "position": {
+            "x": 855,
+            "y": 655
+          },
+          "displaySize": {
+            "width": 90,
+            "height": 46
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 3
+        }
+      ],
+      "startBackgroundId": "stage-5-masjid-route-lv3"
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "jump",
+      "label": "Lompat",
+      "icon": "jump",
+      "value": 7,
+      "hideValue": true
+    },
+    {
+      "order": 4,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 5,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    },
+    {
+      "order": 6,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    },
+    {
+      "order": 7,
+      "command": "moveLeft",
+      "label": "Kiri",
+      "icon": "arrow-left",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 8,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    },
+    {
+      "order": 9,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 27,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 27,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 6,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 6,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "jump",
+      "value": 7,
+      "icon": "jump",
+      "label": "Lompat",
+      "color": "#ff9f18",
+      "hideValue": true
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-5-badge",
+    "badgeTitle": "Penjelajah Masjid",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-5-unlock",
+    "unlockTitle": "Stage 6"
+  }
+}

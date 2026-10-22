@@ -1,0 +1,580 @@
+{
+  "id": "stage-15",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Berbagi dengan Teman",
+  "description": "Berbagi sama rata memakai counting dan pengulangan sederhana.",
+  "thumbnail": "/assets/stages/stage-15/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 15,
+  "maxCommands": 7,
+  "ui": {
+    "stageLabel": "Stage 15",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-15-bg-1",
+      "name": "Buah untuk Teman",
+      "file": "/assets/stages/stage-15/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-15/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-15-bg-2",
+      "name": "Karpet Berbagi",
+      "file": "/assets/stages/stage-15/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-15/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-15-bg-3",
+      "name": "Meja Kurma",
+      "file": "/assets/stages/stage-15/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-15/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "apple-share",
+      "name": "Apel",
+      "file": "/assets/stages/shared/objects/apple.png",
+      "kind": "collectible",
+      "position": {
+        "x": 525,
+        "y": 740
+      },
+      "displaySize": {
+        "width": 125,
+        "height": 125
+      },
+      "interactionRadius": 210,
+      "targetId": "friend-share",
+      "pickupText": "Apel diambil"
+    },
+    {
+      "id": "friend-share",
+      "name": "Teman",
+      "file": "/assets/stages/shared/characters/teman-main.png",
+      "kind": "target",
+      "position": {
+        "x": 875,
+        "y": 720
+      },
+      "displaySize": {
+        "width": 360,
+        "height": 360
+      },
+      "interactionRadius": 210,
+      "showHalo": false,
+      "label": "Teman",
+      "dropText": "Teman mendapat bagian"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Berbagi untuk dua anak.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Apel",
+          "icon": "pick",
+          "objectId": "apple-share"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Beri Teman",
+          "icon": "drop",
+          "targetId": "friend-share"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "apple-share",
+          "icon": "pick",
+          "label": "Ambil Apel",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "friend-share",
+          "icon": "drop",
+          "label": "Beri Teman",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-15-badge",
+        "badgeTitle": "Berbagi Adil",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-15-unlock",
+        "unlockTitle": "Stage 16"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Pakai repeat untuk langkah yang sama.",
+      "maxCommands": 5,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "repeat",
+          "label": "Ulang Kanan",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Apel",
+          "icon": "pick",
+          "objectId": "apple-share"
+        },
+        {
+          "order": 4,
+          "command": "repeat",
+          "label": "Ulang Kanan",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Beri Teman",
+          "icon": "drop",
+          "targetId": "friend-share"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          },
+          "icon": "repeat",
+          "label": "Ulang Kanan",
+          "color": "#7c5cff"
+        },
+        {
+          "type": "pick",
+          "objectId": "apple-share",
+          "icon": "pick",
+          "label": "Ambil Apel",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "friend-share",
+          "icon": "drop",
+          "label": "Beri Teman",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-15-badge",
+        "badgeTitle": "Repeat Berbagi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-15-unlock",
+        "unlockTitle": "Stage 16"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Jumlah benda lebih banyak.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "repeat",
+          "label": "Ulang Kanan",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Apel",
+          "icon": "pick",
+          "objectId": "apple-share"
+        },
+        {
+          "order": 4,
+          "command": "repeat",
+          "label": "Ulang Kanan",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Beri Teman",
+          "icon": "drop",
+          "targetId": "friend-share"
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Berbagi itu indah"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          },
+          "icon": "repeat",
+          "label": "Ulang Kanan",
+          "color": "#7c5cff"
+        },
+        {
+          "type": "pick",
+          "objectId": "apple-share",
+          "icon": "pick",
+          "label": "Ambil Apel",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "friend-share",
+          "icon": "drop",
+          "label": "Beri Teman",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Berbagi itu indah",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-15-badge",
+        "badgeTitle": "Sahabat Berbagi",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-15-unlock",
+        "unlockTitle": "Stage 16"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 4,
+      "command": "pick",
+      "label": "Ambil Apel",
+      "icon": "pick",
+      "objectId": "apple-share"
+    },
+    {
+      "order": 5,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 6,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 7,
+      "command": "drop",
+      "label": "Beri Teman",
+      "icon": "drop",
+      "targetId": "friend-share"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "apple-share",
+      "icon": "pick",
+      "label": "Ambil Apel",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "friend-share",
+      "icon": "drop",
+      "label": "Beri Teman",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "repeat",
+      "times": 2,
+      "repeatCommand": {
+        "type": "moveRight",
+        "value": 7
+      },
+      "icon": "repeat",
+      "label": "Ulang Kanan",
+      "color": "#7c5cff"
+    },
+    {
+      "type": "say",
+      "text": "Berbagi itu indah",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-15-badge",
+    "badgeTitle": "Berbagi Adil",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-15-unlock",
+    "unlockTitle": "Stage 16"
+  }
+}

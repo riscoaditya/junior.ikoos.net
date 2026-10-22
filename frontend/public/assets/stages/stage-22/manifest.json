@@ -1,0 +1,566 @@
+{
+  "id": "stage-22",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Lebah Mencari Bunga",
+  "description": "Loop sederhana: perintah yang sama tidak perlu ditulis berulang.",
+  "thumbnail": "/assets/stages/stage-22/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 22,
+  "maxCommands": 7,
+  "ui": {
+    "stageLabel": "Stage 22",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-22-bg-1",
+      "name": "Lebah dan Bunga",
+      "file": "/assets/stages/stage-22/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-22/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-22-bg-2",
+      "name": "Kebun Madu",
+      "file": "/assets/stages/stage-22/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-22/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-22-bg-3",
+      "name": "Zig-zag Bunga",
+      "file": "/assets/stages/stage-22/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-22/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "bee-character",
+      "name": "Lebah",
+      "file": "/assets/stages/shared/objects/beeCharacter.png",
+      "thumbnail": "/assets/stages/shared/objects/beeCharacter.png",
+      "startPosition": {
+        "x": 300,
+        "y": 590
+      },
+      "displaySize": {
+        "width": 345,
+        "height": 345
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "flower-loop",
+      "name": "Bunga",
+      "file": "/assets/stages/shared/objects/flower.png",
+      "kind": "target",
+      "position": {
+        "x": 930,
+        "y": 610
+      },
+      "displaySize": {
+        "width": 145,
+        "height": 145
+      },
+      "interactionRadius": 360,
+      "label": "Bunga",
+      "choiceText": "Bunga ditemukan"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Jalur lurus dengan repeat.",
+      "maxCommands": 3,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "repeat",
+          "label": "Ulang Maju",
+          "icon": "repeat",
+          "times": 3,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Bunga",
+          "icon": "choice",
+          "text": "Bunga ditemukan",
+          "choiceId": "flower-loop"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "repeat",
+          "times": 3,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          },
+          "icon": "repeat",
+          "label": "Ulang Maju",
+          "color": "#7c5cff"
+        },
+        {
+          "type": "choice",
+          "choiceId": "flower-loop",
+          "text": "Bunga ditemukan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bunga",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-22-badge",
+        "badgeTitle": "Loop Pertama",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-22-unlock",
+        "unlockTitle": "Stage 23"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Zig-zag sederhana.",
+      "maxCommands": 6,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "repeat",
+          "label": "Ulang Maju",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik 4",
+          "icon": "arrow-up",
+          "value": 4
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "moveDown",
+          "label": "Turun 4",
+          "icon": "arrow-down",
+          "value": 4
+        },
+        {
+          "order": 6,
+          "command": "choice",
+          "label": "Bunga",
+          "icon": "choice",
+          "text": "Bunga ditemukan",
+          "choiceId": "flower-loop"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          },
+          "icon": "repeat",
+          "label": "Ulang Maju",
+          "color": "#7c5cff"
+        },
+        {
+          "type": "moveUp",
+          "value": 4,
+          "icon": "arrow-up",
+          "label": "Naik 4",
+          "color": "#168eea"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "moveDown",
+          "value": 4,
+          "icon": "arrow-down",
+          "label": "Turun 4",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "flower-loop",
+          "text": "Bunga ditemukan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bunga",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-22-badge",
+        "badgeTitle": "Lebah Zig-zag",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-22-unlock",
+        "unlockTitle": "Stage 23"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Kombinasi loop dan arah.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "repeat",
+          "label": "Ulang Maju",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 3,
+          "command": "moveUp",
+          "label": "Naik 4",
+          "icon": "arrow-up",
+          "value": 4
+        },
+        {
+          "order": 4,
+          "command": "repeat",
+          "label": "Ulang Maju",
+          "icon": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          }
+        },
+        {
+          "order": 5,
+          "command": "moveDown",
+          "label": "Turun 4",
+          "icon": "arrow-down",
+          "value": 4
+        },
+        {
+          "order": 6,
+          "command": "choice",
+          "label": "Bunga",
+          "icon": "choice",
+          "text": "Bunga ditemukan",
+          "choiceId": "flower-loop"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "repeat",
+          "times": 2,
+          "repeatCommand": {
+            "type": "moveRight",
+            "value": 7
+          },
+          "icon": "repeat",
+          "label": "Ulang Maju",
+          "color": "#7c5cff"
+        },
+        {
+          "type": "moveUp",
+          "value": 4,
+          "icon": "arrow-up",
+          "label": "Naik 4",
+          "color": "#168eea"
+        },
+        {
+          "type": "moveDown",
+          "value": 4,
+          "icon": "arrow-down",
+          "label": "Turun 4",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "flower-loop",
+          "text": "Bunga ditemukan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Bunga",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-22-badge",
+        "badgeTitle": "Sahabat Loop",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-22-unlock",
+        "unlockTitle": "Stage 23"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "repeat",
+      "label": "Ulang Maju",
+      "icon": "repeat",
+      "times": 3,
+      "repeatCommand": {
+        "type": "moveRight",
+        "value": 7
+      }
+    },
+    {
+      "order": 3,
+      "command": "choice",
+      "label": "Bunga",
+      "icon": "choice",
+      "text": "Bunga ditemukan",
+      "choiceId": "flower-loop"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "repeat",
+      "times": 3,
+      "repeatCommand": {
+        "type": "moveRight",
+        "value": 7
+      },
+      "icon": "repeat",
+      "label": "Ulang Maju",
+      "color": "#7c5cff"
+    },
+    {
+      "type": "choice",
+      "choiceId": "flower-loop",
+      "text": "Bunga ditemukan",
+      "correct": true,
+      "icon": "choice",
+      "label": "Bunga",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "repeat",
+      "times": 2,
+      "repeatCommand": {
+        "type": "moveRight",
+        "value": 7
+      },
+      "icon": "repeat",
+      "label": "Ulang Maju",
+      "color": "#7c5cff"
+    },
+    {
+      "type": "moveUp",
+      "value": 4,
+      "icon": "arrow-up",
+      "label": "Naik 4",
+      "color": "#168eea"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "moveDown",
+      "value": 4,
+      "icon": "arrow-down",
+      "label": "Turun 4",
+      "color": "#168eea"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-22-badge",
+    "badgeTitle": "Loop Pertama",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-22-unlock",
+    "unlockTitle": "Stage 23"
+  }
+}

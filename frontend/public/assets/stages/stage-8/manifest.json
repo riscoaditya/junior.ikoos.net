@@ -1,0 +1,1263 @@
+{
+  "id": "stage-8",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Jalur Adab Makan",
+  "description": "Cuci tangan, ucapkan Bismillah, gunakan tangan kanan, lalu bersyukur setelah makan.",
+  "thumbnail": "/assets/stages/stage-8/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 8,
+  "maxCommands": 12,
+  "ui": {
+    "stageLabel": "Stage 8",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-8-bg-1",
+      "name": "Paviliun Makan",
+      "file": "/assets/stages/stage-8/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-8/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-8-bg-2",
+      "name": "Ruang Makan Keluarga",
+      "file": "/assets/stages/stage-8/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-8/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-8-bg-3",
+      "name": "Teras Makan",
+      "file": "/assets/stages/stage-8/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-8/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 145,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 330,
+        "height": 330
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Ambil sabun, cuci tangan, lalu dengarkan dan ucapkan Bismillah sebelum makan.",
+      "maxCommands": 8,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sabun",
+          "icon": "pick",
+          "objectId": "stage-8-soap"
+        },
+        {
+          "order": 4,
+          "command": "drop",
+          "label": "Taruh Sabun",
+          "icon": "drop",
+          "targetId": "stage-8-wash-station"
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "say",
+          "label": "Ucap Bismillah",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 8,
+          "command": "sound",
+          "label": "Dengar Bismillah",
+          "icon": "sound",
+          "soundId": "bismillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "pick",
+          "objectId": "stage-8-soap",
+          "icon": "pick",
+          "label": "Ambil Sabun",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "stage-8-wash-station",
+          "icon": "drop",
+          "label": "Taruh Sabun",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Ucap Bismillah",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Dengar Bismillah",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-8-badge",
+        "badgeTitle": "Tangan Bersih",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-8-unlock",
+        "unlockTitle": "Stage 9"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 126,
+          "height": 76
+        },
+        "missionTitle": "Adab Sebelum Makan",
+        "startLabel": "START",
+        "goalLabel": "MEJA MAKAN",
+        "points": [
+          {
+            "x": 285,
+            "y": 760,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 480,
+            "y": 760,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 640,
+            "y": 760,
+            "kind": "path",
+            "hint": "pick",
+            "hintColor": "#f97316"
+          },
+          {
+            "x": 800,
+            "y": 760,
+            "kind": "path",
+            "hint": "drop",
+            "hintColor": "#14b8a6"
+          },
+          {
+            "x": 800,
+            "y": 590,
+            "actorPosition": {
+              "x": 480,
+              "y": 590
+            },
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1000,
+            "y": 590,
+            "actorPosition": {
+              "x": 800,
+              "y": 590
+            },
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1160,
+            "y": 590,
+            "kind": "path",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          },
+          {
+            "x": 1320,
+            "y": 590,
+            "kind": "goal",
+            "hint": "sound",
+            "hintColor": "#27c488"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-8-soap",
+          "name": "Sabun",
+          "file": "/assets/stages/shared/objects/soap.png",
+          "kind": "collectible",
+          "position": {
+            "x": 500,
+            "y": 720
+          },
+          "displaySize": {
+            "width": 96,
+            "height": 96
+          },
+          "interactionRadius": 270,
+          "targetId": "stage-8-wash-station",
+          "pickupText": "Ayo cuci tangan sampai bersih.",
+          "depth": 1.32
+        },
+        {
+          "id": "stage-8-wash-station",
+          "name": "Tempat Cuci Tangan",
+          "file": "/assets/stages/shared/objects/wudhuStation.png",
+          "kind": "target",
+          "position": {
+            "x": 620,
+            "y": 690
+          },
+          "displaySize": {
+            "width": 156,
+            "height": 156
+          },
+          "interactionRadius": 310,
+          "dropText": "Tangan sudah bersih dan sabun dikembalikan.",
+          "depth": 1.24
+        },
+        {
+          "id": "stage-8-right-hand",
+          "name": "Tangan Kanan",
+          "file": "/assets/stages/shared/objects/hand.png",
+          "kind": "choice",
+          "position": {
+            "x": 880,
+            "y": 545
+          },
+          "displaySize": {
+            "width": 112,
+            "height": 128
+          },
+          "interactionRadius": 300,
+          "choiceText": "Gunakan tangan kanan.",
+          "depth": 1.3
+        },
+        {
+          "id": "stage-8-meal",
+          "name": "Makanan",
+          "file": "/assets/stages/shared/objects/food.png",
+          "kind": "decoration",
+          "position": {
+            "x": 1240,
+            "y": 500
+          },
+          "displaySize": {
+            "width": 150,
+            "height": 124
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 1.16
+        }
+      ],
+      "startBackgroundId": "stage-8-bg-1"
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Cuci tangan, pilih tangan kanan, lalu ucapkan Bismillah sebelum makan.",
+      "maxCommands": 10,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Sabun",
+          "icon": "pick",
+          "objectId": "stage-8-soap"
+        },
+        {
+          "order": 5,
+          "command": "drop",
+          "label": "Taruh Sabun",
+          "icon": "drop",
+          "targetId": "stage-8-wash-station"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Pilih Tangan Kanan",
+          "icon": "choice",
+          "text": "Gunakan tangan kanan",
+          "choiceId": "stage-8-right-hand"
+        },
+        {
+          "order": 8,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "say",
+          "label": "Ucap Bismillah",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 10,
+          "command": "sound",
+          "label": "Dengar Bismillah",
+          "icon": "sound",
+          "soundId": "bismillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "pick",
+          "objectId": "stage-8-soap",
+          "icon": "pick",
+          "label": "Ambil Sabun",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "stage-8-wash-station",
+          "icon": "drop",
+          "label": "Taruh Sabun",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Ucap Bismillah",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Dengar Bismillah",
+          "color": "#27c488"
+        },
+        {
+          "type": "choice",
+          "choiceId": "stage-8-right-hand",
+          "text": "Gunakan tangan kanan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Pilih Tangan Kanan",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-8-badge",
+        "badgeTitle": "Makan dengan Tangan Kanan",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-8-unlock",
+        "unlockTitle": "Stage 9"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 120,
+        "tileSize": {
+          "width": 106,
+          "height": 68
+        },
+        "missionTitle": "Adab Makan",
+        "startLabel": "START",
+        "goalLabel": "MEJA MAKAN",
+        "points": [
+          {
+            "x": 275,
+            "y": 760,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 275,
+            "y": 610,
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 480,
+            "y": 610,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 640,
+            "y": 610,
+            "kind": "path",
+            "hint": "pick",
+            "hintColor": "#f97316"
+          },
+          {
+            "x": 800,
+            "y": 610,
+            "kind": "path",
+            "hint": "drop",
+            "hintColor": "#14b8a6"
+          },
+          {
+            "x": 970,
+            "y": 610,
+            "actorPosition": {
+              "x": 780,
+              "y": 610
+            },
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1130,
+            "y": 610,
+            "kind": "path",
+            "hint": "choice",
+            "hintColor": "#8b5cf6"
+          },
+          {
+            "x": 1130,
+            "y": 440,
+            "actorPosition": {
+              "x": 780,
+              "y": 440
+            },
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1280,
+            "y": 440,
+            "kind": "path",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          },
+          {
+            "x": 1390,
+            "y": 440,
+            "kind": "goal",
+            "hint": "sound",
+            "hintColor": "#27c488"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-8-soap",
+          "name": "Sabun",
+          "file": "/assets/stages/shared/objects/soap.png",
+          "kind": "collectible",
+          "position": {
+            "x": 500,
+            "y": 570
+          },
+          "displaySize": {
+            "width": 96,
+            "height": 96
+          },
+          "interactionRadius": 270,
+          "targetId": "stage-8-wash-station",
+          "pickupText": "Ayo cuci tangan sampai bersih.",
+          "depth": 1.32
+        },
+        {
+          "id": "stage-8-wash-station",
+          "name": "Tempat Cuci Tangan",
+          "file": "/assets/stages/shared/objects/wudhuStation.png",
+          "kind": "target",
+          "position": {
+            "x": 620,
+            "y": 535
+          },
+          "displaySize": {
+            "width": 156,
+            "height": 156
+          },
+          "interactionRadius": 310,
+          "dropText": "Tangan sudah bersih dan sabun dikembalikan.",
+          "depth": 1.24
+        },
+        {
+          "id": "stage-8-right-hand",
+          "name": "Tangan Kanan",
+          "file": "/assets/stages/shared/objects/hand.png",
+          "kind": "choice",
+          "position": {
+            "x": 815,
+            "y": 535
+          },
+          "displaySize": {
+            "width": 112,
+            "height": 128
+          },
+          "interactionRadius": 300,
+          "choiceText": "Gunakan tangan kanan.",
+          "depth": 1.3
+        },
+        {
+          "id": "stage-8-meal",
+          "name": "Makanan",
+          "file": "/assets/stages/shared/objects/food.png",
+          "kind": "decoration",
+          "position": {
+            "x": 1260,
+            "y": 390
+          },
+          "displaySize": {
+            "width": 150,
+            "height": 124
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 1.16
+        }
+      ],
+      "startBackgroundId": "stage-8-bg-2"
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Selesaikan seluruh adab makan sampai mengucapkan Alhamdulillah.",
+      "maxCommands": 12,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 3,
+          "command": "pick",
+          "label": "Ambil Sabun",
+          "icon": "pick",
+          "objectId": "stage-8-soap"
+        },
+        {
+          "order": 4,
+          "command": "drop",
+          "label": "Taruh Sabun",
+          "icon": "drop",
+          "targetId": "stage-8-wash-station"
+        },
+        {
+          "order": 5,
+          "command": "moveUp",
+          "label": "Naik",
+          "icon": "arrow-up",
+          "value": 6,
+          "hideValue": true
+        },
+        {
+          "order": 6,
+          "command": "say",
+          "label": "Ucap Bismillah",
+          "icon": "say",
+          "text": "Bismillah"
+        },
+        {
+          "order": 7,
+          "command": "sound",
+          "label": "Dengar Bismillah",
+          "icon": "sound",
+          "soundId": "bismillah"
+        },
+        {
+          "order": 8,
+          "command": "moveRight",
+          "label": "Kanan",
+          "icon": "arrow-right",
+          "value": 27,
+          "hideValue": true
+        },
+        {
+          "order": 9,
+          "command": "choice",
+          "label": "Pilih Tangan Kanan",
+          "icon": "choice",
+          "text": "Gunakan tangan kanan",
+          "choiceId": "stage-8-right-hand"
+        },
+        {
+          "order": 10,
+          "command": "wait",
+          "label": "Makan Perlahan",
+          "icon": "wait",
+          "value": 1
+        },
+        {
+          "order": 11,
+          "command": "say",
+          "label": "Ucap Alhamdulillah",
+          "icon": "say",
+          "text": "Alhamdulillah"
+        },
+        {
+          "order": 12,
+          "command": "sound",
+          "label": "Dengar Alhamdulillah",
+          "icon": "sound",
+          "soundId": "alhamdulillah"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 27,
+          "icon": "arrow-right",
+          "label": "Kanan",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveLeft",
+          "value": 27,
+          "icon": "arrow-left",
+          "label": "Kiri",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveUp",
+          "value": 6,
+          "icon": "arrow-up",
+          "label": "Naik",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "moveDown",
+          "value": 6,
+          "icon": "arrow-down",
+          "label": "Turun",
+          "color": "#168eea",
+          "hideValue": true
+        },
+        {
+          "type": "pick",
+          "objectId": "stage-8-soap",
+          "icon": "pick",
+          "label": "Ambil Sabun",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "stage-8-wash-station",
+          "icon": "drop",
+          "label": "Taruh Sabun",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Bismillah",
+          "icon": "say",
+          "label": "Ucap Bismillah",
+          "color": "#b865dd"
+        },
+        {
+          "type": "sound",
+          "soundId": "bismillah",
+          "icon": "sound",
+          "label": "Dengar Bismillah",
+          "color": "#27c488"
+        },
+        {
+          "type": "choice",
+          "choiceId": "stage-8-right-hand",
+          "text": "Gunakan tangan kanan",
+          "correct": true,
+          "icon": "choice",
+          "label": "Pilih Tangan Kanan",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "wait",
+          "value": 1,
+          "icon": "wait",
+          "label": "Makan Perlahan",
+          "color": "#ff8a96"
+        },
+        {
+          "type": "say",
+          "text": "Alhamdulillah",
+          "icon": "say",
+          "label": "Ucap Alhamdulillah",
+          "color": "#f59e0b"
+        },
+        {
+          "type": "sound",
+          "soundId": "alhamdulillah",
+          "icon": "sound",
+          "label": "Dengar Alhamdulillah",
+          "color": "#06b6d4"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-8-badge",
+        "badgeTitle": "Anak Bersyukur",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-8-unlock",
+        "unlockTitle": "Stage 9"
+      },
+      "instructionMode": "visual-route",
+      "route": {
+        "actorFootOffset": 112,
+        "tileSize": {
+          "width": 96,
+          "height": 64
+        },
+        "missionTitle": "Adab Makan Lengkap",
+        "startLabel": "START",
+        "goalLabel": "BERSYUKUR",
+        "points": [
+          {
+            "x": 245,
+            "y": 780,
+            "kind": "start",
+            "hint": "start",
+            "hintColor": "#ffd84d"
+          },
+          {
+            "x": 430,
+            "y": 780,
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 580,
+            "y": 780,
+            "kind": "path",
+            "hint": "pick",
+            "hintColor": "#f97316"
+          },
+          {
+            "x": 730,
+            "y": 780,
+            "kind": "path",
+            "hint": "drop",
+            "hintColor": "#14b8a6"
+          },
+          {
+            "x": 730,
+            "y": 610,
+            "actorPosition": {
+              "x": 430,
+              "y": 610
+            },
+            "kind": "path",
+            "hint": "moveUp",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 880,
+            "y": 610,
+            "kind": "path",
+            "hint": "say",
+            "hintColor": "#b865dd"
+          },
+          {
+            "x": 1030,
+            "y": 610,
+            "kind": "path",
+            "hint": "sound",
+            "hintColor": "#27c488"
+          },
+          {
+            "x": 1200,
+            "y": 610,
+            "actorPosition": {
+              "x": 820,
+              "y": 610
+            },
+            "kind": "path",
+            "hint": "moveRight",
+            "hintColor": "#168eea"
+          },
+          {
+            "x": 1340,
+            "y": 610,
+            "kind": "path",
+            "hint": "choice",
+            "hintColor": "#8b5cf6"
+          },
+          {
+            "x": 1340,
+            "y": 450,
+            "kind": "path",
+            "hint": "wait",
+            "hintColor": "#ff8a96"
+          },
+          {
+            "x": 1180,
+            "y": 450,
+            "kind": "path",
+            "hint": "say",
+            "hintColor": "#f59e0b"
+          },
+          {
+            "x": 1020,
+            "y": 450,
+            "kind": "goal",
+            "hint": "sound",
+            "hintColor": "#06b6d4"
+          }
+        ]
+      },
+      "objects": [
+        {
+          "id": "stage-8-soap",
+          "name": "Sabun",
+          "file": "/assets/stages/shared/objects/soap.png",
+          "kind": "collectible",
+          "position": {
+            "x": 450,
+            "y": 730
+          },
+          "displaySize": {
+            "width": 96,
+            "height": 96
+          },
+          "interactionRadius": 270,
+          "targetId": "stage-8-wash-station",
+          "pickupText": "Ayo cuci tangan sampai bersih.",
+          "depth": 1.32
+        },
+        {
+          "id": "stage-8-wash-station",
+          "name": "Tempat Cuci Tangan",
+          "file": "/assets/stages/shared/objects/wudhuStation.png",
+          "kind": "target",
+          "position": {
+            "x": 590,
+            "y": 690
+          },
+          "displaySize": {
+            "width": 156,
+            "height": 156
+          },
+          "interactionRadius": 310,
+          "dropText": "Tangan sudah bersih dan sabun dikembalikan.",
+          "depth": 1.24
+        },
+        {
+          "id": "stage-8-right-hand",
+          "name": "Tangan Kanan",
+          "file": "/assets/stages/shared/objects/hand.png",
+          "kind": "choice",
+          "position": {
+            "x": 850,
+            "y": 545
+          },
+          "displaySize": {
+            "width": 112,
+            "height": 128
+          },
+          "interactionRadius": 300,
+          "choiceText": "Gunakan tangan kanan.",
+          "depth": 1.3
+        },
+        {
+          "id": "stage-8-meal",
+          "name": "Makanan",
+          "file": "/assets/stages/shared/objects/food.png",
+          "kind": "decoration",
+          "position": {
+            "x": 1080,
+            "y": 365
+          },
+          "displaySize": {
+            "width": 150,
+            "height": 124
+          },
+          "interactionRadius": 210,
+          "showHalo": false,
+          "depth": 1.16
+        }
+      ],
+      "startBackgroundId": "stage-8-bg-3"
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 3,
+      "command": "pick",
+      "label": "Ambil Sabun",
+      "icon": "pick",
+      "objectId": "stage-8-soap"
+    },
+    {
+      "order": 4,
+      "command": "drop",
+      "label": "Taruh Sabun",
+      "icon": "drop",
+      "targetId": "stage-8-wash-station"
+    },
+    {
+      "order": 5,
+      "command": "moveUp",
+      "label": "Naik",
+      "icon": "arrow-up",
+      "value": 6,
+      "hideValue": true
+    },
+    {
+      "order": 6,
+      "command": "moveRight",
+      "label": "Kanan",
+      "icon": "arrow-right",
+      "value": 27,
+      "hideValue": true
+    },
+    {
+      "order": 7,
+      "command": "say",
+      "label": "Ucap Bismillah",
+      "icon": "say",
+      "text": "Bismillah"
+    },
+    {
+      "order": 8,
+      "command": "sound",
+      "label": "Dengar Bismillah",
+      "icon": "sound",
+      "soundId": "bismillah"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 27,
+      "icon": "arrow-right",
+      "label": "Kanan",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveLeft",
+      "value": 27,
+      "icon": "arrow-left",
+      "label": "Kiri",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveUp",
+      "value": 6,
+      "icon": "arrow-up",
+      "label": "Naik",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "moveDown",
+      "value": 6,
+      "icon": "arrow-down",
+      "label": "Turun",
+      "color": "#168eea",
+      "hideValue": true
+    },
+    {
+      "type": "pick",
+      "objectId": "stage-8-soap",
+      "icon": "pick",
+      "label": "Ambil Sabun",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "stage-8-wash-station",
+      "icon": "drop",
+      "label": "Taruh Sabun",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "say",
+      "text": "Bismillah",
+      "icon": "say",
+      "label": "Ucap Bismillah",
+      "color": "#b865dd"
+    },
+    {
+      "type": "sound",
+      "soundId": "bismillah",
+      "icon": "sound",
+      "label": "Dengar Bismillah",
+      "color": "#27c488"
+    },
+    {
+      "type": "choice",
+      "choiceId": "stage-8-right-hand",
+      "text": "Gunakan tangan kanan",
+      "correct": true,
+      "icon": "choice",
+      "label": "Pilih Tangan Kanan",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "wait",
+      "value": 1,
+      "icon": "wait",
+      "label": "Makan Perlahan",
+      "color": "#ff8a96"
+    },
+    {
+      "type": "say",
+      "text": "Alhamdulillah",
+      "icon": "say",
+      "label": "Ucap Alhamdulillah",
+      "color": "#f59e0b"
+    },
+    {
+      "type": "sound",
+      "soundId": "alhamdulillah",
+      "icon": "sound",
+      "label": "Dengar Alhamdulillah",
+      "color": "#06b6d4"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-8-badge",
+    "badgeTitle": "Tangan Bersih",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-8-unlock",
+    "unlockTitle": "Stage 9"
+  }
+}

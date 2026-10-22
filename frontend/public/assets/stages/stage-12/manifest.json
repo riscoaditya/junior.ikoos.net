@@ -1,0 +1,598 @@
+{
+  "id": "stage-12",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Perlengkapan Shalat",
+  "description": "Pilih perlengkapan shalat dan antar ke tempatnya.",
+  "thumbnail": "/assets/stages/stage-12/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 12,
+  "maxCommands": 9,
+  "ui": {
+    "stageLabel": "Stage 12",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-12-bg-1",
+      "name": "Perlengkapan Shalat",
+      "file": "/assets/stages/stage-12/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-12-bg-2",
+      "name": "Ruang Ibadah",
+      "file": "/assets/stages/stage-12/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-12-bg-3",
+      "name": "Lemari Rapi",
+      "file": "/assets/stages/stage-12/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "sajadah-item",
+      "name": "Sajadah",
+      "file": "/assets/stages/shared/objects/prayerMat.png",
+      "kind": "collectible",
+      "position": {
+        "x": 520,
+        "y": 750
+      },
+      "displaySize": {
+        "width": 130,
+        "height": 150
+      },
+      "interactionRadius": 210,
+      "targetId": "prayer-area",
+      "pickupText": "Sajadah diambil"
+    },
+    {
+      "id": "prayer-area",
+      "name": "Tempat Shalat",
+      "file": "/assets/stages/shared/objects/mosqueTarget.png",
+      "kind": "target",
+      "position": {
+        "x": 900,
+        "y": 720
+      },
+      "displaySize": {
+        "width": 170,
+        "height": 170
+      },
+      "interactionRadius": 210,
+      "label": "Shalat",
+      "dropText": "Siap shalat"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Ambil satu perlengkapan.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Sajadah",
+          "icon": "pick",
+          "objectId": "sajadah-item"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Taruh Sajadah",
+          "icon": "drop",
+          "targetId": "prayer-area"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "sajadah-item",
+          "icon": "pick",
+          "label": "Ambil Sajadah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "prayer-area",
+          "icon": "drop",
+          "label": "Taruh Sajadah",
+          "color": "#14b8a6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-12-badge",
+        "badgeTitle": "Siap Shalat",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-12-unlock",
+        "unlockTitle": "Stage 13"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Antar perlengkapan lalu salam.",
+      "maxCommands": 8,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Sajadah",
+          "icon": "pick",
+          "objectId": "sajadah-item"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Taruh Sajadah",
+          "icon": "drop",
+          "targetId": "prayer-area"
+        },
+        {
+          "order": 8,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Assalamu'alaikum"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "sajadah-item",
+          "icon": "pick",
+          "label": "Ambil Sajadah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "prayer-area",
+          "icon": "drop",
+          "label": "Taruh Sajadah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "say",
+          "text": "Assalamu'alaikum",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-12-badge",
+        "badgeTitle": "Rapi Beribadah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-12-unlock",
+        "unlockTitle": "Stage 13"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Pilih perlengkapan sesuai tujuan.",
+      "maxCommands": 9,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "pick",
+          "label": "Ambil Sajadah",
+          "icon": "pick",
+          "objectId": "sajadah-item"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "drop",
+          "label": "Taruh Sajadah",
+          "icon": "drop",
+          "targetId": "prayer-area"
+        },
+        {
+          "order": 8,
+          "command": "choice",
+          "label": "Siap Shalat",
+          "icon": "choice",
+          "text": "Siap shalat",
+          "choiceId": "prayer-area"
+        },
+        {
+          "order": 9,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "pick",
+          "objectId": "sajadah-item",
+          "icon": "pick",
+          "label": "Ambil Sajadah",
+          "color": "#f97316"
+        },
+        {
+          "type": "drop",
+          "targetId": "prayer-area",
+          "icon": "drop",
+          "label": "Taruh Sajadah",
+          "color": "#14b8a6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "prayer-area",
+          "text": "Siap shalat",
+          "correct": true,
+          "icon": "choice",
+          "label": "Siap Shalat",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-12-badge",
+        "badgeTitle": "Sahabat Ibadah",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-12-unlock",
+        "unlockTitle": "Stage 13"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 4,
+      "command": "pick",
+      "label": "Ambil Sajadah",
+      "icon": "pick",
+      "objectId": "sajadah-item"
+    },
+    {
+      "order": 5,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 6,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 7,
+      "command": "drop",
+      "label": "Taruh Sajadah",
+      "icon": "drop",
+      "targetId": "prayer-area"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "pick",
+      "objectId": "sajadah-item",
+      "icon": "pick",
+      "label": "Ambil Sajadah",
+      "color": "#f97316"
+    },
+    {
+      "type": "drop",
+      "targetId": "prayer-area",
+      "icon": "drop",
+      "label": "Taruh Sajadah",
+      "color": "#14b8a6"
+    },
+    {
+      "type": "say",
+      "text": "Assalamu'alaikum",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "choice",
+      "choiceId": "prayer-area",
+      "text": "Siap shalat",
+      "correct": true,
+      "icon": "choice",
+      "label": "Siap Shalat",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-12-badge",
+    "badgeTitle": "Siap Shalat",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-12-unlock",
+    "unlockTitle": "Stage 13"
+  }
+}

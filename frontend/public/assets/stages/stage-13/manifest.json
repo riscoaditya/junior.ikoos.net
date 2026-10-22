@@ -1,0 +1,623 @@
+{
+  "id": "stage-13",
+  "stageSize": {
+    "width": 1500,
+    "height": 1000,
+    "aspectRatio": "3:2"
+  },
+  "title": "Shalat 5 Waktu",
+  "description": "Pilih gerbang waktu shalat yang tepat.",
+  "thumbnail": "/assets/stages/stage-13/backgrounds/bg-1.png",
+  "status": "active",
+  "difficulty": 13,
+  "maxCommands": 9,
+  "ui": {
+    "stageLabel": "Stage 13",
+    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "theme": "junior-gameplay"
+  },
+  "backgrounds": [
+    {
+      "id": "stage-13-bg-1",
+      "name": "Langit Subuh",
+      "file": "/assets/stages/stage-13/backgrounds/bg-1.png",
+      "thumbnail": "/assets/stages/stage-13/backgrounds/bg-1.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-13-bg-2",
+      "name": "Waktu Shalat",
+      "file": "/assets/stages/stage-13/backgrounds/bg-2.png",
+      "thumbnail": "/assets/stages/stage-13/backgrounds/bg-2.png",
+      "fit": "cover"
+    },
+    {
+      "id": "stage-13-bg-3",
+      "name": "Malam Maghrib",
+      "file": "/assets/stages/stage-13/backgrounds/bg-3.png",
+      "thumbnail": "/assets/stages/stage-13/backgrounds/bg-3.png",
+      "fit": "cover"
+    }
+  ],
+  "characters": [
+    {
+      "id": "anak-muslim",
+      "name": "Ali",
+      "file": "/assets/stages/shared/characters/ali-main.png",
+      "thumbnail": "/assets/stages/shared/characters/ali-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "anak-ceria",
+      "name": "Aisyah",
+      "file": "/assets/stages/shared/characters/aisyah-main.png",
+      "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
+      "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
+      "startPosition": {
+        "x": 350,
+        "y": 680
+      },
+      "displaySize": {
+        "width": 630,
+        "height": 630
+      },
+      "scale": 1
+    },
+    {
+      "id": "kucing-lucu",
+      "name": "Kucing",
+      "file": "/assets/stages/stage-1/characters/kucing.png",
+      "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
+      "startPosition": {
+        "x": 330,
+        "y": 735
+      },
+      "displaySize": {
+        "width": 435,
+        "height": 435
+      },
+      "scale": 1
+    }
+  ],
+  "objects": [
+    {
+      "id": "time-subuh",
+      "name": "Subuh",
+      "file": "/assets/stages/shared/objects/moon.png",
+      "kind": "choice",
+      "position": {
+        "x": 520,
+        "y": 620
+      },
+      "displaySize": {
+        "width": 140,
+        "height": 140
+      },
+      "interactionRadius": 210,
+      "label": "Subuh",
+      "choiceText": "Subuh"
+    },
+    {
+      "id": "time-maghrib",
+      "name": "Maghrib",
+      "file": "/assets/stages/shared/objects/mosqueTarget.png",
+      "kind": "choice",
+      "position": {
+        "x": 850,
+        "y": 710
+      },
+      "displaySize": {
+        "width": 160,
+        "height": 160
+      },
+      "interactionRadius": 210,
+      "label": "Maghrib",
+      "choiceText": "Maghrib"
+    },
+    {
+      "id": "time-five",
+      "name": "5 Waktu",
+      "file": "/assets/stages/shared/objects/starToken.png",
+      "kind": "choice",
+      "position": {
+        "x": 1080,
+        "y": 650
+      },
+      "displaySize": {
+        "width": 135,
+        "height": 135
+      },
+      "interactionRadius": 210,
+      "label": "5 Waktu",
+      "choiceText": "Lima waktu"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "file": "/assets/stages/stage-1/sounds/pop.wav"
+    },
+    {
+      "id": "success",
+      "name": "Success",
+      "file": "/assets/stages/stage-1/sounds/success.wav"
+    },
+    {
+      "id": "salam",
+      "name": "Salam",
+      "file": "/assets/stages/stage-1/sounds/salam.wav"
+    },
+    {
+      "id": "bismillah",
+      "name": "Bismillah",
+      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
+    },
+    {
+      "id": "alhamdulillah",
+      "name": "Alhamdulillah",
+      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
+    },
+    {
+      "id": "masyaallah",
+      "name": "MasyaAllah",
+      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "id": "level-1",
+      "title": "Lv 1",
+      "label": "Lv 1",
+      "description": "Kenal Subuh dan Maghrib.",
+      "maxCommands": 5,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Subuh",
+          "icon": "choice",
+          "text": "Subuh",
+          "choiceId": "time-subuh"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Maghrib",
+          "icon": "choice",
+          "text": "Maghrib",
+          "choiceId": "time-maghrib"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-subuh",
+          "text": "Subuh",
+          "correct": true,
+          "icon": "choice",
+          "label": "Subuh",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-maghrib",
+          "text": "Maghrib",
+          "correct": true,
+          "icon": "choice",
+          "label": "Maghrib",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-13-badge",
+        "badgeTitle": "Kenal Waktu",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-13-unlock",
+        "unlockTitle": "Stage 14"
+      }
+    },
+    {
+      "id": "level-2",
+      "title": "Lv 2",
+      "label": "Lv 2",
+      "description": "Tiga waktu shalat.",
+      "maxCommands": 7,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 3,
+          "command": "choice",
+          "label": "Subuh",
+          "icon": "choice",
+          "text": "Subuh",
+          "choiceId": "time-subuh"
+        },
+        {
+          "order": 4,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 5,
+          "command": "choice",
+          "label": "Maghrib",
+          "icon": "choice",
+          "text": "Maghrib",
+          "choiceId": "time-maghrib"
+        },
+        {
+          "order": 6,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 7,
+          "command": "choice",
+          "label": "Isya",
+          "icon": "choice",
+          "text": "Isya",
+          "choiceId": "time-five"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-subuh",
+          "text": "Subuh",
+          "correct": true,
+          "icon": "choice",
+          "label": "Subuh",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-maghrib",
+          "text": "Maghrib",
+          "correct": true,
+          "icon": "choice",
+          "label": "Maghrib",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-five",
+          "text": "Isya",
+          "correct": true,
+          "icon": "choice",
+          "label": "Isya",
+          "color": "#8b5cf6"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-13-badge",
+        "badgeTitle": "Pilih Waktu",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-13-unlock",
+        "unlockTitle": "Stage 14"
+      }
+    },
+    {
+      "id": "level-3",
+      "title": "Lv 3",
+      "label": "Lv 3",
+      "description": "Lima waktu dengan cerita singkat.",
+      "maxCommands": 9,
+      "instructions": [
+        {
+          "order": 1,
+          "command": "start",
+          "label": "Start",
+          "icon": "flag"
+        },
+        {
+          "order": 2,
+          "command": "say",
+          "label": "Bicara",
+          "icon": "say",
+          "text": "Aku belajar shalat"
+        },
+        {
+          "order": 3,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 4,
+          "command": "choice",
+          "label": "Subuh",
+          "icon": "choice",
+          "text": "Subuh",
+          "choiceId": "time-subuh"
+        },
+        {
+          "order": 5,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 6,
+          "command": "choice",
+          "label": "Maghrib",
+          "icon": "choice",
+          "text": "Maghrib",
+          "choiceId": "time-maghrib"
+        },
+        {
+          "order": 7,
+          "command": "moveRight",
+          "label": "Kanan 7",
+          "icon": "arrow-right",
+          "value": 7
+        },
+        {
+          "order": 8,
+          "command": "choice",
+          "label": "5 Waktu",
+          "icon": "choice",
+          "text": "Lima waktu",
+          "choiceId": "time-five"
+        },
+        {
+          "order": 9,
+          "command": "sound",
+          "label": "Hebat",
+          "icon": "sound",
+          "soundId": "success"
+        }
+      ],
+      "commands": [
+        {
+          "type": "start",
+          "icon": "flag",
+          "label": "Start",
+          "color": "#ffd84d"
+        },
+        {
+          "type": "say",
+          "text": "Aku belajar shalat",
+          "icon": "say",
+          "label": "Bicara",
+          "color": "#b865dd"
+        },
+        {
+          "type": "moveRight",
+          "value": 7,
+          "icon": "arrow-right",
+          "label": "Kanan 7",
+          "color": "#168eea"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-subuh",
+          "text": "Subuh",
+          "correct": true,
+          "icon": "choice",
+          "label": "Subuh",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-maghrib",
+          "text": "Maghrib",
+          "correct": true,
+          "icon": "choice",
+          "label": "Maghrib",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "choice",
+          "choiceId": "time-five",
+          "text": "Lima waktu",
+          "correct": true,
+          "icon": "choice",
+          "label": "5 Waktu",
+          "color": "#8b5cf6"
+        },
+        {
+          "type": "sound",
+          "soundId": "success",
+          "icon": "sound",
+          "label": "Hebat",
+          "color": "#27c488"
+        }
+      ],
+      "reward": {
+        "stars": 3,
+        "badgeId": "stage-13-badge",
+        "badgeTitle": "Sahabat Shalat",
+        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+        "unlockId": "stage-13-unlock",
+        "unlockTitle": "Stage 14"
+      }
+    }
+  ],
+  "instructions": [
+    {
+      "order": 1,
+      "command": "start",
+      "label": "Start",
+      "icon": "flag"
+    },
+    {
+      "order": 2,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 3,
+      "command": "choice",
+      "label": "Subuh",
+      "icon": "choice",
+      "text": "Subuh",
+      "choiceId": "time-subuh"
+    },
+    {
+      "order": 4,
+      "command": "moveRight",
+      "label": "Kanan 7",
+      "icon": "arrow-right",
+      "value": 7
+    },
+    {
+      "order": 5,
+      "command": "choice",
+      "label": "Maghrib",
+      "icon": "choice",
+      "text": "Maghrib",
+      "choiceId": "time-maghrib"
+    }
+  ],
+  "commands": [
+    {
+      "type": "start",
+      "icon": "flag",
+      "label": "Start",
+      "color": "#ffd84d"
+    },
+    {
+      "type": "moveRight",
+      "value": 7,
+      "icon": "arrow-right",
+      "label": "Kanan 7",
+      "color": "#168eea"
+    },
+    {
+      "type": "choice",
+      "choiceId": "time-subuh",
+      "text": "Subuh",
+      "correct": true,
+      "icon": "choice",
+      "label": "Subuh",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "time-maghrib",
+      "text": "Maghrib",
+      "correct": true,
+      "icon": "choice",
+      "label": "Maghrib",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "choice",
+      "choiceId": "time-five",
+      "text": "Isya",
+      "correct": true,
+      "icon": "choice",
+      "label": "Isya",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "say",
+      "text": "Aku belajar shalat",
+      "icon": "say",
+      "label": "Bicara",
+      "color": "#b865dd"
+    },
+    {
+      "type": "choice",
+      "choiceId": "time-five",
+      "text": "Lima waktu",
+      "correct": true,
+      "icon": "choice",
+      "label": "5 Waktu",
+      "color": "#8b5cf6"
+    },
+    {
+      "type": "sound",
+      "soundId": "success",
+      "icon": "sound",
+      "label": "Hebat",
+      "color": "#27c488"
+    }
+  ],
+  "reward": {
+    "stars": 3,
+    "badgeId": "stage-13-badge",
+    "badgeTitle": "Kenal Waktu",
+    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "unlockId": "stage-13-unlock",
+    "unlockTitle": "Stage 14"
+  }
+}

@@ -6,36 +6,36 @@
     "aspectRatio": "3:2"
   },
   "title": "Perlengkapan Shalat",
-  "description": "Pilih perlengkapan shalat dan antar ke tempatnya.",
-  "thumbnail": "/assets/stages/stage-12/backgrounds/bg-1.png",
+  "description": "Bantu Ali mengambil dan menata perlengkapan shalat dengan urut dan rapi.",
+  "thumbnail": "/assets/stages/stage-12/backgrounds/bg-prayer-room-v2.png",
   "status": "active",
   "difficulty": 12,
-  "maxCommands": 9,
+  "maxCommands": 28,
   "ui": {
     "stageLabel": "Stage 12",
-    "tip": "Selesaikan misi kecil, kumpulkan bintang, lalu lihat ceritanya bergerak.",
+    "tip": "Perhatikan perubahan benda: ambil dari tempatnya, bawa dengan hati-hati, lalu taruh di tujuan yang benar.",
     "theme": "junior-gameplay"
   },
   "backgrounds": [
     {
       "id": "stage-12-bg-1",
-      "name": "Perlengkapan Shalat",
-      "file": "/assets/stages/stage-12/backgrounds/bg-1.png",
-      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-1.png",
+      "name": "Ruang Persiapan Shalat",
+      "file": "/assets/stages/stage-12/backgrounds/bg-prayer-room-v2.png",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-prayer-room-v2.png",
       "fit": "cover"
     },
     {
       "id": "stage-12-bg-2",
-      "name": "Ruang Ibadah",
-      "file": "/assets/stages/stage-12/backgrounds/bg-2.png",
-      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-2.png",
+      "name": "Sudut Perlengkapan Shalat",
+      "file": "/assets/stages/stage-12/backgrounds/bg-prayer-corner-v2.png",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-prayer-corner-v2.png",
       "fit": "cover"
     },
     {
       "id": "stage-12-bg-3",
-      "name": "Lemari Rapi",
-      "file": "/assets/stages/stage-12/backgrounds/bg-3.png",
-      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-3.png",
+      "name": "Musala Keluarga",
+      "file": "/assets/stages/stage-12/backgrounds/bg-musalla-v2.png",
+      "thumbnail": "/assets/stages/stage-12/backgrounds/bg-musalla-v2.png",
       "fit": "cover"
     }
   ],
@@ -46,14 +46,8 @@
       "file": "/assets/stages/shared/characters/ali-main.png",
       "thumbnail": "/assets/stages/shared/characters/ali-main.png",
       "instructionAvatar": "/assets/stages/shared/characters/ali-avatar.png",
-      "startPosition": {
-        "x": 350,
-        "y": 680
-      },
-      "displaySize": {
-        "width": 630,
-        "height": 630
-      },
+      "startPosition": { "x": 350, "y": 735 },
+      "displaySize": { "width": 430, "height": 430 },
       "scale": 1
     },
     {
@@ -62,14 +56,8 @@
       "file": "/assets/stages/shared/characters/aisyah-main.png",
       "thumbnail": "/assets/stages/shared/characters/aisyah-main.png",
       "instructionAvatar": "/assets/stages/shared/characters/aisyah-avatar.png",
-      "startPosition": {
-        "x": 350,
-        "y": 680
-      },
-      "displaySize": {
-        "width": 630,
-        "height": 630
-      },
+      "startPosition": { "x": 350, "y": 735 },
+      "displaySize": { "width": 430, "height": 430 },
       "scale": 1
     },
     {
@@ -77,521 +65,409 @@
       "name": "Kucing",
       "file": "/assets/stages/stage-1/characters/kucing.png",
       "thumbnail": "/assets/stages/stage-1/thumbnails/kucing.png",
-      "startPosition": {
-        "x": 330,
-        "y": 735
-      },
-      "displaySize": {
-        "width": 435,
-        "height": 435
-      },
+      "startPosition": { "x": 330, "y": 790 },
+      "displaySize": { "width": 310, "height": 310 },
       "scale": 1
     }
   ],
   "objects": [
     {
-      "id": "sajadah-item",
-      "name": "Sajadah",
-      "file": "/assets/stages/shared/objects/prayerMat.png",
+      "id": "sajadah-item-lv1",
+      "name": "Sajadah Tergulung",
+      "file": "/assets/stages/stage-12/objects/sajadah-rolled-v2.png",
       "kind": "collectible",
-      "position": {
-        "x": 520,
-        "y": 750
-      },
-      "displaySize": {
-        "width": 130,
-        "height": 150
-      },
-      "interactionRadius": 210,
-      "targetId": "prayer-area",
-      "pickupText": "Sajadah diambil"
+      "position": { "x": 600, "y": 735 },
+      "displaySize": { "width": 170, "height": 140 },
+      "interactionRadius": 220,
+      "targetId": "area-sajadah-lv1",
+      "pickupText": "Sajadah diambil dengan hati-hati."
     },
     {
-      "id": "prayer-area",
-      "name": "Tempat Shalat",
-      "file": "/assets/stages/shared/objects/mosqueTarget.png",
+      "id": "area-sajadah-lv1",
+      "name": "Arah Kiblat",
+      "file": "/assets/stages/stage-12/objects/qibla-marker-v2.png",
       "kind": "target",
-      "position": {
-        "x": 900,
-        "y": 720
-      },
-      "displaySize": {
-        "width": 170,
-        "height": 170
-      },
-      "interactionRadius": 210,
-      "label": "Shalat",
-      "dropText": "Siap shalat"
+      "position": { "x": 1190, "y": 790 },
+      "displaySize": { "width": 118, "height": 118 },
+      "interactionRadius": 230,
+      "label": "Arah Kiblat",
+      "dropText": "Sajadah terbentang rapi menghadap kiblat.",
+      "choiceText": "Benar, sajadah sudah rapi dan menghadap kiblat.",
+      "correct": true,
+      "resultFile": "/assets/stages/stage-12/objects/sajadah-open-v2.png",
+      "resultPosition": { "x": 1190, "y": 835 },
+      "resultDisplaySize": { "width": 310, "height": 205 },
+      "resultDepth": 1.65,
+      "hideTargetOnSuccess": true
     }
   ],
   "sounds": [
-    {
-      "id": "pop",
-      "name": "Pop",
-      "file": "/assets/stages/stage-1/sounds/pop.wav"
-    },
-    {
-      "id": "success",
-      "name": "Success",
-      "file": "/assets/stages/stage-1/sounds/success.wav"
-    },
-    {
-      "id": "salam",
-      "name": "Salam",
-      "file": "/assets/stages/stage-1/sounds/salam.wav"
-    },
-    {
-      "id": "bismillah",
-      "name": "Bismillah",
-      "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3"
-    },
-    {
-      "id": "alhamdulillah",
-      "name": "Alhamdulillah",
-      "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3"
-    },
-    {
-      "id": "masyaallah",
-      "name": "MasyaAllah",
-      "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3"
-    }
+    { "id": "pop", "name": "Pop", "file": "/assets/stages/stage-1/sounds/pop.wav" },
+    { "id": "success", "name": "Success", "file": "/assets/stages/stage-1/sounds/success.wav" },
+    { "id": "salam", "name": "Salam", "file": "/assets/stages/stage-1/sounds/salam.wav" },
+    { "id": "bismillah", "name": "Bismillah", "file": "/assets/stages/stage-4/sounds/Bismillahirrahmanirrahim.mp3" },
+    { "id": "alhamdulillah", "name": "Alhamdulillah", "file": "/assets/stages/stage-2/sounds/alhamdulillah.mp3" },
+    { "id": "masyaallah", "name": "MasyaAllah", "file": "/assets/stages/stage-3/sounds/MasyaAllah.mp3" }
   ],
   "levels": [
     {
       "id": "level-1",
       "title": "Lv 1",
       "label": "Lv 1",
-      "description": "Ambil satu perlengkapan.",
-      "maxCommands": 7,
-      "instructions": [
+      "description": "Ambil sajadah, bawa dengan hati-hati, lalu bentangkan rapi menghadap kiblat.",
+      "maxCommands": 14,
+      "startBackgroundId": "stage-12-bg-1",
+      "objects": [
         {
-          "order": 1,
-          "command": "start",
-          "label": "Start",
-          "icon": "flag"
+          "id": "sajadah-item-lv1",
+          "name": "Sajadah Tergulung",
+          "file": "/assets/stages/stage-12/objects/sajadah-rolled-v2.png",
+          "kind": "collectible",
+          "position": { "x": 600, "y": 735 },
+          "displaySize": { "width": 170, "height": 140 },
+          "interactionRadius": 220,
+          "targetId": "area-sajadah-lv1",
+          "pickupText": "Sajadah diambil dengan hati-hati."
         },
         {
-          "order": 2,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 3,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 4,
-          "command": "pick",
-          "label": "Ambil Sajadah",
-          "icon": "pick",
-          "objectId": "sajadah-item"
-        },
-        {
-          "order": 5,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 6,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 7,
-          "command": "drop",
-          "label": "Taruh Sajadah",
-          "icon": "drop",
-          "targetId": "prayer-area"
+          "id": "area-sajadah-lv1",
+          "name": "Arah Kiblat",
+          "file": "/assets/stages/stage-12/objects/qibla-marker-v2.png",
+          "kind": "target",
+          "position": { "x": 1190, "y": 790 },
+          "displaySize": { "width": 118, "height": 118 },
+          "interactionRadius": 230,
+          "label": "Arah Kiblat",
+          "dropText": "Sajadah terbentang rapi menghadap kiblat.",
+          "choiceText": "Benar, sajadah sudah rapi dan menghadap kiblat.",
+          "correct": true,
+          "resultFile": "/assets/stages/stage-12/objects/sajadah-open-v2.png",
+          "resultPosition": { "x": 1190, "y": 835 },
+          "resultDisplaySize": { "width": 310, "height": 205 },
+          "resultDepth": 1.65,
+          "hideTargetOnSuccess": true
         }
       ],
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+        { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+        { "order": 3, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 4, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 5, "command": "pick", "label": "Ambil Sajadah", "icon": "pick", "objectId": "sajadah-item-lv1" },
+        { "order": 6, "command": "say", "label": "Bawa Hati-hati", "icon": "say", "text": "Aku membawa sajadah dengan hati-hati." },
+        { "order": 7, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 8, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 9, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 10, "command": "drop", "label": "Bentangkan Sajadah", "icon": "drop", "targetId": "area-sajadah-lv1" },
+        { "order": 11, "command": "wait", "label": "Rapikan 1", "icon": "wait", "value": 1 },
+        { "order": 12, "command": "choice", "label": "Cek Arah Kiblat", "icon": "choice", "text": "Sajadah menghadap kiblat", "choiceId": "area-sajadah-lv1" },
+        { "order": 13, "command": "say", "label": "Sajadah Rapi", "icon": "say", "text": "Sajadah sudah terbentang rapi." },
+        { "order": 14, "command": "sound", "label": "Hebat", "icon": "sound", "soundId": "success" }
+      ],
       "commands": [
-        {
-          "type": "start",
-          "icon": "flag",
-          "label": "Start",
-          "color": "#ffd84d"
-        },
-        {
-          "type": "moveRight",
-          "value": 7,
-          "icon": "arrow-right",
-          "label": "Kanan 7",
-          "color": "#168eea"
-        },
-        {
-          "type": "pick",
-          "objectId": "sajadah-item",
-          "icon": "pick",
-          "label": "Ambil Sajadah",
-          "color": "#f97316"
-        },
-        {
-          "type": "drop",
-          "targetId": "prayer-area",
-          "icon": "drop",
-          "label": "Taruh Sajadah",
-          "color": "#14b8a6"
-        }
+        { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+        { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#27c488" },
+        { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+        { "type": "pick", "objectId": "sajadah-item-lv1", "icon": "pick", "label": "Ambil Sajadah", "color": "#f97316" },
+        { "type": "say", "text": "Aku membawa sajadah dengan hati-hati.", "icon": "say", "label": "Bawa Hati-hati", "color": "#b865dd" },
+        { "type": "drop", "targetId": "area-sajadah-lv1", "icon": "drop", "label": "Bentangkan Sajadah", "color": "#14b8a6" },
+        { "type": "wait", "value": 1, "icon": "wait", "label": "Rapikan 1", "color": "#64748b" },
+        { "type": "choice", "choiceId": "area-sajadah-lv1", "text": "Sajadah menghadap kiblat", "correct": true, "icon": "choice", "label": "Cek Arah Kiblat", "color": "#8b5cf6" },
+        { "type": "say", "text": "Sajadah sudah terbentang rapi.", "icon": "say", "label": "Sajadah Rapi", "color": "#b865dd" },
+        { "type": "sound", "soundId": "success", "icon": "sound", "label": "Hebat", "color": "#27c488" }
       ],
       "reward": {
         "stars": 3,
-        "badgeId": "stage-12-badge",
-        "badgeTitle": "Siap Shalat",
-        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
-        "unlockId": "stage-12-unlock",
-        "unlockTitle": "Stage 13"
+        "badgeId": "stage-12-level-1-badge",
+        "badgeTitle": "Sajadah Rapi",
+        "badgeText": "Ali berhasil membentangkan sajadah menghadap kiblat.",
+        "unlockId": "stage-12-level-2",
+        "unlockTitle": "Lv 2"
       }
     },
     {
       "id": "level-2",
       "title": "Lv 2",
       "label": "Lv 2",
-      "description": "Antar perlengkapan lalu salam.",
-      "maxCommands": 8,
-      "instructions": [
+      "description": "Siapkan dua perlengkapan: bentangkan sajadah, lalu letakkan peci dengan rapi.",
+      "maxCommands": 15,
+      "startBackgroundId": "stage-12-bg-2",
+      "objects": [
         {
-          "order": 1,
-          "command": "start",
-          "label": "Start",
-          "icon": "flag"
+          "id": "sajadah-item-lv2",
+          "name": "Sajadah Tergulung",
+          "file": "/assets/stages/stage-12/objects/sajadah-rolled-v2.png",
+          "kind": "collectible",
+          "position": { "x": 600, "y": 735 },
+          "displaySize": { "width": 170, "height": 140 },
+          "interactionRadius": 220,
+          "targetId": "area-sajadah-lv2",
+          "pickupText": "Sajadah siap dibentangkan."
         },
         {
-          "order": 2,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
+          "id": "area-sajadah-lv2",
+          "name": "Arah Kiblat",
+          "file": "/assets/stages/stage-12/objects/qibla-marker-v2.png",
+          "kind": "target",
+          "position": { "x": 880, "y": 780 },
+          "displaySize": { "width": 112, "height": 112 },
+          "interactionRadius": 225,
+          "label": "Kiblat",
+          "dropText": "Sajadah terbentang rapi.",
+          "resultFile": "/assets/stages/stage-12/objects/sajadah-open-v2.png",
+          "resultPosition": { "x": 880, "y": 835 },
+          "resultDisplaySize": { "width": 295, "height": 195 },
+          "resultDepth": 1.65,
+          "hideTargetOnSuccess": true
         },
         {
-          "order": 3,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
+          "id": "peci-item-lv2",
+          "name": "Peci",
+          "file": "/assets/stages/stage-12/objects/peci-v2.png",
+          "kind": "collectible",
+          "position": { "x": 1010, "y": 700 },
+          "displaySize": { "width": 125, "height": 125 },
+          "interactionRadius": 210,
+          "targetId": "rak-peci-lv2",
+          "pickupText": "Peci diambil dengan tangan bersih."
         },
         {
-          "order": 4,
-          "command": "pick",
-          "label": "Ambil Sajadah",
-          "icon": "pick",
-          "objectId": "sajadah-item"
-        },
-        {
-          "order": 5,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 6,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 7,
-          "command": "drop",
-          "label": "Taruh Sajadah",
-          "icon": "drop",
-          "targetId": "prayer-area"
-        },
-        {
-          "order": 8,
-          "command": "say",
-          "label": "Bicara",
-          "icon": "say",
-          "text": "Assalamu'alaikum"
+          "id": "rak-peci-lv2",
+          "name": "Tempat Peci",
+          "file": "/assets/stages/stage-12/objects/peci-tray-v2.png",
+          "kind": "target",
+          "position": { "x": 1290, "y": 735 },
+          "displaySize": { "width": 185, "height": 145 },
+          "interactionRadius": 215,
+          "label": "Tempat Peci",
+          "dropText": "Peci diletakkan rapi di tempatnya.",
+          "resultFile": "/assets/stages/stage-12/objects/peci-v2.png",
+          "resultPosition": { "x": 1290, "y": 690 },
+          "resultDisplaySize": { "width": 105, "height": 105 },
+          "resultDepth": 2.65
         }
       ],
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+        { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+        { "order": 3, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 4, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 5, "command": "pick", "label": "Ambil Sajadah", "icon": "pick", "objectId": "sajadah-item-lv2" },
+        { "order": 6, "command": "say", "label": "Bawa Sajadah", "icon": "say", "text": "Aku membawa sajadah dengan hati-hati." },
+        { "order": 7, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 8, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 9, "command": "drop", "label": "Bentangkan Sajadah", "icon": "drop", "targetId": "area-sajadah-lv2" },
+        { "order": 10, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 11, "command": "pick", "label": "Ambil Peci", "icon": "pick", "objectId": "peci-item-lv2" },
+        { "order": 12, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 13, "command": "drop", "label": "Taruh Peci", "icon": "drop", "targetId": "rak-peci-lv2" },
+        { "order": 14, "command": "say", "label": "Dua Benda Siap", "icon": "say", "text": "Sajadah dan peci sudah tertata rapi." },
+        { "order": 15, "command": "sound", "label": "Alhamdulillah", "icon": "sound", "soundId": "alhamdulillah" }
+      ],
       "commands": [
-        {
-          "type": "start",
-          "icon": "flag",
-          "label": "Start",
-          "color": "#ffd84d"
-        },
-        {
-          "type": "moveRight",
-          "value": 7,
-          "icon": "arrow-right",
-          "label": "Kanan 7",
-          "color": "#168eea"
-        },
-        {
-          "type": "pick",
-          "objectId": "sajadah-item",
-          "icon": "pick",
-          "label": "Ambil Sajadah",
-          "color": "#f97316"
-        },
-        {
-          "type": "drop",
-          "targetId": "prayer-area",
-          "icon": "drop",
-          "label": "Taruh Sajadah",
-          "color": "#14b8a6"
-        },
-        {
-          "type": "say",
-          "text": "Assalamu'alaikum",
-          "icon": "say",
-          "label": "Bicara",
-          "color": "#b865dd"
-        }
+        { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+        { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#27c488" },
+        { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+        { "type": "pick", "objectId": "sajadah-item-lv2", "icon": "pick", "label": "Ambil Sajadah", "color": "#f97316" },
+        { "type": "say", "text": "Aku membawa sajadah dengan hati-hati.", "icon": "say", "label": "Bawa Sajadah", "color": "#b865dd" },
+        { "type": "drop", "targetId": "area-sajadah-lv2", "icon": "drop", "label": "Bentangkan Sajadah", "color": "#14b8a6" },
+        { "type": "pick", "objectId": "peci-item-lv2", "icon": "pick", "label": "Ambil Peci", "color": "#f97316" },
+        { "type": "drop", "targetId": "rak-peci-lv2", "icon": "drop", "label": "Taruh Peci", "color": "#14b8a6" },
+        { "type": "say", "text": "Sajadah dan peci sudah tertata rapi.", "icon": "say", "label": "Dua Benda Siap", "color": "#b865dd" },
+        { "type": "sound", "soundId": "alhamdulillah", "icon": "sound", "label": "Alhamdulillah", "color": "#27c488" }
       ],
       "reward": {
         "stars": 3,
-        "badgeId": "stage-12-badge",
-        "badgeTitle": "Rapi Beribadah",
-        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
-        "unlockId": "stage-12-unlock",
-        "unlockTitle": "Stage 13"
+        "badgeId": "stage-12-level-2-badge",
+        "badgeTitle": "Dua Perlengkapan Siap",
+        "badgeText": "Ali berhasil menata sajadah dan peci secara berurutan.",
+        "unlockId": "stage-12-level-3",
+        "unlockTitle": "Lv 3"
       }
     },
     {
       "id": "level-3",
       "title": "Lv 3",
       "label": "Lv 3",
-      "description": "Pilih perlengkapan sesuai tujuan.",
-      "maxCommands": 9,
-      "instructions": [
+      "description": "Tantangan lengkap: siapkan sajadah, peci, dan Al-Qur'an dalam urutan yang benar.",
+      "maxCommands": 28,
+      "startBackgroundId": "stage-12-bg-3",
+      "objects": [
         {
-          "order": 1,
-          "command": "start",
-          "label": "Start",
-          "icon": "flag"
+          "id": "sajadah-item-lv3",
+          "name": "Sajadah Tergulung",
+          "file": "/assets/stages/stage-12/objects/sajadah-rolled-v2.png",
+          "kind": "collectible",
+          "position": { "x": 600, "y": 735 },
+          "displaySize": { "width": 165, "height": 136 },
+          "interactionRadius": 220,
+          "targetId": "area-sajadah-lv3",
+          "pickupText": "Sajadah diambil lebih dahulu."
         },
         {
-          "order": 2,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
+          "id": "area-sajadah-lv3",
+          "name": "Arah Kiblat",
+          "file": "/assets/stages/stage-12/objects/qibla-marker-v2.png",
+          "kind": "target",
+          "position": { "x": 880, "y": 780 },
+          "displaySize": { "width": 108, "height": 108 },
+          "interactionRadius": 230,
+          "label": "Kiblat",
+          "dropText": "Sajadah terbentang menghadap kiblat.",
+          "choiceText": "Lengkap! Semua perlengkapan sudah rapi dan siap digunakan.",
+          "correct": true,
+          "resultFile": "/assets/stages/stage-12/objects/sajadah-open-v2.png",
+          "resultPosition": { "x": 880, "y": 835 },
+          "resultDisplaySize": { "width": 285, "height": 190 },
+          "resultDepth": 1.65,
+          "hideTargetOnSuccess": true
         },
         {
-          "order": 3,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
+          "id": "peci-item-lv3",
+          "name": "Peci",
+          "file": "/assets/stages/stage-12/objects/peci-v2.png",
+          "kind": "collectible",
+          "position": { "x": 990, "y": 700 },
+          "displaySize": { "width": 118, "height": 118 },
+          "interactionRadius": 205,
+          "targetId": "rak-peci-lv3",
+          "pickupText": "Peci diambil setelah sajadah siap."
         },
         {
-          "order": 4,
-          "command": "pick",
-          "label": "Ambil Sajadah",
-          "icon": "pick",
-          "objectId": "sajadah-item"
+          "id": "rak-peci-lv3",
+          "name": "Tempat Peci",
+          "file": "/assets/stages/stage-12/objects/peci-tray-v2.png",
+          "kind": "target",
+          "position": { "x": 1130, "y": 735 },
+          "displaySize": { "width": 172, "height": 136 },
+          "interactionRadius": 205,
+          "label": "Peci",
+          "dropText": "Peci tertata rapi.",
+          "resultFile": "/assets/stages/stage-12/objects/peci-v2.png",
+          "resultPosition": { "x": 1130, "y": 692 },
+          "resultDisplaySize": { "width": 98, "height": 98 },
+          "resultDepth": 2.65
         },
         {
-          "order": 5,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
+          "id": "quran-item-lv3",
+          "name": "Al-Qur'an",
+          "file": "/assets/stages/stage-12/objects/quran-closed-v2.png",
+          "kind": "collectible",
+          "position": { "x": 1230, "y": 700 },
+          "displaySize": { "width": 130, "height": 118 },
+          "interactionRadius": 205,
+          "targetId": "rehal-lv3",
+          "pickupText": "Al-Qur'an diangkat dengan hormat menggunakan dua tangan."
         },
         {
-          "order": 6,
-          "command": "moveRight",
-          "label": "Kanan 7",
-          "icon": "arrow-right",
-          "value": 7
-        },
-        {
-          "order": 7,
-          "command": "drop",
-          "label": "Taruh Sajadah",
-          "icon": "drop",
-          "targetId": "prayer-area"
-        },
-        {
-          "order": 8,
-          "command": "choice",
-          "label": "Siap Shalat",
-          "icon": "choice",
-          "text": "Siap shalat",
-          "choiceId": "prayer-area"
-        },
-        {
-          "order": 9,
-          "command": "sound",
-          "label": "Hebat",
-          "icon": "sound",
-          "soundId": "success"
+          "id": "rehal-lv3",
+          "name": "Rehal",
+          "file": "/assets/stages/stage-12/objects/rehal-empty-v2.png",
+          "kind": "target",
+          "position": { "x": 1380, "y": 735 },
+          "displaySize": { "width": 170, "height": 150 },
+          "interactionRadius": 215,
+          "label": "Rehal",
+          "dropText": "Al-Qur'an terbuka rapi di atas rehal.",
+          "resultFile": "/assets/stages/stage-12/objects/quran-on-rehal-v2.png",
+          "resultPosition": { "x": 1380, "y": 710 },
+          "resultDisplaySize": { "width": 210, "height": 190 },
+          "resultDepth": 2.7,
+          "hideTargetOnSuccess": true
         }
       ],
+      "instructions": [
+        { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+        { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+        { "order": 3, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 4, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 5, "command": "pick", "label": "Ambil Sajadah", "icon": "pick", "objectId": "sajadah-item-lv3" },
+        { "order": 6, "command": "say", "label": "Bawa Sajadah", "icon": "say", "text": "Pertama, aku siapkan sajadah." },
+        { "order": 7, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 8, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 9, "command": "drop", "label": "Bentangkan Sajadah", "icon": "drop", "targetId": "area-sajadah-lv3" },
+        { "order": 10, "command": "wait", "label": "Rapikan 1", "icon": "wait", "value": 1 },
+        { "order": 11, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 12, "command": "pick", "label": "Ambil Peci", "icon": "pick", "objectId": "peci-item-lv3" },
+        { "order": 13, "command": "say", "label": "Bawa Peci", "icon": "say", "text": "Kedua, aku ambil peci." },
+        { "order": 14, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 15, "command": "drop", "label": "Taruh Peci", "icon": "drop", "targetId": "rak-peci-lv3" },
+        { "order": 16, "command": "wait", "label": "Rapikan 1", "icon": "wait", "value": 1 },
+        { "order": 17, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 18, "command": "pick", "label": "Ambil Al-Qur'an", "icon": "pick", "objectId": "quran-item-lv3" },
+        { "order": 19, "command": "say", "label": "Bawa Al-Qur'an", "icon": "say", "text": "Ketiga, aku membawa Al-Qur'an dengan hormat." },
+        { "order": 20, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+        { "order": 21, "command": "drop", "label": "Taruh di Rehal", "icon": "drop", "targetId": "rehal-lv3" },
+        { "order": 22, "command": "wait", "label": "Rapikan 1", "icon": "wait", "value": 1 },
+        { "order": 23, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 24, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 25, "command": "moveLeft", "label": "Kiri 7", "icon": "arrow-left", "value": 7 },
+        { "order": 26, "command": "choice", "label": "Cek Semua Siap", "icon": "choice", "text": "Semua perlengkapan tertata rapi", "choiceId": "area-sajadah-lv3" },
+        { "order": 27, "command": "say", "label": "Siap Shalat", "icon": "say", "text": "Sajadah, peci, dan Al-Qur'an sudah siap." },
+        { "order": 28, "command": "sound", "label": "Alhamdulillah", "icon": "sound", "soundId": "alhamdulillah" }
+      ],
       "commands": [
-        {
-          "type": "start",
-          "icon": "flag",
-          "label": "Start",
-          "color": "#ffd84d"
-        },
-        {
-          "type": "moveRight",
-          "value": 7,
-          "icon": "arrow-right",
-          "label": "Kanan 7",
-          "color": "#168eea"
-        },
-        {
-          "type": "pick",
-          "objectId": "sajadah-item",
-          "icon": "pick",
-          "label": "Ambil Sajadah",
-          "color": "#f97316"
-        },
-        {
-          "type": "drop",
-          "targetId": "prayer-area",
-          "icon": "drop",
-          "label": "Taruh Sajadah",
-          "color": "#14b8a6"
-        },
-        {
-          "type": "choice",
-          "choiceId": "prayer-area",
-          "text": "Siap shalat",
-          "correct": true,
-          "icon": "choice",
-          "label": "Siap Shalat",
-          "color": "#8b5cf6"
-        },
-        {
-          "type": "sound",
-          "soundId": "success",
-          "icon": "sound",
-          "label": "Hebat",
-          "color": "#27c488"
-        }
+        { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+        { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#27c488" },
+        { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+        { "type": "moveLeft", "value": 7, "icon": "arrow-left", "label": "Kiri 7", "color": "#168eea" },
+        { "type": "pick", "objectId": "sajadah-item-lv3", "icon": "pick", "label": "Ambil Sajadah", "color": "#f97316" },
+        { "type": "say", "text": "Pertama, aku siapkan sajadah.", "icon": "say", "label": "Bawa Sajadah", "color": "#b865dd" },
+        { "type": "drop", "targetId": "area-sajadah-lv3", "icon": "drop", "label": "Bentangkan Sajadah", "color": "#14b8a6" },
+        { "type": "wait", "value": 1, "icon": "wait", "label": "Rapikan 1", "color": "#64748b" },
+        { "type": "pick", "objectId": "peci-item-lv3", "icon": "pick", "label": "Ambil Peci", "color": "#f97316" },
+        { "type": "say", "text": "Kedua, aku ambil peci.", "icon": "say", "label": "Bawa Peci", "color": "#b865dd" },
+        { "type": "drop", "targetId": "rak-peci-lv3", "icon": "drop", "label": "Taruh Peci", "color": "#14b8a6" },
+        { "type": "pick", "objectId": "quran-item-lv3", "icon": "pick", "label": "Ambil Al-Qur'an", "color": "#f97316" },
+        { "type": "say", "text": "Ketiga, aku membawa Al-Qur'an dengan hormat.", "icon": "say", "label": "Bawa Al-Qur'an", "color": "#b865dd" },
+        { "type": "drop", "targetId": "rehal-lv3", "icon": "drop", "label": "Taruh di Rehal", "color": "#14b8a6" },
+        { "type": "choice", "choiceId": "area-sajadah-lv3", "text": "Semua perlengkapan tertata rapi", "correct": true, "icon": "choice", "label": "Cek Semua Siap", "color": "#8b5cf6" },
+        { "type": "say", "text": "Sajadah, peci, dan Al-Qur'an sudah siap.", "icon": "say", "label": "Siap Shalat", "color": "#b865dd" },
+        { "type": "sound", "soundId": "alhamdulillah", "icon": "sound", "label": "Alhamdulillah", "color": "#27c488" }
       ],
       "reward": {
         "stars": 3,
-        "badgeId": "stage-12-badge",
-        "badgeTitle": "Sahabat Ibadah",
-        "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
-        "unlockId": "stage-12-unlock",
+        "badgeId": "stage-12-level-3-badge",
+        "badgeTitle": "Sahabat Perlengkapan Shalat",
+        "badgeText": "Ali menyiapkan tiga perlengkapan secara urut, bersih, dan rapi.",
+        "unlockId": "stage-12-complete",
         "unlockTitle": "Stage 13"
       }
     }
   ],
   "instructions": [
-    {
-      "order": 1,
-      "command": "start",
-      "label": "Start",
-      "icon": "flag"
-    },
-    {
-      "order": 2,
-      "command": "moveRight",
-      "label": "Kanan 7",
-      "icon": "arrow-right",
-      "value": 7
-    },
-    {
-      "order": 3,
-      "command": "moveRight",
-      "label": "Kanan 7",
-      "icon": "arrow-right",
-      "value": 7
-    },
-    {
-      "order": 4,
-      "command": "pick",
-      "label": "Ambil Sajadah",
-      "icon": "pick",
-      "objectId": "sajadah-item"
-    },
-    {
-      "order": 5,
-      "command": "moveRight",
-      "label": "Kanan 7",
-      "icon": "arrow-right",
-      "value": 7
-    },
-    {
-      "order": 6,
-      "command": "moveRight",
-      "label": "Kanan 7",
-      "icon": "arrow-right",
-      "value": 7
-    },
-    {
-      "order": 7,
-      "command": "drop",
-      "label": "Taruh Sajadah",
-      "icon": "drop",
-      "targetId": "prayer-area"
-    }
+    { "order": 1, "command": "start", "label": "Mulai", "icon": "flag" },
+    { "order": 2, "command": "sound", "label": "Bismillah", "icon": "sound", "soundId": "bismillah" },
+    { "order": 3, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+    { "order": 4, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+    { "order": 5, "command": "pick", "label": "Ambil Sajadah", "icon": "pick", "objectId": "sajadah-item-lv1" },
+    { "order": 6, "command": "say", "label": "Bawa Hati-hati", "icon": "say", "text": "Aku membawa sajadah dengan hati-hati." },
+    { "order": 7, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+    { "order": 8, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+    { "order": 9, "command": "moveRight", "label": "Kanan 7", "icon": "arrow-right", "value": 7 },
+    { "order": 10, "command": "drop", "label": "Bentangkan Sajadah", "icon": "drop", "targetId": "area-sajadah-lv1" },
+    { "order": 11, "command": "wait", "label": "Rapikan 1", "icon": "wait", "value": 1 },
+    { "order": 12, "command": "choice", "label": "Cek Arah Kiblat", "icon": "choice", "text": "Sajadah menghadap kiblat", "choiceId": "area-sajadah-lv1" },
+    { "order": 13, "command": "say", "label": "Sajadah Rapi", "icon": "say", "text": "Sajadah sudah terbentang rapi." },
+    { "order": 14, "command": "sound", "label": "Hebat", "icon": "sound", "soundId": "success" }
   ],
   "commands": [
-    {
-      "type": "start",
-      "icon": "flag",
-      "label": "Start",
-      "color": "#ffd84d"
-    },
-    {
-      "type": "moveRight",
-      "value": 7,
-      "icon": "arrow-right",
-      "label": "Kanan 7",
-      "color": "#168eea"
-    },
-    {
-      "type": "pick",
-      "objectId": "sajadah-item",
-      "icon": "pick",
-      "label": "Ambil Sajadah",
-      "color": "#f97316"
-    },
-    {
-      "type": "drop",
-      "targetId": "prayer-area",
-      "icon": "drop",
-      "label": "Taruh Sajadah",
-      "color": "#14b8a6"
-    },
-    {
-      "type": "say",
-      "text": "Assalamu'alaikum",
-      "icon": "say",
-      "label": "Bicara",
-      "color": "#b865dd"
-    },
-    {
-      "type": "choice",
-      "choiceId": "prayer-area",
-      "text": "Siap shalat",
-      "correct": true,
-      "icon": "choice",
-      "label": "Siap Shalat",
-      "color": "#8b5cf6"
-    },
-    {
-      "type": "sound",
-      "soundId": "success",
-      "icon": "sound",
-      "label": "Hebat",
-      "color": "#27c488"
-    }
+    { "type": "start", "icon": "flag", "label": "Mulai", "color": "#ffd84d" },
+    { "type": "sound", "soundId": "bismillah", "icon": "sound", "label": "Bismillah", "color": "#27c488" },
+    { "type": "moveRight", "value": 7, "icon": "arrow-right", "label": "Kanan 7", "color": "#168eea" },
+    { "type": "pick", "objectId": "sajadah-item-lv1", "icon": "pick", "label": "Ambil Sajadah", "color": "#f97316" },
+    { "type": "say", "text": "Aku membawa sajadah dengan hati-hati.", "icon": "say", "label": "Bawa Hati-hati", "color": "#b865dd" },
+    { "type": "drop", "targetId": "area-sajadah-lv1", "icon": "drop", "label": "Bentangkan Sajadah", "color": "#14b8a6" },
+    { "type": "wait", "value": 1, "icon": "wait", "label": "Rapikan 1", "color": "#64748b" },
+    { "type": "choice", "choiceId": "area-sajadah-lv1", "text": "Sajadah menghadap kiblat", "correct": true, "icon": "choice", "label": "Cek Arah Kiblat", "color": "#8b5cf6" },
+    { "type": "say", "text": "Sajadah sudah terbentang rapi.", "icon": "say", "label": "Sajadah Rapi", "color": "#b865dd" },
+    { "type": "sound", "soundId": "success", "icon": "sound", "label": "Hebat", "color": "#27c488" }
   ],
   "reward": {
     "stars": 3,
     "badgeId": "stage-12-badge",
     "badgeTitle": "Siap Shalat",
-    "badgeText": "Misi selesai. Tantangan berikutnya siap dicoba bersama guru.",
+    "badgeText": "Semua perlengkapan shalat sudah tertata rapi.",
     "unlockId": "stage-12-unlock",
     "unlockTitle": "Stage 13"
   }

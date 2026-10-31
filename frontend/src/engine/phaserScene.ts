@@ -7,6 +7,7 @@ export type StageReadyPayload = { scene: JuniorScene };
 type RenderedStageObject = {
   data: StageObject;
   image: Phaser.GameObjects.Image;
+  resultImage?: Phaser.GameObjects.Image;
   halo?: Phaser.GameObjects.Graphics;
   labelBg?: Phaser.GameObjects.Graphics;
   label?: Phaser.GameObjects.Text;
@@ -62,6 +63,7 @@ export class JuniorScene extends Phaser.Scene {
     this.stageManifest.levels?.forEach((level) => level.objects?.forEach((item) => objectMap.set(item.id, item)));
     objectMap.forEach((item) => {
       this.load.image(item.id, item.file);
+      if (item.resultFile) this.load.image(this.resultTextureKey(item.id), item.resultFile);
     });
 
     this.stageManifest.sounds?.forEach((item) => this.load.audio(item.id, item.file));
@@ -134,6 +136,7 @@ export class JuniorScene extends Phaser.Scene {
       view.halo?.destroy();
       view.labelBg?.destroy();
       view.label?.destroy();
+      view.resultImage?.destroy();
       view.image.destroy();
     });
     this.objectViews.clear();
@@ -938,7 +941,8 @@ export class JuniorScene extends Phaser.Scene {
     await this.animateDropToTarget(this.carriedObjectId, target);
     this.destroyCarriedBadge();
     this.carriedObjectId = undefined;
-    await this.pulseObject(target);
+    const revealedResult = await this.revealDropResult(target);
+    if (!revealedResult) await this.pulseObject(target);
 
     if (target.data.dropText || target.data.successText) {
       await this.say(target.data.dropText || target.data.successText || 'Bagus!', 1.4);
@@ -1161,6 +1165,48 @@ export class JuniorScene extends Phaser.Scene {
       ease: 'Sine.easeInOut',
     });
     dropImage.destroy();
+  }
+
+  private resultTextureKey(objectId: string) {
+    return `${objectId}__result`;
+  }
+
+  private async revealDropResult(target: RenderedStageObject) {
+    const textureKey = this.resultTextureKey(target.data.id);
+    if (!target.data.resultFile || !this.textures.exists(textureKey)) return false;
+
+    target.resultImage?.destroy();
+    const resultPosition = target.data.resultPosition || target.data.position || { x: target.image.x, y: target.image.y };
+    const resultImage = this.add.image(resultPosition.x, resultPosition.y + 22, textureKey)
+      .setDepth(target.data.resultDepth ?? target.image.depth + 0.4)
+      .setAlpha(0)
+      .setScale(0.78);
+
+    if (target.data.resultDisplaySize) {
+      resultImage.setDisplaySize(target.data.resultDisplaySize.width, target.data.resultDisplaySize.height);
+      resultImage.setScale(resultImage.scaleX * 0.78, resultImage.scaleY * 0.78);
+    }
+
+    target.resultImage = resultImage;
+    target.halo?.setVisible(false);
+    target.labelBg?.setVisible(false);
+    target.label?.setVisible(false);
+    if (target.data.hideTargetOnSuccess) target.image.setVisible(false);
+
+    const finalScaleX = resultImage.scaleX / 0.78;
+    const finalScaleY = resultImage.scaleY / 0.78;
+    await Promise.all([
+      this.tweenPromise({
+        targets: resultImage,
+        y: resultPosition.y,
+        scaleX: finalScaleX,
+        scaleY: finalScaleY,
+        duration: 360,
+        ease: 'Back.easeOut',
+      }),
+      this.tweenPromise({ targets: resultImage, alpha: 1, duration: 220, ease: 'Sine.easeOut' }),
+    ]);
+    return true;
   }
 
   private emitConfetti() {

@@ -59,6 +59,13 @@ export type StageObject = {
   successText?: string;
   locked?: boolean;
   showHalo?: boolean;
+  /** PNG hasil yang muncul menetap setelah barang berhasil ditaruh di target ini. */
+  resultFile?: string;
+  resultPosition?: { x: number; y: number };
+  resultDisplaySize?: { width: number; height: number };
+  resultDepth?: number;
+  /** Sembunyikan gambar target awal saat resultFile sudah ditampilkan. */
+  hideTargetOnSuccess?: boolean;
 };
 
 export type StageSound = {
